@@ -466,108 +466,122 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
   color:var(--soft);margin-top:9px;display:block}
 .selmsg.ok{color:var(--coral2);font-weight:700}
 
-/* 05 · como a 75 LAB trabalha -------------------------------------------- */
-.princ{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
-.pr4{border:2px solid var(--line);padding:24px 22px;display:flex;flex-direction:column;gap:14px;
+/* 05 e 06 · as entregas em detalhe --------------------------------------- */
+.entgrid{flex:1;min-height:0;display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.entd{border:2px solid var(--line);padding:19px 19px;display:flex;flex-direction:column;gap:12px;
   transition:.3s var(--ease);position:relative;overflow:hidden}
-.pr4::before{content:'';position:absolute;left:0;top:0;right:0;height:5px;background:var(--coral);
-  transform:scaleX(0);transform-origin:left;transition:.32s var(--ease)}
-.pr4:hover{border-color:var(--coral);transform:translateY(-5px)}
-.pr4:hover::before{transform:scaleX(1)}
-.pr4 .ico{color:var(--coral);width:40px;height:40px}
-.pr4 h3{font-size:31px;line-height:1.02}
-.pr4 p{font-size:13.5px;line-height:1.5;color:var(--soft)}
-.pr4 p b{color:var(--paper);font-weight:600}
-.slide:not(.dark) .pr4 p b{color:var(--ink)}
-.contra{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
-.contra>div{border:2px solid var(--line);padding:14px 18px;display:flex;gap:13px;align-items:center;
-  font-size:12.5px;line-height:1.42}
-.contra svg{width:19px;height:19px;stroke:var(--coral);fill:none;stroke-width:2.6;
-  stroke-linecap:round;flex-shrink:0}
-.contra b{font-weight:700}
+.entd::before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--pc);
+  transform:scaleY(0);transform-origin:top;transition:.32s var(--ease)}
+.entd:hover{border-color:var(--pc);transform:translateY(-5px)}
+.entd:hover::before{transform:scaleY(1)}
+.entd .eh{display:flex;align-items:flex-start;gap:13px}
+.entd .ico{color:var(--pc);width:32px;height:32px;flex-shrink:0}
+.entd .num{font-family:var(--fmono);font-size:8.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--pc);display:block;margin-bottom:3px}
+.entd h3{font-size:24px;line-height:1.02}
+.entd .o{font-size:12.5px;line-height:1.46;color:var(--soft)}
+.entd ul{list-style:none;display:flex;flex-direction:column;gap:5px}
+.entd li{font-size:11.5px;line-height:1.4;padding-left:14px;position:relative}
+.entd li::before{content:'';position:absolute;left:0;top:5.5px;width:6px;height:6px;background:var(--pc)}
+.entd li b{font-weight:700}
+.entd .meta{margin-top:auto;padding-top:11px;border-top:2px solid var(--line);
+  display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.entd .meta b{font-family:var(--fmono);font-size:8px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--soft);display:block;margin-bottom:2px}
+.entd .meta span{font-size:11px;line-height:1.35;font-weight:500}
+.entd .valor{border-top:2px solid var(--pc);padding-top:11px;display:flex;flex-direction:column;gap:2px}
+.entd .valor .vl{font-family:var(--fdisp);font-weight:900;font-size:36px;line-height:1;
+  letter-spacing:-.03em;color:var(--pc);font-variant-numeric:tabular-nums}
+.entd .valor .vl small{font-size:15px;letter-spacing:0}
+.entd .valor i{font-style:normal;font-family:var(--fmono);font-size:8.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--soft)}
 
-/* 06 · as seis entregas em três blocos ------------------------------------ */
-.grupos{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.grupo{display:flex;flex-direction:column;gap:2px}
-.grupo .gh{display:flex;align-items:baseline;gap:12px;padding-bottom:9px;margin-bottom:8px;
-  border-bottom:4px solid var(--pc)}
-.grupo .gh h3{font-size:30px;line-height:1;color:var(--pc)}
-.grupo .gh span{font-family:var(--fmono);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--soft)}
-.ent{border:2px solid var(--line);padding:15px 18px;display:flex;flex-direction:column;gap:8px;flex:1;
-  transition:.3s var(--ease);position:relative;overflow:hidden}
-.ent::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--pc);
-  transform:scaleY(0);transform-origin:top;transition:.3s var(--ease)}
-.ent:hover{border-color:var(--pc);transform:translateY(-4px)}
-.ent:hover::before{transform:scaleY(1)}
-.ent .top{display:flex;align-items:center;gap:12px}
-.ent .ico{color:var(--pc);width:28px;height:28px;flex-shrink:0}
-.ent h4{font-family:var(--fdisp);font-weight:900;font-size:23px;text-transform:uppercase;
-  letter-spacing:-.015em;line-height:1.02}
-.ent .o{font-size:12.5px;line-height:1.46;color:var(--soft)}
-.ent .chega{margin-top:auto;padding-top:11px;border-top:2px solid var(--line);font-size:11.5px;line-height:1.45}
-.ent .chega i{font-style:normal;font-family:var(--fmono);font-size:8.5px;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--pc);display:block;margin-bottom:3px}
+/* 07 · cronograma em calendário ------------------------------------------ */
+.cal{flex:1;min-height:0;display:flex;flex-direction:column;gap:2px;justify-content:center;position:relative}
+.calhead{display:grid;grid-template-columns:238px repeat(12,1fr);gap:0;
+  border-bottom:2px solid var(--line);padding-bottom:6px;margin-bottom:5px}
+.calhead .tri{grid-column:span 3;text-align:center;font-family:var(--fmono);font-size:8.5px;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--coral2);padding-bottom:7px}
+.calmes{display:grid;grid-template-columns:238px repeat(12,1fr);gap:0;padding-bottom:7px;
+  border-bottom:2px solid var(--line);margin-bottom:6px}
+.calmes span{text-align:center;font-family:var(--fmono);font-weight:700;font-size:9px;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
+.calmes span.pico{color:var(--teal)}
+.calrow{display:grid;grid-template-columns:238px repeat(12,1fr);gap:0;align-items:center;
+  min-height:28px;border-bottom:1px solid var(--line);transition:.2s;position:relative;z-index:2}
+.calrow:last-child{border-bottom:0}
+.calrow:hover{background:var(--fill)}
+.calrow .lbl{font-size:12px;line-height:1.3;padding-right:14px;display:flex;flex-direction:column;gap:1px}
+.calrow .lbl b{font-weight:600}
+.calrow .lbl i{font-style:normal;font-family:var(--fmono);font-size:8px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--soft)}
+.bar{height:14px;background:var(--bc,var(--coral2));margin:0 2px;display:flex;align-items:center;
+  padding:0 8px;transform-origin:left;animation:grw .8s var(--ease) both;
+  animation-delay:calc(var(--d,0)*70ms + 300ms)}
+.bar span{font-family:var(--fmono);font-weight:700;font-size:8px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink);white-space:nowrap;overflow:hidden}
+.bar.criar{--bc:#C0EE4E}
+.bar.levar{--bc:#01A290}
+.bar.levar span{color:var(--paper)}
+.bar.impl{--bc:#F4F1EA}
+.slide:not(.dark) .bar.impl{--bc:#12141C}
+.slide:not(.dark) .bar.impl span{color:var(--paper)}
+.calgrid{position:absolute;inset:0;pointer-events:none;display:grid;z-index:1;
+  grid-template-columns:238px repeat(12,1fr)}
+.calgrid i{border-left:1px solid var(--line);opacity:.5}
+.calgrid i:first-child,.calgrid i:nth-child(2){border-left:0}
+.calgrid i.tri{border-left-width:2px;opacity:1}
 
-/* 07 · a estratégia quebrada por canal ------------------------------------ */
-.canplano{flex:1;min-height:0;display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
-.cp{border:2px solid var(--line);display:flex;flex-direction:column;transition:.3s var(--ease)}
-.cp:hover{border-color:var(--coral);transform:translateY(-5px)}
-.cp .cph{padding:18px 20px;border-bottom:2px solid var(--line);display:flex;align-items:center;gap:13px;
-  background:var(--fill)}
-.cp .cph .ico{color:var(--coral);width:28px;height:28px;flex-shrink:0}
-.cp .cph h3{font-size:26px;line-height:1}
-.cp .ln{padding:14px 20px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:5px}
-.cp .ln:last-child{border-bottom:0;flex:1}
-.cp .ln b{font-family:var(--fmono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral)}
-.cp .ln span{font-size:12.5px;line-height:1.46}
-.cp .ln.peca span{font-weight:600}
-.cp .ln.peca{background:var(--fill)}
+/* 08 · tabela de valores ------------------------------------------------- */
+.tab{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center}
+.tabrow{display:grid;grid-template-columns:214px 1fr 156px 168px;gap:20px;align-items:center;
+  padding:7px 14px;border-bottom:1px solid var(--line);transition:.2s}
+.tabrow:hover{background:var(--fill)}
+.tabrow.th{border-bottom:2px solid var(--line);padding-bottom:10px}
+.tabrow.th span{font-family:var(--fmono);font-size:8.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--soft)}
+.tabrow .nm{display:flex;align-items:center;gap:12px}
+.tabrow .nm .ico{width:22px;height:22px;color:var(--pc);flex-shrink:0}
+.tabrow .nm b{font-family:var(--fdisp);font-weight:900;font-size:17px;text-transform:uppercase;
+  letter-spacing:-.01em;line-height:1.05}
+.tabrow .de{font-size:11.5px;line-height:1.4;color:var(--soft)}
+.tabrow .fm{font-family:var(--fmono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--soft);line-height:1.5}
+.tabrow .vl{font-family:var(--fdisp);font-weight:900;font-size:25px;line-height:1;letter-spacing:-.02em;
+  text-align:right;color:var(--pc);font-variant-numeric:tabular-nums}
+.tabrow .vl small{font-size:12px;letter-spacing:0}
+.tabrow .vl em{display:block;font-style:normal;font-family:var(--fmono);font-size:8px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin-top:3px}
 
-/* 08 · arquitetura do freezer e enxoval ----------------------------------- */
-.frzw{flex:1;min-height:0;display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
-.frzfoto{position:relative;display:grid;place-items:center;height:100%}
-.frzfoto img{max-height:330px;width:auto;filter:drop-shadow(0 26px 44px rgba(0,0,0,.5));position:relative;z-index:2}
-.frzfoto .luzf{position:absolute;width:360px;height:360px;border-radius:50%;
-  background:radial-gradient(circle,rgba(236,127,132,.3),transparent 66%);z-index:1}
-.zonas{display:grid;grid-template-columns:1fr 1fr;gap:2px}
-.zona{border:2px solid var(--line);padding:16px 18px;display:flex;flex-direction:column;gap:7px;
-  transition:.26s var(--ease)}
-.zona:hover{border-color:var(--zc,var(--coral))}
-.zona .faixa{height:6px;width:48px;background:var(--zc,var(--coral))}
-.zona b{font-family:var(--fdisp);font-weight:900;font-size:24px;text-transform:uppercase;line-height:1}
-.zona p{font-size:12.5px;line-height:1.46;color:var(--soft)}
-.zona p em{font-style:normal;color:var(--paper);font-weight:600}
-.slide:not(.dark) .zona p em{color:var(--ink)}
-.zq{--zc:#EC7F84}.zm{--zc:#01A290}.zf{--zc:rgba(244,241,234,.3)}
-.slide:not(.dark) .zf{--zc:rgba(18,20,28,.28)}
-.zt{--zc:#C0EE4E}
-.slide:not(.dark) .zt{--zc:#7FA81E}
-.caixa{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:2px}
-.caixa>div{border:2px solid var(--line);padding:13px 16px;display:flex;flex-direction:column;gap:5px}
-.caixa b{font-family:var(--fmono);font-size:8.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--coral)}
-.caixa span{font-size:12px;line-height:1.45;color:var(--soft)}
-
-/* 09 · o caminho --------------------------------------------------------- */
-.caminho{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:22px}
-.etapas{display:grid;grid-template-columns:repeat(5,1fr);gap:2px}
-.etapa{border:2px solid var(--line);padding:18px 18px;display:flex;flex-direction:column;gap:9px;
-  transition:.28s var(--ease)}
-.etapa:hover{border-color:var(--coral2);transform:translateY(-4px)}
-.etapa .sem{font-family:var(--fmono);font-size:9.5px;letter-spacing:.14em;color:var(--coral2)}
-.etapa h4{font-size:21px;font-weight:700;line-height:1.16}
-.etapa p{font-size:12px;line-height:1.44;color:var(--soft)}
-.etapa .quem{margin-top:auto;padding-top:10px;border-top:2px solid var(--line);font-family:var(--fmono);
-  font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;line-height:1.5}
-.etapa .quem i{font-style:normal;color:var(--coral2);display:block}
-.ondas{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
-.onda4{border:2px solid var(--line);padding:16px 18px;display:flex;flex-direction:column;gap:6px;
-  transition:.26s}
-.onda4:hover{border-color:var(--coral2)}
-.onda4.pico{border-color:var(--teal);background:var(--fill)}
-.onda4 .q{font-family:var(--fmono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
-.onda4 b{font-family:var(--fdisp);font-weight:900;font-size:25px;text-transform:uppercase;line-height:1}
-.onda4.pico b{color:var(--teal)}
-.onda4 p{font-size:11.5px;line-height:1.44;color:var(--soft)}
+/* 09 · cenários somando as entregas -------------------------------------- */
+.cenT{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center}
+.ctrow{display:grid;grid-template-columns:238px repeat(3,1fr);gap:2px;align-items:stretch}
+.ctrow>div{padding:3px 15px;display:flex;flex-direction:column;justify-content:center;
+  border-bottom:1px solid var(--line)}
+.ctrow>div:first-child{padding-left:0}
+.ctrow .cl{font-size:11.5px;font-weight:500;line-height:1.28}
+.ctrow .cl i{font-style:normal;font-family:var(--fmono);font-size:8px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--soft);display:block;margin-top:1px}
+.ctrow .v{font-family:var(--fmono);font-weight:700;font-size:13px;text-align:right;
+  font-variant-numeric:tabular-nums}
+.ctrow .v i{font-style:normal;font-size:8px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--soft);display:block;margin-top:1px;font-weight:400}
+.ctrow .v.zero{color:var(--soft);font-weight:400}
+.ctrow.th>div{border-bottom:2px solid var(--line);padding-bottom:8px;padding-top:0}
+.ctrow.th b{font-family:var(--fdisp);font-weight:900;font-size:21px;text-transform:uppercase;line-height:1}
+.ctrow.th span{font-family:var(--fmono);font-size:8px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--soft);display:block;margin-top:3px}
+.ctrow.sub>div{background:var(--fill);border-bottom:2px solid var(--line)}
+.ctrow.sub .v{font-size:15px;color:var(--coral)}
+.ctrow.tot>div{border-bottom:0;padding-top:9px}
+.ctrow.tot .v{font-family:var(--fdisp);font-weight:900;font-size:23px;letter-spacing:-.02em;
+  color:var(--coral);line-height:1}
+.ctrow.tot .cl{font-family:var(--fdisp);font-weight:900;font-size:20px;text-transform:uppercase}
+.ctcol-rec{position:relative}
+.ctrow.th .rec{border-top:4px solid var(--coral);padding-top:9px;position:relative}
+.ctrow.th .rec::after{content:'Recomendado';position:absolute;top:-4px;right:0;background:var(--coral);
+  color:var(--ink);font-family:var(--fmono);font-weight:700;font-size:7.5px;letter-spacing:.12em;
+  text-transform:uppercase;padding:3px 8px}
 
 /* 10 · investimento e decisão -------------------------------------------- */
 .dec{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:14px}
@@ -596,19 +610,19 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
 .passos>div:hover{border-color:var(--coral)}
 .passos b{font-family:var(--fdisp);font-weight:900;font-size:27px;line-height:.9;color:var(--coral)}
 .passos span{font-size:12px;line-height:1.44}
-.instfoot{display:grid;grid-template-columns:auto 1fr 1fr auto;gap:26px;align-items:center;
-  border-top:2px solid var(--line);padding-top:14px}
+.instfoot{display:grid;grid-template-columns:auto 1fr 1fr auto;gap:24px;align-items:center;
+  border-top:2px solid var(--line);padding-top:11px;margin-top:10px}
 .instfoot .marcas{display:flex;align-items:center;gap:13px}
-.instfoot .marcas img.ll{height:42px}
+.instfoot .marcas img.ll{height:32px}
 .instfoot .marcas img.l75{height:16px}
 .instfoot .col h4{font-family:var(--fmono);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;
   color:var(--coral);margin-bottom:6px}
-.instfoot .col .ln{font-size:11px;line-height:1.55;color:var(--soft)}
+.instfoot .col .ln{font-size:10.5px;line-height:1.5;color:var(--soft)}
 .instfoot .col .ln b{color:var(--paper);font-weight:600}
 .slide:not(.dark) .instfoot .col .ln b{color:var(--ink)}
 .instfoot .col .ln em{font-style:normal;font-family:var(--fmono);font-size:9px;color:var(--coral)}
 .instfoot .fecho{text-align:right}
-.instfoot .fecho .tagl{font-family:var(--ftext);font-weight:700;font-size:18px;line-height:1.22;letter-spacing:-.02em}
+.instfoot .fecho .tagl{font-family:var(--ftext);font-weight:700;font-size:16px;line-height:1.22;letter-spacing:-.02em}
 .instfoot .fecho .tagl em{font-style:normal;color:var(--coral)}
 .instfoot .fecho span{font-family:var(--fmono);font-size:8px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--soft);display:block;margin-top:6px}
@@ -626,29 +640,28 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
   .note{font-size:9.5px;max-width:none}
   .hd{margin-bottom:16px!important}
 
-  .mapaw,.vsg,.mkt3,.jorline,.canais,.grupos,.canplano,.frzw,.zonas,.caixa,.princ,.contra,
-  .etapas,.ondas,.cens,.passos,.instfoot{grid-template-columns:1fr!important}
+  .mapaw,.vsg,.mkt3,.jorline,.canais,.entgrid,.instfoot{grid-template-columns:1fr!important}
 
-  /* 01 */
+  /* 01 · capa */
   .marca{display:none}
   .marcalogo{position:relative;right:auto;top:auto;transform:none;width:170px;
     margin:0 auto 6px;animation:none}
   .open{gap:20px}
   .open .sub s{display:none}
 
-  /* 02 */
+  /* 02 · mapa */
   .mapabox{height:auto}
   .mapa{height:300px;width:auto}
   .figrow .n{font-size:46px;min-width:108px}
   .figrow{gap:13px}
 
-  /* 03 */
+  /* 03 · leitura */
   .arw{display:none}
   .vsitem{min-height:0}
   .mkt3>div{padding:13px 0!important;border-right:0!important;border-bottom:2px solid var(--line)}
   .mkt3>div:last-child{border-bottom:0}
 
-  /* 04 */
+  /* 04 · shopper e canais */
   .jorline::before{display:none}
   .jst{flex-direction:row;text-align:left;align-items:flex-start;gap:12px;
     border-bottom:1px solid var(--line);padding:11px 0}
@@ -656,36 +669,38 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
   .jst .sec{font-size:24px;min-width:40px}
   .canal{padding:14px 0;border:0;border-bottom:2px solid var(--line);background:transparent}
 
-  /* 05 */
-  .mv{border-right:0;border-bottom:2px solid var(--line);padding:13px 0}
-  .mv .q{min-height:0}
-  .flowline{display:none}
-  .regra{padding:15px;gap:14px}
+  /* 05 e 06 · entregas */
+  .entd{padding:16px 0;border:0;border-bottom:2px solid var(--line)}
+  .entd::before{display:none}
+  .entd .valor .vl{font-size:31px}
 
-  /* 06 */
-  .camada{gap:11px}
-  .camada .lbl{padding:3px 0 3px 13px}
+  /* 07 · o calendário rola na horizontal dentro da própria caixa */
+  .cal{overflow-x:auto;padding-bottom:6px}
+  .calhead,.calmes,.calrow,.calgrid{grid-template-columns:142px repeat(12,44px)!important;min-width:670px}
+  .calgrid{width:670px}
+  .calrow .lbl{font-size:10px;padding-right:8px}
+  .calrow .lbl i{font-size:7px}
+  .bar span{display:none}
 
-  /* 07 */
-  .fcard .cap{height:148px}
-  .fcard .cap img{max-height:116px}
+  /* 08 · tabela de valores */
+  .tabrow{grid-template-columns:1fr;gap:7px;padding:15px 0;border-bottom:2px solid var(--line)}
+  .tabrow.th{display:none}
+  .tabrow .vl{text-align:left;font-size:30px}
+  .tabrow .vl em{margin-top:1px}
+  .tabrow .fm{font-size:9px}
 
-  /* 08 */
-  .modo{padding:15px 0;border:0;border-bottom:2px solid var(--line)}
-  .pmapa{height:auto;grid-template-columns:1fr;gap:14px;padding:14px 16px;justify-items:center}
-  .mapinha{height:190px}
-  .plegenda{max-width:none}
-  .painel .lin{grid-template-columns:1fr 70px 50px;font-size:10px}
-
-  /* 09 */
-  .etapa{padding:13px 0;border:0;border-bottom:2px solid var(--line)}
-  .onda4{padding:12px 0;border:0;border-bottom:2px solid var(--line)}
-
-  /* 10 */
-  .cen{padding:15px 0;border:0;border-bottom:2px solid var(--line)}
-  .cen .selo{position:static;align-self:flex-start;margin-bottom:4px}
-  .passos>div{padding:12px 0;border:0;border-bottom:2px solid var(--line)}
-  .instfoot{gap:16px;padding-top:15px}
+  /* 09 · cenários */
+  .cenT{overflow-x:auto}
+  .ctrow{grid-template-columns:150px repeat(3,120px)!important;min-width:520px}
+  .ctrow>div{padding:6px 10px}
+  .ctrow .cl{font-size:10.5px}
+  .ctrow .v{font-size:11px}
+  .ctrow.th b{font-size:15px}
+  .ctrow.th span{font-size:7px}
+  .ctrow.tot .v{font-size:15px}
+  .ctrow.tot .cl{font-size:15px}
+  .ctrow.th .rec::after{display:none}
+  .instfoot{gap:16px;padding-top:15px;margin-top:14px}
   .instfoot .fecho{text-align:left}
 
   div:has(> .btn){flex-wrap:wrap!important;gap:8px!important}
@@ -1046,368 +1061,522 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
     diferente. <b>A variável mais barata de mexer não é o produto nem o preço</b>: é o que o shopper vê
     ao abrir a tampa.</p>
 </section>
-<section class="slide dark" data-part="Como fazemos"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
-  <div class="hd" style="margin-bottom:22px">
-    <span class="eyebrow" data-a><i>(04)</i> Como a 75 LAB trabalha</span>
-    <h2 data-a style="--d:1">A gente entrega pronto.<br><em>Você abre a caixa e instala.</em></h2>
+<section class="slide" data-part="As entregas"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
+  <div class="hd" style="margin-bottom:20px">
+    <span class="eyebrow" data-a><i>(04)</i> As entregas · pensar e criar</span>
+    <h2 data-a style="--d:1">A decisão antes da peça,<br><em>e a peça antes da gráfica.</em></h2>
   </div>
-  <div class="tese">
-    <div class="princ">
-      <div class="pr4" data-a style="--d:2">
-        <svg class="ico" viewBox="0 0 32 32"><path class="rise" d="M4 8l12-5 12 5-12 5z"/>
-          <path d="M4 8v16l12 5 12-5V8"/><path d="M16 13v16"/></svg>
-        <h3>Pronto<br>para usar</h3>
-        <p>Chega montado, embalado por loja e com <b>manual de uma página</b>.</p>
+  <div class="entgrid">
+
+    <div class="entd motor" data-a style="--d:2">
+      <div class="eh">
+        <svg class="ico" viewBox="0 0 32 32"><path d="M16 3v26M3 16h26"/>
+          <circle class="pulse" cx="8.5" cy="8.5" r="3.4"/><circle cx="23.5" cy="8.5" r="3.4"/>
+          <circle cx="8.5" cy="23.5" r="3.4"/><circle class="pulse" cx="23.5" cy="23.5" r="3.4"/></svg>
+        <div><span class="num">Entrega 01 · pensar</span><h3>Estratégia<br>por Canal</h3></div>
       </div>
-      <div class="pr4" data-a style="--d:3">
-        <svg class="ico" viewBox="0 0 32 32"><path d="M3 11l3-7h20l3 7v18H3z"/><path d="M3 11h26"/>
-          <circle class="pulse" cx="16" cy="20" r="4"/></svg>
-        <h3>Sem depender<br>do seu dado</h3>
-        <p>Desenhamos com o que já está público e com <b>o que vemos na loja</b>.</p>
+      <p class="o">O plano de trade quebrado por tipo de loja. O que funciona em padaria não é o que
+        funciona em condomínio.</p>
+      <ul>
+        <li>Visita e leitura de concorrência na loja</li>
+        <li>Missão de compra e barreira de cada canal</li>
+        <li>Mensagem e hierarquia de comunicação</li>
+        <li>Mapa de qual peça resolve cada canal</li>
+        <li>O que evitar, com justificativa</li>
+      </ul>
+      <div class="meta">
+        <div><b>Formato</b><span>Plano por canal, em apresentação e PDF</span></div>
+        <div><b>Prazo</b><span>3 semanas por canal</span></div>
       </div>
-      <div class="pr4" data-a style="--d:4">
-        <svg class="ico" viewBox="0 0 32 32"><path class="pulse" d="M18 2L7 18h8l-1 12 11-16h-8z"/></svg>
-        <h3>Sem esperar<br>piloto</h3>
-        <p>A primeira onda já vai para <b>todas as lojas do canal escolhido</b>.</p>
+      <div class="valor">
+        <span class="vl"><small>R$ </small>16.800</span>
+        <i>por canal · revisão anual inclusa</i>
       </div>
-      <div class="pr4" data-a style="--d:5">
+    </div>
+
+    <div class="entd motor" data-a style="--d:3">
+      <div class="eh">
+        <svg class="ico" viewBox="0 0 32 32"><rect x="4" y="7" width="24" height="21" rx="2"/>
+          <path d="M4 13h24M10 4v5M22 4v5"/><circle class="pulse" cx="16" cy="20.5" r="3.4"/></svg>
+        <div><span class="num">Entrega 02 · pensar</span><h3>Calendário<br>de Trade</h3></div>
+      </div>
+      <p class="o">As ocasiões do ano com ação definida, para a produção virar carteira anual e não
+        urgência de última hora.</p>
+      <ul>
+        <li>12 janelas com ocasião e objetivo</li>
+        <li>Ação e peça de cada janela</li>
+        <li>Data de pedido e de implantação</li>
+        <li>Divisão da verba de produção por trimestre</li>
+        <li>Revisão a cada três meses</li>
+      </ul>
+      <div class="meta">
+        <div><b>Formato</b><span>Calendário de 12 meses, em planilha viva</span></div>
+        <div><b>Prazo</b><span>2 semanas</span></div>
+      </div>
+      <div class="valor">
+        <span class="vl"><small>R$ </small>9.800</span>
+        <i>por ano · com revisão trimestral</i>
+      </div>
+    </div>
+
+    <div class="entd ativar" data-a style="--d:4">
+      <div class="eh">
+        <svg class="ico" viewBox="0 0 32 32"><path class="rise" d="M2 7h28v5H2z"/>
+          <path d="M4 12h24v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M13 20h6"/></svg>
+        <div><span class="num">Entrega 03 · criar</span><h3>Arquitetura<br>do Freezer</h3></div>
+      </div>
+      <p class="o">Sortimento, planograma e sinalização. O freezer deixa de ser armário e passa a
+        guiar a escolha do shopper.</p>
+      <ul>
+        <li>Planograma por tipo de freezer do parque</li>
+        <li>Zonas de visibilidade, da frente ao fundo</li>
+        <li>Sinalização de sabor, ocasião e preço</li>
+        <li>Guia de testeira e peças intercambiáveis</li>
+        <li>Cartaz de montagem em uma página</li>
+      </ul>
+      <div class="meta">
+        <div><b>Formato</b><span>Manual ilustrado e artes abertas</span></div>
+        <div><b>Prazo</b><span>4 semanas</span></div>
+      </div>
+      <div class="valor">
+        <span class="vl"><small>R$ </small>19.600</span>
+        <i>projeto · vale para todo o parque</i>
+      </div>
+    </div>
+
+    <div class="entd ativar" data-a style="--d:5">
+      <div class="eh">
+        <svg class="ico" viewBox="0 0 32 32"><path d="M16 3l12 6.5v13L16 29 4 22.5v-13z"/>
+          <path d="M4 9.5l12 6.5 12-6.5M16 16v13"/><circle class="pulse" cx="16" cy="16" r="2.8"/></svg>
+        <div><span class="num">Entrega 04 · criar</span><h3>Conceito e<br>Enxoval de PDV</h3></div>
+      </div>
+      <p class="o">A ideia da campanha e todas as peças que ela gera, desenhadas, prototipadas
+        e produzidas.</p>
+      <ul>
+        <li>Conceito e identidade da campanha</li>
+        <li><b>Manual de merchandising com as peças em 3D</b>, uma versão por canal, só com material
+          que funciona naquele tipo de loja</li>
+        <li>Layouts abertos de todo o enxoval</li>
+        <li>Protótipo físico para aprovação</li>
+        <li>Cotação, gráfica e embalagem por endereço</li>
+      </ul>
+      <div class="meta">
+        <div><b>Formato</b><span>Manual em 3D, artes e produção acompanhada</span></div>
+        <div><b>Prazo</b><span>6 semanas por onda</span></div>
+      </div>
+      <div class="valor">
+        <span class="vl"><small>R$ </small>32.000</span>
+        <i>por onda · produção física à parte</i>
+      </div>
+    </div>
+
+  </div>
+  <p class="note" data-a style="--d:7">Valores de criação e estratégia. <b>A produção física é cotada à parte</b>
+    e gerida como carteira anual. Pensar e criar a 75 LAB faz com o portfólio público e com uma rodada
+    de visitas, sem depender de relatório de venda liberado.</p>
+</section>
+<section class="slide dark" data-part="As entregas"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
+  <div class="hd" style="margin-bottom:20px">
+    <span class="eyebrow" data-a><i>(05)</i> As entregas · levar e rastrear</span>
+    <h2 data-a style="--d:1">Chegar na loja é metade.<br><em>A outra metade é provar que chegou.</em></h2>
+  </div>
+  <div class="entgrid">
+
+    <div class="entd escalar" data-a style="--d:2">
+      <div class="eh">
+        <svg class="ico" viewBox="0 0 32 32"><path d="M6 3h20v26H6z"/><path d="M11 3v26"/>
+          <path class="blink" d="M15 10h7M15 15h7M15 20h4"/></svg>
+        <div><span class="num">Entrega 05 · levar</span><h3>Guia de<br>Execução</h3></div>
+      </div>
+      <p class="o">Como instalar e o que comprovar, na linguagem de quem está na loja, não na
+        linguagem da agência.</p>
+      <ul>
+        <li>Manual de uma página, por canal</li>
+        <li>Vídeo curto de montagem</li>
+        <li>Lista de conferência fotográfica</li>
+        <li>Página da peça no ar, aberta pelo QR</li>
+        <li>Treinamento remoto do distribuidor</li>
+      </ul>
+      <div class="meta">
+        <div><b>Formato</b><span>Página no ar, PDF e vídeo</span></div>
+        <div><b>Prazo</b><span>2 semanas</span></div>
+      </div>
+      <div class="valor">
+        <span class="vl"><small>R$ </small>8.400</span>
+        <i>projeto · serve todas as ondas do ano</i>
+      </div>
+    </div>
+
+    <div class="entd escalar" data-a style="--d:3">
+      <div class="eh">
+        <svg class="ico" viewBox="0 0 32 32"><path d="M4 9l12-5 12 5-12 5z"/>
+          <path d="M4 9v15l12 5 12-5V9"/><path d="M16 14v15"/>
+          <circle class="pulse" cx="26" cy="7" r="2.6"/></svg>
+        <div><span class="num">Entrega 06 · levar</span><h3>Catálogo do<br>Distribuidor</h3></div>
+      </div>
+      <p class="o">O que a ponta pode pedir, com foto, preço e prazo. Tira a compra local do
+        improviso e mantém o padrão nacional.</p>
+      <ul>
+        <li>Catálogo homologado com especificação</li>
+        <li>Kits por porte de loja</li>
+        <li>Preço de referência e prazo de produção</li>
+        <li>Janela de pedido por trimestre</li>
+        <li>Formulário e processo de pedido prontos</li>
+      </ul>
+      <div class="meta">
+        <div><b>Formato</b><span>Catálogo digital e processo de pedido</span></div>
+        <div><b>Prazo</b><span>3 semanas</span></div>
+      </div>
+      <div class="valor">
+        <span class="vl"><small>R$ </small>12.600</span>
+        <i>por ano · atualizado a cada onda</i>
+      </div>
+    </div>
+
+    <div class="entd motor" data-a style="--d:4">
+      <div class="eh">
         <svg class="ico" viewBox="0 0 32 32"><rect x="3" y="3" width="10" height="10" rx="1"/>
           <rect x="19" y="3" width="10" height="10" rx="1"/><rect x="3" y="19" width="10" height="10" rx="1"/>
           <path class="blink" d="M19 19h4v4h-4zM25 19h4M19 25h4M25 25h4v4h-4"/></svg>
-        <h3>Prova<br>embutida</h3>
-        <p>O QR da peça registra <b>quem instalou, onde e quando</b>.</p>
+        <div><span class="num">Entrega 07 · rastrear</span><h3>One Shot<br>rastreio estático</h3></div>
       </div>
-    </div>
-    <div class="contra" data-a style="--d:7">
-      <div><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg>
-        <span>Nenhum <b>aplicativo</b> para a sua equipe aprender.</span></div>
-      <div><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg>
-        <span>Nenhum <b>sensor ou hardware</b> para instalar e manter.</span></div>
-      <div><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg>
-        <span>Nenhuma <b>planilha de venda</b> para liberar antes de começar.</span></div>
-    </div>
-  </div>
-  <p class="note" data-a style="--d:9">O que precisamos de vocês no começo é curto:
-    <b>o endereço das lojas do canal escolhido e a aprovação do protótipo</b>.</p>
-</section>
-<section class="slide" data-part="As entregas"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
-  <div class="hd" style="margin-bottom:22px">
-    <span class="eyebrow" data-a><i>(05)</i> O que a 75 LAB entrega</span>
-    <h2 data-a style="--d:1">Seis entregas de trade.<br><em>Pensar, criar e levar até a loja.</em></h2>
-  </div>
-  <div class="grupos">
-
-    <div class="grupo motor" data-a style="--d:2">
-      <div class="gh"><h3>Pensar</h3><span>a decisão antes da peça</span></div>
-      <div class="ent motor">
-        <div class="top">
-          <svg class="ico" viewBox="0 0 32 32"><path d="M16 3v26M3 16h26"/>
-            <circle class="pulse" cx="8.5" cy="8.5" r="3.4"/><circle cx="23.5" cy="8.5" r="3.4"/>
-            <circle cx="8.5" cy="23.5" r="3.4"/><circle class="pulse" cx="23.5" cy="23.5" r="3.4"/></svg>
-          <h4>Estratégia<br>por Canal</h4>
-        </div>
-        <p class="o">O plano quebrado por tipo de loja: missão de compra, mensagem e peça de cada canal.</p>
-        <div class="chega"><i>Você recebe</i>Um plano por canal, com o que fazer, o que evitar e qual
-          material resolve.</div>
+      <p class="o">A leitura pontual da implantação. O QR da peça carimba a loja no ato de instalar,
+        sem ninguém preencher planilha.</p>
+      <ul>
+        <li>QR impresso em cada peça</li>
+        <li>Registro de GPS e data da instalação</li>
+        <li>Foto da fachada e do material montado</li>
+        <li>Painel de cobertura, loja a loja</li>
+        <li>Lista de cobrança do que ficou sem instalar</li>
+      </ul>
+      <div class="meta">
+        <div><b>Formato</b><span>Por ponto de venda, pagamento único</span></div>
+        <div><b>Prazo</b><span>Ativo desde a primeira instalação</span></div>
       </div>
-      <div class="ent motor">
-        <div class="top">
-          <svg class="ico" viewBox="0 0 32 32"><rect x="4" y="7" width="24" height="21" rx="2"/>
-            <path d="M4 13h24M10 4v5M22 4v5"/><circle class="pulse" cx="16" cy="20.5" r="3.4"/></svg>
-          <h4>Calendário<br>de Trade</h4>
-        </div>
-        <p class="o">As ocasiões do ano com ação definida, para a produção virar carteira anual e não urgência mensal.</p>
-        <div class="chega"><i>Você recebe</i>Calendário de 12 meses com a ocasião, a ação e a peça
-          de cada janela.</div>
+      <div class="valor">
+        <span class="vl"><small>R$ </small>13,64</span>
+        <i>por PDV · único, ou 12x com total de R$ 17,05</i>
       </div>
     </div>
 
-    <div class="grupo ativar" data-a style="--d:3">
-      <div class="gh"><h3>Criar</h3><span>a ideia e o material</span></div>
-      <div class="ent ativar">
-        <div class="top">
-          <svg class="ico" viewBox="0 0 32 32"><path class="rise" d="M2 7h28v5H2z"/>
-            <path d="M4 12h24v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M13 20h6"/></svg>
-          <h4>Arquitetura<br>do Freezer</h4>
-        </div>
-        <p class="o">Sortimento, planograma e sinalização. O freezer deixa de ser armário e passa a guiar a escolha.</p>
-        <div class="chega"><i>Você recebe</i>Planograma por tipo de freezer e o cartaz que ensina
-          a montar, em uma página.</div>
+    <div class="entd ativar" data-a style="--d:5">
+      <div class="eh">
+        <svg class="ico" viewBox="0 0 32 32"><path d="M16 29s10-9.5 10-16A10 10 0 0 0 6 13c0 6.5 10 16 10 16z"/>
+          <circle class="pulse" cx="16" cy="13" r="3.4"/>
+          <path class="wave" d="M27 6a15 15 0 0 1 0 14"/></svg>
+        <div><span class="num">Entrega 08 · rastrear</span><h3>OnTiming<br>rastreio ao vivo</h3></div>
       </div>
-      <div class="ent ativar">
-        <div class="top">
-          <svg class="ico" viewBox="0 0 32 32"><path class="pulse" d="M18 2L7 18h8l-1 12 11-16h-8z"/></svg>
-          <h4>Conceito e<br>Enxoval de PDV</h4>
-        </div>
-        <p class="o">A ideia da campanha e todas as peças que ela gera, desenhadas, prototipadas e produzidas.</p>
-        <div class="chega"><i>Você recebe</i>Conceito, layouts, protótipo aprovado e produção
-          embalada por endereço.</div>
+      <p class="o">O ativo reporta enquanto fica na loja. Para o que tem valor ao longo do tempo,
+        como freezer e estrutura de campanha longa.</p>
+      <ul>
+        <li>Tudo o que o One Shot registra</li>
+        <li>Posição viva do ativo, por etiqueta</li>
+        <li>Permanência e movimentação entre lojas</li>
+        <li>Alerta quando o ativo sai do ponto</li>
+        <li>Histórico completo por endereço</li>
+      </ul>
+      <div class="meta">
+        <div><b>Formato</b><span>Assinatura de 6 a 12 meses</span></div>
+        <div><b>Prazo</b><span>Ativo na entrega da etiqueta</span></div>
       </div>
-    </div>
-
-    <div class="grupo escalar" data-a style="--d:4">
-      <div class="gh"><h3>Levar</h3><span>até a ponta, com prova</span></div>
-      <div class="ent escalar">
-        <div class="top">
-          <svg class="ico" viewBox="0 0 32 32"><path d="M6 3h20v26H6z"/><path d="M11 3v26"/>
-            <path class="blink" d="M15 10h7M15 15h7M15 20h4"/></svg>
-          <h4>Guia de<br>Execução</h4>
-        </div>
-        <p class="o">Como instalar e o que comprovar, na linguagem de quem está na loja. O QR registra sozinho.</p>
-        <div class="chega"><i>Você recebe</i>Manual de uma página, vídeo curto e painel de cobertura
-          por loja.</div>
-      </div>
-      <div class="ent escalar">
-        <div class="top">
-          <svg class="ico" viewBox="0 0 32 32"><path d="M4 9l12-5 12 5-12 5z"/>
-            <path d="M4 9v15l12 5 12-5V9"/><path d="M16 14v15"/>
-            <circle class="pulse" cx="26" cy="7" r="2.6"/></svg>
-          <h4>Catálogo do<br>Distribuidor</h4>
-        </div>
-        <p class="o">O que a ponta pode pedir, com foto, preço e prazo. Tira a compra local do improviso.</p>
-        <div class="chega"><i>Você recebe</i>Catálogo homologado, kits por porte de loja e processo
-          de pedido pronto.</div>
+      <div class="valor">
+        <span class="vl"><small>R$ </small>27,27</span>
+        <i>por PDV à vista · ou R$ 34,09 por PDV ao mês</i>
       </div>
     </div>
 
   </div>
-  <p class="note" data-a style="--d:6">Nenhuma delas depende de planilha de venda liberada, aplicativo novo
-    ou equipe extra do seu lado. <b>Pensar e criar a 75 LAB faz com o que já é público e com uma rodada
-    de visitas. Levar é a parte que o distribuidor já sabe fazer.</b></p>
-</section>
-<section class="slide dark" data-part="As entregas"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
-  <div class="hd" style="margin-bottom:20px">
-    <span class="eyebrow" data-a><i>(06)</i> Entrega 01 · Estratégia por Canal</span>
-    <h2 data-a style="--d:1">O mesmo picolé.<br><em>Quatro conversas diferentes.</em></h2>
-  </div>
-  <div class="canplano">
-    <div class="cp" data-a style="--d:2">
-      <div class="cph">
-        <svg class="ico" viewBox="0 0 32 32"><path d="M3 29V10l10-6 10 6v19"/><path d="M23 29V16h6v13"/>
-          <path class="blink" d="M8 13h3M8 18h3M15 13h3M15 18h3"/><path d="M1 29h30"/></svg>
-        <h3>Condomínios</h3>
-      </div>
-      <div class="ln"><b>Missão de compra</b><span>Impulso e consumo imediato, quase sempre no fim de semana.</span></div>
-      <div class="ln"><b>Mensagem</b><span>Ligar o picolé ao momento: piscina, visita, fim de tarde.</span></div>
-      <div class="ln peca"><b>Peça que resolve</b><span>Comunicação de elevador e área comum, com troca quinzenal.</span></div>
-    </div>
-
-    <div class="cp" data-a style="--d:3">
-      <div class="cph">
-        <svg class="ico" viewBox="0 0 32 32"><path d="M3 29h26"/><path d="M5 29V14h22v15"/>
-          <path class="rise" d="M9 14c0-3 2-4 2-6M16 14c0-3 2-4 2-6M23 14c0-3 2-4 2-6"/>
-          <path d="M5 21h22"/></svg>
-        <h3>Padarias</h3>
-      </div>
-      <div class="ln"><b>Missão de compra</b><span>Sobremesa rápida, logo depois da refeição ou do café.</span></div>
-      <div class="ln"><b>Mensagem</b><span>Entrar na conversa do balcão, onde a disputa é com o doce, não com outro sorvete.</span></div>
-      <div class="ln peca"><b>Peça que resolve</b><span>Material de balcão e de frente de caixa, com combo de preço fechado.</span></div>
-    </div>
-
-    <div class="cp" data-a style="--d:4">
-      <div class="cph">
-        <svg class="ico" viewBox="0 0 32 32"><path d="M7 3v12a4 4 0 0 0 8 0V3M11 15v14"/>
-          <path d="M24 3c-2 3-3 6-3 10v5h6V3z"/><path d="M24 18v11"/></svg>
-        <h3>Restaurantes</h3>
-      </div>
-      <div class="ln"><b>Missão de compra</b><span>Fechar a refeição, antes de a conta chegar à mesa.</span></div>
-      <div class="ln"><b>Mensagem</b><span>Oferecer sobremesa sem depender de o cliente lembrar que ela existe.</span></div>
-      <div class="ln peca"><b>Peça que resolve</b><span>Peça de mesa com QR e roteiro curto de sugestão para o salão.</span></div>
-    </div>
-
-    <div class="cp" data-a style="--d:5">
-      <div class="cph">
-        <svg class="ico" viewBox="0 0 32 32"><path d="M3 11l3-7h20l3 7v18H3z"/><path d="M3 11h26"/>
-          <path class="blink" d="M12 18h8v11h-8z"/></svg>
-        <h3>Proximidade</h3>
-      </div>
-      <div class="ln"><b>Missão de compra</b><span>Decisão rápida, com o mínimo de esforço de escolha.</span></div>
-      <div class="ln"><b>Mensagem</b><span>Reduzir a opção visível: campeões de venda primeiro, preço legível de longe.</span></div>
-      <div class="ln peca"><b>Peça que resolve</b><span>Régua de sabores no freezer e destaque no fluxo de saída.</span></div>
-    </div>
-  </div>
-  <p class="note" data-a style="--d:7">A estratégia sai de uma rodada de visitas aos quatro canais, feita pela 75 LAB,
-    somada ao portfólio público e à leitura de concorrência na própria loja.
-    <b>Não depende de relatório de venda liberado antes de começar.</b></p>
-</section>
-<section class="slide dark" data-part="As entregas"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
-  <div class="hd" style="margin-bottom:18px">
-    <span class="eyebrow" data-a><i>(07)</i> Entregas 03 e 04 · Arquitetura do Freezer e Enxoval</span>
-    <h2 data-a style="--d:1">O freezer já está na loja.<br><em>Falta dizer como arrumar.</em></h2>
-  </div>
-  <div class="frzw">
-    <div class="frzfoto" data-a style="--d:2" data-lb="Freezer Los Los, o ativo instalado em 6.200 pontos de venda">
-      <div class="luzf" aria-hidden="true"></div>
-      <img src="assets/img/freezer.png" alt="Freezer da Los Los">
-    </div>
-    <div>
-      <div class="zonas">
-        <div class="zona zq" data-a style="--d:3">
-          <i class="faixa"></i><b>Frente</b>
-          <p><em>O que mais vende, na altura da mão.</em> Nunca giro lento, nunca estoque.</p>
-        </div>
-        <div class="zona zm" data-a style="--d:4">
-          <i class="faixa"></i><b>Meio</b>
-          <p><em>O resto do sortimento, agrupado por sabor.</em> Quem já decidiu escolhe aqui.</p>
-        </div>
-        <div class="zona zf" data-a style="--d:5">
-          <i class="faixa"></i><b>Fundo</b>
-          <p><em>Estoque e giro lento.</em> Fora do alcance, nunca com comunicação.</p>
-        </div>
-        <div class="zona zt" data-a style="--d:6">
-          <i class="faixa"></i><b>Tampa</b>
-          <p><em>O cartaz que ensina tudo isso.</em> Uma página plastificada, presa por dentro.</p>
-        </div>
-      </div>
-      <div class="caixa" data-a style="--d:7">
-        <div><b>A 75 LAB desenha</b><span>Planograma, sinalização e a identidade da campanha.</span></div>
-        <div><b>A 75 LAB produz</b><span>Cotação, gráfica, montagem e conferência de cada item.</span></div>
-        <div><b>Chega assim</b><span>Uma caixa lacrada por endereço, com o guia dentro.</span></div>
-        <div><b>Comprova assim</b><span>O QR do guia registra quem instalou, onde e quando.</span></div>
-      </div>
-    </div>
-  </div>
-  <p class="note" data-a style="--d:9">A arquitetura vale para todos os tipos de freezer do parque e sobrevive
-    à troca de campanha: <b>a estrutura fica e a troca acontece em adesivo, lâmina e cartaz</b>,
-    que é a parte barata da produção.</p>
+  <p class="note" data-a style="--d:7">O rastreio é cobrado por ponto de venda, então cresce junto com a
+    cobertura e não antes dela. <b>O One Shot responde se chegou e foi instalado. O OnTiming responde
+    se continuou lá, em que estado e por quanto tempo.</b></p>
 </section>
 <section class="slide" data-part="O caminho"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
-  <div class="hd" style="margin-bottom:20px">
-    <span class="eyebrow" data-a><i>(08)</i> O caminho</span>
-    <h2 data-a style="--d:1">Oito semanas até <em>o material na rua</em>.<br><u>Sem piloto, sem espera.</u></h2>
+  <div class="hd" style="margin-bottom:16px">
+    <span class="eyebrow" data-a><i>(06)</i> Cronograma · outubro de 2026 a setembro de 2027</span>
+    <h2 data-a style="--d:1">Três ondas no ano.<br><em>A primeira na rua em oito semanas.</em></h2>
   </div>
-  <div class="caminho">
-    <div class="etapas">
-      <div class="etapa" data-a style="--d:2">
-        <span class="sem">Semanas 1 e 2</span>
-        <h4>Desenho</h4>
-        <p>Visitamos o canal, lemos a concorrência na loja e escrevemos a estratégia.</p>
-        <span class="quem"><i>Quem faz</i>75 LAB</span>
-      </div>
-      <div class="etapa" data-a style="--d:3">
-        <span class="sem">Semana 3</span>
-        <h4>Aprovação</h4>
-        <p>Vocês veem a estratégia e o protótipo montado num freezer de verdade.</p>
-        <span class="quem"><i>Quem faz</i>Los Los</span>
-      </div>
-      <div class="etapa" data-a style="--d:4">
-        <span class="sem">Semanas 4 a 6</span>
-        <h4>Produção</h4>
-        <p>Imprimimos, montamos e embalamos uma caixa por endereço.</p>
-        <span class="quem"><i>Quem faz</i>75 LAB</span>
-      </div>
-      <div class="etapa" data-a style="--d:5">
-        <span class="sem">Semanas 7 e 8</span>
-        <h4>Rua</h4>
-        <p>O distribuidor recebe a caixa lacrada e instala com o manual de uma página.</p>
-        <span class="quem"><i>Quem faz</i>Distribuidor</span>
-      </div>
-      <div class="etapa" data-a style="--d:6">
-        <span class="sem">Da semana 8 em diante</span>
-        <h4>Painel</h4>
-        <p>O QR preenche a cobertura sozinho e a lista de cobrança sai pronta.</p>
-        <span class="quem"><i>Quem faz</i>75 LAB</span>
-      </div>
+  <div class="cal">
+    <div class="calgrid" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i class="tri"></i><i></i><i></i><i class="tri"></i><i></i><i></i>
+      <i class="tri"></i><i></i><i></i>
     </div>
-    <div class="ondas" data-a style="--d:8">
-      <div class="onda4">
-        <span class="q">Onda 1 · out a dez</span>
-        <b>Padrão</b>
-        <p>Estratégia e enxoval do primeiro canal, já na rua.</p>
-      </div>
-      <div class="onda4 pico">
-        <span class="q">Onda 2 · jan a mar</span>
-        <b>Verão</b>
-        <p>Arquitetura do freezer e troca de comunicação no pico.</p>
-      </div>
-      <div class="onda4">
-        <span class="q">Onda 3 · abr a jun</span>
-        <b>Segundo canal</b>
-        <p>Estratégia e enxoval do segundo canal, com catálogo para o distribuidor.</p>
-      </div>
-      <div class="onda4">
-        <span class="q">Onda 4 · jul a set</span>
-        <b>Próximo verão</b>
-        <p>Calendário do ano seguinte, desenhado com o que a cobertura mostrou.</p>
-      </div>
+    <div class="calhead" data-a style="--d:2">
+      <span></span>
+      <span class="tri">4º tri 2026</span><span class="tri">1º tri 2027</span>
+      <span class="tri">2º tri 2027</span><span class="tri">3º tri 2027</span>
+    </div>
+    <div class="calmes" data-a style="--d:2">
+      <span></span>
+      <span>Out</span><span>Nov</span><span class="pico">Dez</span>
+      <span class="pico">Jan</span><span class="pico">Fev</span><span>Mar</span>
+      <span>Abr</span><span>Mai</span><span>Jun</span>
+      <span>Jul</span><span>Ago</span><span>Set</span>
+    </div>
+
+    <div class="calrow" data-a style="--d:3">
+      <span class="lbl"><b>Estratégia por Canal</b><i>Entrega 01</i></span>
+      <div class="bar" style="grid-column:2/4;--d:1"><span>Canal 1</span></div>
+    </div>
+    <div class="calrow" data-a style="--d:3">
+      <span class="lbl"><b>Calendário de Trade</b><i>Entrega 02</i></span>
+      <div class="bar" style="grid-column:2/3;--d:2"><span>Ano</span></div>
+    </div>
+    <div class="calrow" data-a style="--d:4">
+      <span class="lbl"><b>Arquitetura do Freezer</b><i>Entrega 03</i></span>
+      <div class="bar criar" style="grid-column:3/5;--d:3"><span>Parque todo</span></div>
+    </div>
+    <div class="calrow" data-a style="--d:4">
+      <span class="lbl"><b>Conceito e Enxoval</b><i>Entrega 04 · onda 1</i></span>
+      <div class="bar criar" style="grid-column:3/5;--d:4"><span>Verão</span></div>
+    </div>
+    <div class="calrow" data-a style="--d:5">
+      <span class="lbl"><b>Implantação na rua</b><i>Onda 1</i></span>
+      <div class="bar impl" style="grid-column:4/5;--d:5"><span>Instalação</span></div>
+    </div>
+    <div class="calrow" data-a style="--d:5">
+      <span class="lbl"><b>Conceito e Enxoval</b><i>Entrega 04 · onda 2</i></span>
+      <div class="bar criar" style="grid-column:5/7;--d:6"><span>Pico</span></div>
+    </div>
+    <div class="calrow" data-a style="--d:6">
+      <span class="lbl"><b>Implantação na rua</b><i>Onda 2</i></span>
+      <div class="bar impl" style="grid-column:7/8;--d:7"><span>Instalação</span></div>
+    </div>
+    <div class="calrow" data-a style="--d:6">
+      <span class="lbl"><b>Catálogo do Distribuidor</b><i>Entrega 06</i></span>
+      <div class="bar levar" style="grid-column:8/10;--d:8"><span>Homologação e janela de pedido</span></div>
+    </div>
+    <div class="calrow" data-a style="--d:7">
+      <span class="lbl"><b>Conceito e Enxoval</b><i>Entrega 04 · onda 3</i></span>
+      <div class="bar criar" style="grid-column:9/11;--d:9"><span>Defesa de giro</span></div>
+    </div>
+    <div class="calrow" data-a style="--d:7">
+      <span class="lbl"><b>Implantação na rua</b><i>Onda 3</i></span>
+      <div class="bar impl" style="grid-column:10/11;--d:10"><span>Instalação</span></div>
+    </div>
+    <div class="calrow" data-a style="--d:8">
+      <span class="lbl"><b>Guia e cobertura por QR</b><i>Entregas 05 e 07</i></span>
+      <div class="bar levar" style="grid-column:4/14;--d:11"><span>Contínuo, da primeira instalação em diante</span></div>
+    </div>
+    <div class="calrow" data-a style="--d:8">
+      <span class="lbl"><b>Plano do ano seguinte</b><i>Revisão das entregas 01 e 02</i></span>
+      <div class="bar" style="grid-column:12/14;--d:12"><span>Próximo verão</span></div>
     </div>
   </div>
-  <p class="note" data-a style="--d:10">A estrutura física fica na loja entre as ondas.
-    <b>A troca acontece em adesivo, lâmina e cartaz</b>, que é a parte barata,
-    por isso a segunda onda custa menos que a primeira.</p>
+  <p class="note" data-a style="--d:10">Pensar em coral, criar em lima, levar em verde e implantação em contraste.
+    A estrutura física fica na loja entre as ondas: <b>a troca acontece em adesivo, lâmina e cartaz</b>,
+    por isso a onda 2 custa menos produção que a onda 1.</p>
 </section>
-<section class="slide dark" data-part="O caminho"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
-  <div class="hd" style="margin-bottom:6px">
-    <span class="eyebrow" data-a><i>(09)</i> Investimento e decisão</span>
-    <h2 class="sm" data-a style="--d:1">Começa por um canal.<br><em>Cresce por onda, não por promessa.</em></h2>
+<section class="slide dark" data-part="O investimento"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
+  <div class="hd" style="margin-bottom:16px">
+    <span class="eyebrow" data-a><i>(07)</i> Valor por entrega</span>
+    <h2 data-a style="--d:1">Cada entrega tem preço próprio.<br><em>Você contrata o que precisa.</em></h2>
   </div>
-  <div class="dec">
-    <div class="cens">
-      <div class="cen rec" data-a style="--d:2">
-        <span class="selo">Recomendado</span>
-        <h3>P · Fundação</h3>
-        <span class="fee"><small>R$ </small><span class="tnum" data-cu="15">0</span><small> mil/mês</small></span>
-        <div class="dl">
-          <div><dt>Produção</dt><dd>R$ 15 a 20 mil</dd></div>
-          <div><dt>Canais por onda</dt><dd>1</dd></div>
-          <div><dt>Entregas</dt><dd>01 a 05</dd></div>
-          <div><dt>Total no ano</dt><dd>R$ 360 a 420 mil</dd></div>
-        </div>
-      </div>
-      <div class="cen" data-a style="--d:3">
-        <h3>M · Aceleração</h3>
-        <span class="fee"><small>R$ </small><span class="tnum" data-cu="22">0</span><small> mil/mês</small></span>
-        <div class="dl">
-          <div><dt>Produção</dt><dd>R$ 25 a 35 mil</dd></div>
-          <div><dt>Canais por onda</dt><dd>2</dd></div>
-          <div><dt>Entregas</dt><dd>as seis</dd></div>
-          <div><dt>Total no ano</dt><dd>R$ 564 a 684 mil</dd></div>
-        </div>
-      </div>
-      <div class="cen" data-a style="--d:4">
-        <h3>G · Escala</h3>
-        <span class="fee"><small>R$ </small><span class="tnum" data-cu="30">0</span><small> mil/mês</small></span>
-        <div class="dl">
-          <div><dt>Produção</dt><dd>R$ 40 a 60 mil</dd></div>
-          <div><dt>Canais por onda</dt><dd>3 ou mais</dd></div>
-          <div><dt>Entregas</dt><dd>as seis, multirregional</dd></div>
-          <div><dt>Total no ano</dt><dd>R$ 840 mil a 1,08 mi</dd></div>
-        </div>
-      </div>
+  <div class="tab">
+    <div class="tabrow th" data-a style="--d:2">
+      <span>Entrega</span><span>O que é</span><span>Formato e prazo</span><span style="text-align:right">Investimento</span>
     </div>
-    <div class="passos" data-a style="--d:5">
-      <div><b>01</b><span>Escolher o canal da onda 1.</span></div>
-      <div><b>02</b><span>Passar o endereço das lojas desse canal.</span></div>
-      <div><b>03</b><span>Aprovar o protótipo na semana 3.</span></div>
+
+    <div class="tabrow motor" data-a style="--d:3">
+      <div class="nm">
+        <svg class="ico" viewBox="0 0 32 32"><path d="M16 3v26M3 16h26"/>
+          <circle cx="8.5" cy="8.5" r="3.4"/><circle cx="23.5" cy="8.5" r="3.4"/>
+          <circle cx="8.5" cy="23.5" r="3.4"/><circle cx="23.5" cy="23.5" r="3.4"/></svg>
+        <b>Estratégia<br>por Canal</b>
+      </div>
+      <p class="de">O plano quebrado por tipo de loja: missão de compra, mensagem e peça.</p>
+      <p class="fm">Plano em PDF<br>3 semanas</p>
+      <span class="vl"><small>R$ </small>16.800<em>por canal</em></span>
     </div>
-    <div class="instfoot" data-a style="--d:6">
-      <div class="marcas">
-        <img class="ll" src="assets/logo/loslos-white.png" alt="Sorvetes Los Los">
-        <span class="x">&times;</span>
-        <img class="l75" src="assets/logo/75lab-paper.png" alt="75 LAB">
+
+    <div class="tabrow motor" data-a style="--d:4">
+      <div class="nm">
+        <svg class="ico" viewBox="0 0 32 32"><rect x="4" y="7" width="24" height="21" rx="2"/>
+          <path d="M4 13h24M10 4v5M22 4v5"/><circle cx="16" cy="20.5" r="3.4"/></svg>
+        <b>Calendário<br>de Trade</b>
       </div>
-      <div class="col">
-        <h4>75 LAB</h4>
-        <p class="ln">Aceleradora de trade marketing · São Paulo, Brasil<br>
-          75lab.com.br · contato@75lab.com.br · @setecincolab<br>
-          Razão social e CNPJ: <em>a preencher antes do envio</em></p>
+      <p class="de">As 12 janelas do ano com ocasião, ação e divisão da verba.</p>
+      <p class="fm">Planilha viva<br>2 semanas</p>
+      <span class="vl"><small>R$ </small>9.800<em>por ano</em></span>
+    </div>
+
+    <div class="tabrow ativar" data-a style="--d:5">
+      <div class="nm">
+        <svg class="ico" viewBox="0 0 32 32"><path d="M2 7h28v5H2z"/>
+          <path d="M4 12h24v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M13 20h6"/></svg>
+        <b>Arquitetura<br>do Freezer</b>
       </div>
-      <div class="col">
-        <h4>Apresentação</h4>
-        <p class="ln"><b>Caíque Becker</b> · Co-fundador e Head de Trade<br>
-          marketing@75lab.com.br · telefone <em>a preencher</em><br>
-          Com Daniel Coimbra · Co-fundador e CEO</p>
+      <p class="de">Planograma, zonas de visibilidade, sinalização e cartaz de montagem.</p>
+      <p class="fm">Manual e artes<br>4 semanas</p>
+      <span class="vl"><small>R$ </small>19.600<em>projeto</em></span>
+    </div>
+
+    <div class="tabrow ativar" data-a style="--d:6">
+      <div class="nm">
+        <svg class="ico" viewBox="0 0 32 32"><path d="M16 3l12 6.5v13L16 29 4 22.5v-13z"/>
+          <path d="M4 9.5l12 6.5 12-6.5M16 16v13"/></svg>
+        <b>Conceito e<br>Enxoval de PDV</b>
       </div>
-      <div class="fecho">
-        <p class="tagl">Ideia boa é<br>a que <em>acontece</em>.</p>
-        <span>Prova acima de promessa</span>
+      <p class="de">Conceito, manual de merchandising com peças em 3D por canal, layouts e produção.</p>
+      <p class="fm">Manual 3D e artes<br>6 semanas por onda</p>
+      <span class="vl"><small>R$ </small>32.000<em>por onda</em></span>
+    </div>
+
+    <div class="tabrow escalar" data-a style="--d:7">
+      <div class="nm">
+        <svg class="ico" viewBox="0 0 32 32"><path d="M6 3h20v26H6z"/><path d="M11 3v26"/>
+          <path d="M15 10h7M15 15h7M15 20h4"/></svg>
+        <b>Guia de<br>Execução</b>
       </div>
+      <p class="de">Manual de uma página, vídeo de montagem e treinamento remoto.</p>
+      <p class="fm">Página, PDF e vídeo<br>2 semanas</p>
+      <span class="vl"><small>R$ </small>8.400<em>projeto</em></span>
+    </div>
+
+    <div class="tabrow escalar" data-a style="--d:8">
+      <div class="nm">
+        <svg class="ico" viewBox="0 0 32 32"><path d="M4 9l12-5 12 5-12 5z"/>
+          <path d="M4 9v15l12 5 12-5V9"/><path d="M16 14v15"/></svg>
+        <b>Catálogo do<br>Distribuidor</b>
+      </div>
+      <p class="de">Catálogo homologado com kits, preço de referência e processo de pedido.</p>
+      <p class="fm">Catálogo digital<br>3 semanas</p>
+      <span class="vl"><small>R$ </small>12.600<em>por ano</em></span>
+    </div>
+
+    <div class="tabrow motor" data-a style="--d:9">
+      <div class="nm">
+        <svg class="ico" viewBox="0 0 32 32"><rect x="3" y="3" width="10" height="10" rx="1"/>
+          <rect x="19" y="3" width="10" height="10" rx="1"/><rect x="3" y="19" width="10" height="10" rx="1"/>
+          <path d="M19 19h4v4h-4zM25 19h4M19 25h4M25 25h4v4h-4"/></svg>
+        <b>One Shot<br>estático</b>
+      </div>
+      <p class="de">QR na peça com GPS e foto da fachada, mais painel de cobertura.</p>
+      <p class="fm">Por ponto de venda<br>pagamento único</p>
+      <span class="vl"><small>R$ </small>13,64<em>por PDV</em></span>
+    </div>
+
+    <div class="tabrow ativar" data-a style="--d:10">
+      <div class="nm">
+        <svg class="ico" viewBox="0 0 32 32"><path d="M16 29s10-9.5 10-16A10 10 0 0 0 6 13c0 6.5 10 16 10 16z"/>
+          <circle cx="16" cy="13" r="3.4"/></svg>
+        <b>OnTiming<br>ao vivo</b>
+      </div>
+      <p class="de">Etiqueta que reporta posição, permanência e movimentação do ativo.</p>
+      <p class="fm">Assinatura<br>6 a 12 meses</p>
+      <span class="vl"><small>R$ </small>27,27<em>por PDV à vista</em></span>
     </div>
   </div>
-  <p class="note" data-a style="--d:8">Só a faixa de fee de R$ 13 a 15 mil e a produção de R$ 15 a 20 mil vieram
-    da conversa de 14/09. <b>Os cenários M e G são simulações da 75 LAB</b>, não proposta fechada.
-    O número de lojas por onda sai do cadastro do canal escolhido. Produção não inclui mídia,
-    premiação, promotoria nem frete extraordinário.</p>
+  <p class="note" data-a style="--d:12">Valores de estratégia, criação e rastreio. <b>A produção física é cotada
+    à parte</b>, por peça e por volume, e gerida como carteira anual. O OnTiming também pode ser contratado
+    em mensalidade, a R$ 34,09 por PDV ao mês, com assinatura de 6 a 12 meses.</p>
+</section>
+<section class="slide" data-part="O investimento"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
+  <div class="hd" style="margin-bottom:14px">
+    <span class="eyebrow" data-a><i>(08)</i> Cenários de investimento</span>
+    <h2 class="sm" data-a style="--d:1">Os mesmos preços, <em>somados de três jeitos</em>.</h2>
+  </div>
+  <div class="cenT">
+    <div class="ctrow th" data-a style="--d:2">
+      <div class="cl"><span class="mono" style="font-size:9px;color:var(--soft)">Entrega</span></div>
+      <div class="rec"><b>P · Fundação</b><span>1 canal · 2 ondas · 1.000 lojas</span></div>
+      <div><b>M · Aceleração</b><span>2 canais · 3 ondas · 2.500 lojas</span></div>
+      <div><b>G · Escala</b><span>4 canais · 4 ondas · 6.200 lojas</span></div>
+    </div>
+
+    <div class="ctrow" data-a style="--d:3">
+      <div class="cl">Estratégia por Canal<i>R$ 16.800 por canal</i></div>
+      <div class="v" data-cen="P">16.800<i>1 canal</i></div>
+      <div class="v" data-cen="M">33.600<i>2 canais</i></div>
+      <div class="v" data-cen="G">67.200<i>4 canais</i></div>
+    </div>
+    <div class="ctrow" data-a style="--d:3">
+      <div class="cl">Calendário de Trade<i>R$ 9.800 por ano</i></div>
+      <div class="v zero" data-cen="P">○</div>
+      <div class="v" data-cen="M">9.800</div>
+      <div class="v" data-cen="G">9.800</div>
+    </div>
+    <div class="ctrow" data-a style="--d:4">
+      <div class="cl">Arquitetura do Freezer<i>R$ 19.600 projeto</i></div>
+      <div class="v" data-cen="P">19.600</div>
+      <div class="v" data-cen="M">19.600</div>
+      <div class="v" data-cen="G">19.600</div>
+    </div>
+    <div class="ctrow" data-a style="--d:4">
+      <div class="cl">Conceito e Enxoval de PDV<i>R$ 32.000 por onda</i></div>
+      <div class="v" data-cen="P">64.000<i>2 ondas</i></div>
+      <div class="v" data-cen="M">96.000<i>3 ondas</i></div>
+      <div class="v" data-cen="G">128.000<i>4 ondas</i></div>
+    </div>
+    <div class="ctrow" data-a style="--d:5">
+      <div class="cl">Guia de Execução<i>R$ 8.400 projeto</i></div>
+      <div class="v" data-cen="P">8.400</div>
+      <div class="v" data-cen="M">8.400</div>
+      <div class="v" data-cen="G">8.400</div>
+    </div>
+    <div class="ctrow" data-a style="--d:5">
+      <div class="cl">Catálogo do Distribuidor<i>R$ 12.600 por ano</i></div>
+      <div class="v zero" data-cen="P">○</div>
+      <div class="v" data-cen="M">12.600</div>
+      <div class="v" data-cen="G">12.600</div>
+    </div>
+    <div class="ctrow" data-a style="--d:6">
+      <div class="cl">One Shot · rastreio estático<i>R$ 13,64 por PDV</i></div>
+      <div class="v" data-cen="P">13.640<i>1.000 lojas</i></div>
+      <div class="v" data-cen="M">34.100<i>2.500 lojas</i></div>
+      <div class="v" data-cen="G">84.568<i>6.200 lojas</i></div>
+    </div>
+    <div class="ctrow" data-a style="--d:6">
+      <div class="cl">OnTiming · rastreio ao vivo<i>R$ 34,09 por PDV ao mês</i></div>
+      <div class="v zero" data-cen="P">○</div>
+      <div class="v zero" data-cen="M">○</div>
+      <div class="v" data-cen="G">81.816<i>200 pontos · 12 meses</i></div>
+    </div>
+
+    <div class="ctrow sub" data-a style="--d:7">
+      <div class="cl"><b>Estratégia, criação e rastreio</b></div>
+      <div class="v" data-cen="P">R$ 122.440</div>
+      <div class="v" data-cen="M">R$ 214.100</div>
+      <div class="v" data-cen="G">R$ 411.984</div>
+    </div>
+    <div class="ctrow" data-a style="--d:8">
+      <div class="cl">Produção física estimada<i>cotada à parte, carteira anual</i></div>
+      <div class="v" data-cen="P">180 a 240 mil</div>
+      <div class="v" data-cen="M">300 a 420 mil</div>
+      <div class="v" data-cen="G">480 a 720 mil</div>
+    </div>
+    <div class="ctrow tot" data-a style="--d:9">
+      <div class="cl">Total no ano</div>
+      <div class="v" data-cen="P">R$ 302 a 362 mil</div>
+      <div class="v" data-cen="M">R$ 514 a 634 mil</div>
+      <div class="v" data-cen="G">R$ 892 mil a 1,13 mi</div>
+    </div>
+  </div>
+  <div class="instfoot" data-a style="--d:11">
+    <div class="marcas">
+      <img class="ll" src="assets/logo/loslos-ink.png" alt="Sorvetes Los Los">
+      <span class="x">&times;</span>
+      <img class="l75" src="assets/logo/75lab-black.png" alt="75 LAB">
+    </div>
+    <div class="col">
+      <h4>75 LAB</h4>
+      <p class="ln">Aceleradora de trade marketing · São Paulo, Brasil<br>
+        75lab.com.br · contato@75lab.com.br · @setecincolab<br>
+        Razão social e CNPJ: <em>a preencher antes do envio</em></p>
+    </div>
+    <div class="col">
+      <h4>Apresentação</h4>
+      <p class="ln"><b>Caíque Becker</b> · Co-fundador e Head de Trade<br>
+        marketing@75lab.com.br · telefone <em>a preencher</em><br>
+        Com Daniel Coimbra · Co-fundador e CEO</p>
+    </div>
+    <div class="fecho">
+      <p class="tagl">Ideia boa é<br>a que <em>acontece</em>.</p>
+      <span>Prova acima de promessa</span>
+    </div>
+  </div>
+  <p class="note" data-a style="--d:13">O cenário P cabe na faixa sinalizada em 14/09.
+    <b>O volume de lojas de cada cenário é premissa de cálculo</b> e será substituído pelo cadastro real
+    do canal. Produção não inclui mídia, premiação, promotoria nem frete extraordinário.</p>
 </section>
 
 <svg id="grain" aria-hidden="true"><filter id="gf"><feTurbulence type="fractalNoise"
@@ -1492,17 +1661,16 @@ addEventListener("resize",fit);fit();
 
 /* ------------------------------------------------ capitulos */
 var CHAP=[
-  {t:"O desafio",   a:0, b:3},
-  {t:"Como fazemos",a:4, b:4},
-  {t:"As entregas", a:5, b:7},
-  {t:"O caminho",   a:8, b:9}
+  {t:"O desafio",     a:0, b:3},
+  {t:"As entregas",   a:4, b:5},
+  {t:"O caminho",     a:6, b:6},
+  {t:"O investimento",a:7, b:8}
 ];
 var TITLES=[
  "Em 2014 vocês instalaram um canal","6.200 freezers, 2.800 à vista",
  "O problema real por trás do pedido","O shopper decide em segundos",
- "A gente entrega pronto","As seis entregas de trade",
- "Estratégia por Canal","Arquitetura do Freezer",
- "Oito semanas até a rua","Investimento e decisão"
+ "Entregas: pensar e criar","Entregas: levar e rastrear",
+ "Cronograma do ano","Valor por entrega","Cenários de investimento"
 ];
 
 var slides=$$(".slide"),N=slides.length,i=0,busy=false;

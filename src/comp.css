@@ -142,108 +142,122 @@
   color:var(--soft);margin-top:9px;display:block}
 .selmsg.ok{color:var(--coral2);font-weight:700}
 
-/* 05 · como a 75 LAB trabalha -------------------------------------------- */
-.princ{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
-.pr4{border:2px solid var(--line);padding:24px 22px;display:flex;flex-direction:column;gap:14px;
+/* 05 e 06 · as entregas em detalhe --------------------------------------- */
+.entgrid{flex:1;min-height:0;display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.entd{border:2px solid var(--line);padding:19px 19px;display:flex;flex-direction:column;gap:12px;
   transition:.3s var(--ease);position:relative;overflow:hidden}
-.pr4::before{content:'';position:absolute;left:0;top:0;right:0;height:5px;background:var(--coral);
-  transform:scaleX(0);transform-origin:left;transition:.32s var(--ease)}
-.pr4:hover{border-color:var(--coral);transform:translateY(-5px)}
-.pr4:hover::before{transform:scaleX(1)}
-.pr4 .ico{color:var(--coral);width:40px;height:40px}
-.pr4 h3{font-size:31px;line-height:1.02}
-.pr4 p{font-size:13.5px;line-height:1.5;color:var(--soft)}
-.pr4 p b{color:var(--paper);font-weight:600}
-.slide:not(.dark) .pr4 p b{color:var(--ink)}
-.contra{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
-.contra>div{border:2px solid var(--line);padding:14px 18px;display:flex;gap:13px;align-items:center;
-  font-size:12.5px;line-height:1.42}
-.contra svg{width:19px;height:19px;stroke:var(--coral);fill:none;stroke-width:2.6;
-  stroke-linecap:round;flex-shrink:0}
-.contra b{font-weight:700}
+.entd::before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--pc);
+  transform:scaleY(0);transform-origin:top;transition:.32s var(--ease)}
+.entd:hover{border-color:var(--pc);transform:translateY(-5px)}
+.entd:hover::before{transform:scaleY(1)}
+.entd .eh{display:flex;align-items:flex-start;gap:13px}
+.entd .ico{color:var(--pc);width:32px;height:32px;flex-shrink:0}
+.entd .num{font-family:var(--fmono);font-size:8.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--pc);display:block;margin-bottom:3px}
+.entd h3{font-size:24px;line-height:1.02}
+.entd .o{font-size:12.5px;line-height:1.46;color:var(--soft)}
+.entd ul{list-style:none;display:flex;flex-direction:column;gap:5px}
+.entd li{font-size:11.5px;line-height:1.4;padding-left:14px;position:relative}
+.entd li::before{content:'';position:absolute;left:0;top:5.5px;width:6px;height:6px;background:var(--pc)}
+.entd li b{font-weight:700}
+.entd .meta{margin-top:auto;padding-top:11px;border-top:2px solid var(--line);
+  display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.entd .meta b{font-family:var(--fmono);font-size:8px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--soft);display:block;margin-bottom:2px}
+.entd .meta span{font-size:11px;line-height:1.35;font-weight:500}
+.entd .valor{border-top:2px solid var(--pc);padding-top:11px;display:flex;flex-direction:column;gap:2px}
+.entd .valor .vl{font-family:var(--fdisp);font-weight:900;font-size:36px;line-height:1;
+  letter-spacing:-.03em;color:var(--pc);font-variant-numeric:tabular-nums}
+.entd .valor .vl small{font-size:15px;letter-spacing:0}
+.entd .valor i{font-style:normal;font-family:var(--fmono);font-size:8.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--soft)}
 
-/* 06 · as seis entregas em três blocos ------------------------------------ */
-.grupos{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.grupo{display:flex;flex-direction:column;gap:2px}
-.grupo .gh{display:flex;align-items:baseline;gap:12px;padding-bottom:9px;margin-bottom:8px;
-  border-bottom:4px solid var(--pc)}
-.grupo .gh h3{font-size:30px;line-height:1;color:var(--pc)}
-.grupo .gh span{font-family:var(--fmono);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--soft)}
-.ent{border:2px solid var(--line);padding:15px 18px;display:flex;flex-direction:column;gap:8px;flex:1;
-  transition:.3s var(--ease);position:relative;overflow:hidden}
-.ent::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--pc);
-  transform:scaleY(0);transform-origin:top;transition:.3s var(--ease)}
-.ent:hover{border-color:var(--pc);transform:translateY(-4px)}
-.ent:hover::before{transform:scaleY(1)}
-.ent .top{display:flex;align-items:center;gap:12px}
-.ent .ico{color:var(--pc);width:28px;height:28px;flex-shrink:0}
-.ent h4{font-family:var(--fdisp);font-weight:900;font-size:23px;text-transform:uppercase;
-  letter-spacing:-.015em;line-height:1.02}
-.ent .o{font-size:12.5px;line-height:1.46;color:var(--soft)}
-.ent .chega{margin-top:auto;padding-top:11px;border-top:2px solid var(--line);font-size:11.5px;line-height:1.45}
-.ent .chega i{font-style:normal;font-family:var(--fmono);font-size:8.5px;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--pc);display:block;margin-bottom:3px}
+/* 07 · cronograma em calendário ------------------------------------------ */
+.cal{flex:1;min-height:0;display:flex;flex-direction:column;gap:2px;justify-content:center;position:relative}
+.calhead{display:grid;grid-template-columns:238px repeat(12,1fr);gap:0;
+  border-bottom:2px solid var(--line);padding-bottom:6px;margin-bottom:5px}
+.calhead .tri{grid-column:span 3;text-align:center;font-family:var(--fmono);font-size:8.5px;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--coral2);padding-bottom:7px}
+.calmes{display:grid;grid-template-columns:238px repeat(12,1fr);gap:0;padding-bottom:7px;
+  border-bottom:2px solid var(--line);margin-bottom:6px}
+.calmes span{text-align:center;font-family:var(--fmono);font-weight:700;font-size:9px;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
+.calmes span.pico{color:var(--teal)}
+.calrow{display:grid;grid-template-columns:238px repeat(12,1fr);gap:0;align-items:center;
+  min-height:28px;border-bottom:1px solid var(--line);transition:.2s;position:relative;z-index:2}
+.calrow:last-child{border-bottom:0}
+.calrow:hover{background:var(--fill)}
+.calrow .lbl{font-size:12px;line-height:1.3;padding-right:14px;display:flex;flex-direction:column;gap:1px}
+.calrow .lbl b{font-weight:600}
+.calrow .lbl i{font-style:normal;font-family:var(--fmono);font-size:8px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--soft)}
+.bar{height:14px;background:var(--bc,var(--coral2));margin:0 2px;display:flex;align-items:center;
+  padding:0 8px;transform-origin:left;animation:grw .8s var(--ease) both;
+  animation-delay:calc(var(--d,0)*70ms + 300ms)}
+.bar span{font-family:var(--fmono);font-weight:700;font-size:8px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink);white-space:nowrap;overflow:hidden}
+.bar.criar{--bc:#C0EE4E}
+.bar.levar{--bc:#01A290}
+.bar.levar span{color:var(--paper)}
+.bar.impl{--bc:#F4F1EA}
+.slide:not(.dark) .bar.impl{--bc:#12141C}
+.slide:not(.dark) .bar.impl span{color:var(--paper)}
+.calgrid{position:absolute;inset:0;pointer-events:none;display:grid;z-index:1;
+  grid-template-columns:238px repeat(12,1fr)}
+.calgrid i{border-left:1px solid var(--line);opacity:.5}
+.calgrid i:first-child,.calgrid i:nth-child(2){border-left:0}
+.calgrid i.tri{border-left-width:2px;opacity:1}
 
-/* 07 · a estratégia quebrada por canal ------------------------------------ */
-.canplano{flex:1;min-height:0;display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
-.cp{border:2px solid var(--line);display:flex;flex-direction:column;transition:.3s var(--ease)}
-.cp:hover{border-color:var(--coral);transform:translateY(-5px)}
-.cp .cph{padding:18px 20px;border-bottom:2px solid var(--line);display:flex;align-items:center;gap:13px;
-  background:var(--fill)}
-.cp .cph .ico{color:var(--coral);width:28px;height:28px;flex-shrink:0}
-.cp .cph h3{font-size:26px;line-height:1}
-.cp .ln{padding:14px 20px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:5px}
-.cp .ln:last-child{border-bottom:0;flex:1}
-.cp .ln b{font-family:var(--fmono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral)}
-.cp .ln span{font-size:12.5px;line-height:1.46}
-.cp .ln.peca span{font-weight:600}
-.cp .ln.peca{background:var(--fill)}
+/* 08 · tabela de valores ------------------------------------------------- */
+.tab{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center}
+.tabrow{display:grid;grid-template-columns:214px 1fr 156px 168px;gap:20px;align-items:center;
+  padding:7px 14px;border-bottom:1px solid var(--line);transition:.2s}
+.tabrow:hover{background:var(--fill)}
+.tabrow.th{border-bottom:2px solid var(--line);padding-bottom:10px}
+.tabrow.th span{font-family:var(--fmono);font-size:8.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--soft)}
+.tabrow .nm{display:flex;align-items:center;gap:12px}
+.tabrow .nm .ico{width:22px;height:22px;color:var(--pc);flex-shrink:0}
+.tabrow .nm b{font-family:var(--fdisp);font-weight:900;font-size:17px;text-transform:uppercase;
+  letter-spacing:-.01em;line-height:1.05}
+.tabrow .de{font-size:11.5px;line-height:1.4;color:var(--soft)}
+.tabrow .fm{font-family:var(--fmono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--soft);line-height:1.5}
+.tabrow .vl{font-family:var(--fdisp);font-weight:900;font-size:25px;line-height:1;letter-spacing:-.02em;
+  text-align:right;color:var(--pc);font-variant-numeric:tabular-nums}
+.tabrow .vl small{font-size:12px;letter-spacing:0}
+.tabrow .vl em{display:block;font-style:normal;font-family:var(--fmono);font-size:8px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin-top:3px}
 
-/* 08 · arquitetura do freezer e enxoval ----------------------------------- */
-.frzw{flex:1;min-height:0;display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
-.frzfoto{position:relative;display:grid;place-items:center;height:100%}
-.frzfoto img{max-height:330px;width:auto;filter:drop-shadow(0 26px 44px rgba(0,0,0,.5));position:relative;z-index:2}
-.frzfoto .luzf{position:absolute;width:360px;height:360px;border-radius:50%;
-  background:radial-gradient(circle,rgba(236,127,132,.3),transparent 66%);z-index:1}
-.zonas{display:grid;grid-template-columns:1fr 1fr;gap:2px}
-.zona{border:2px solid var(--line);padding:16px 18px;display:flex;flex-direction:column;gap:7px;
-  transition:.26s var(--ease)}
-.zona:hover{border-color:var(--zc,var(--coral))}
-.zona .faixa{height:6px;width:48px;background:var(--zc,var(--coral))}
-.zona b{font-family:var(--fdisp);font-weight:900;font-size:24px;text-transform:uppercase;line-height:1}
-.zona p{font-size:12.5px;line-height:1.46;color:var(--soft)}
-.zona p em{font-style:normal;color:var(--paper);font-weight:600}
-.slide:not(.dark) .zona p em{color:var(--ink)}
-.zq{--zc:#EC7F84}.zm{--zc:#01A290}.zf{--zc:rgba(244,241,234,.3)}
-.slide:not(.dark) .zf{--zc:rgba(18,20,28,.28)}
-.zt{--zc:#C0EE4E}
-.slide:not(.dark) .zt{--zc:#7FA81E}
-.caixa{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:2px}
-.caixa>div{border:2px solid var(--line);padding:13px 16px;display:flex;flex-direction:column;gap:5px}
-.caixa b{font-family:var(--fmono);font-size:8.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--coral)}
-.caixa span{font-size:12px;line-height:1.45;color:var(--soft)}
-
-/* 09 · o caminho --------------------------------------------------------- */
-.caminho{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:22px}
-.etapas{display:grid;grid-template-columns:repeat(5,1fr);gap:2px}
-.etapa{border:2px solid var(--line);padding:18px 18px;display:flex;flex-direction:column;gap:9px;
-  transition:.28s var(--ease)}
-.etapa:hover{border-color:var(--coral2);transform:translateY(-4px)}
-.etapa .sem{font-family:var(--fmono);font-size:9.5px;letter-spacing:.14em;color:var(--coral2)}
-.etapa h4{font-size:21px;font-weight:700;line-height:1.16}
-.etapa p{font-size:12px;line-height:1.44;color:var(--soft)}
-.etapa .quem{margin-top:auto;padding-top:10px;border-top:2px solid var(--line);font-family:var(--fmono);
-  font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;line-height:1.5}
-.etapa .quem i{font-style:normal;color:var(--coral2);display:block}
-.ondas{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
-.onda4{border:2px solid var(--line);padding:16px 18px;display:flex;flex-direction:column;gap:6px;
-  transition:.26s}
-.onda4:hover{border-color:var(--coral2)}
-.onda4.pico{border-color:var(--teal);background:var(--fill)}
-.onda4 .q{font-family:var(--fmono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
-.onda4 b{font-family:var(--fdisp);font-weight:900;font-size:25px;text-transform:uppercase;line-height:1}
-.onda4.pico b{color:var(--teal)}
-.onda4 p{font-size:11.5px;line-height:1.44;color:var(--soft)}
+/* 09 · cenários somando as entregas -------------------------------------- */
+.cenT{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center}
+.ctrow{display:grid;grid-template-columns:238px repeat(3,1fr);gap:2px;align-items:stretch}
+.ctrow>div{padding:3px 15px;display:flex;flex-direction:column;justify-content:center;
+  border-bottom:1px solid var(--line)}
+.ctrow>div:first-child{padding-left:0}
+.ctrow .cl{font-size:11.5px;font-weight:500;line-height:1.28}
+.ctrow .cl i{font-style:normal;font-family:var(--fmono);font-size:8px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--soft);display:block;margin-top:1px}
+.ctrow .v{font-family:var(--fmono);font-weight:700;font-size:13px;text-align:right;
+  font-variant-numeric:tabular-nums}
+.ctrow .v i{font-style:normal;font-size:8px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--soft);display:block;margin-top:1px;font-weight:400}
+.ctrow .v.zero{color:var(--soft);font-weight:400}
+.ctrow.th>div{border-bottom:2px solid var(--line);padding-bottom:8px;padding-top:0}
+.ctrow.th b{font-family:var(--fdisp);font-weight:900;font-size:21px;text-transform:uppercase;line-height:1}
+.ctrow.th span{font-family:var(--fmono);font-size:8px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--soft);display:block;margin-top:3px}
+.ctrow.sub>div{background:var(--fill);border-bottom:2px solid var(--line)}
+.ctrow.sub .v{font-size:15px;color:var(--coral)}
+.ctrow.tot>div{border-bottom:0;padding-top:9px}
+.ctrow.tot .v{font-family:var(--fdisp);font-weight:900;font-size:23px;letter-spacing:-.02em;
+  color:var(--coral);line-height:1}
+.ctrow.tot .cl{font-family:var(--fdisp);font-weight:900;font-size:20px;text-transform:uppercase}
+.ctcol-rec{position:relative}
+.ctrow.th .rec{border-top:4px solid var(--coral);padding-top:9px;position:relative}
+.ctrow.th .rec::after{content:'Recomendado';position:absolute;top:-4px;right:0;background:var(--coral);
+  color:var(--ink);font-family:var(--fmono);font-weight:700;font-size:7.5px;letter-spacing:.12em;
+  text-transform:uppercase;padding:3px 8px}
 
 /* 10 · investimento e decisão -------------------------------------------- */
 .dec{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:14px}
@@ -272,19 +286,19 @@
 .passos>div:hover{border-color:var(--coral)}
 .passos b{font-family:var(--fdisp);font-weight:900;font-size:27px;line-height:.9;color:var(--coral)}
 .passos span{font-size:12px;line-height:1.44}
-.instfoot{display:grid;grid-template-columns:auto 1fr 1fr auto;gap:26px;align-items:center;
-  border-top:2px solid var(--line);padding-top:14px}
+.instfoot{display:grid;grid-template-columns:auto 1fr 1fr auto;gap:24px;align-items:center;
+  border-top:2px solid var(--line);padding-top:11px;margin-top:10px}
 .instfoot .marcas{display:flex;align-items:center;gap:13px}
-.instfoot .marcas img.ll{height:42px}
+.instfoot .marcas img.ll{height:32px}
 .instfoot .marcas img.l75{height:16px}
 .instfoot .col h4{font-family:var(--fmono);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;
   color:var(--coral);margin-bottom:6px}
-.instfoot .col .ln{font-size:11px;line-height:1.55;color:var(--soft)}
+.instfoot .col .ln{font-size:10.5px;line-height:1.5;color:var(--soft)}
 .instfoot .col .ln b{color:var(--paper);font-weight:600}
 .slide:not(.dark) .instfoot .col .ln b{color:var(--ink)}
 .instfoot .col .ln em{font-style:normal;font-family:var(--fmono);font-size:9px;color:var(--coral)}
 .instfoot .fecho{text-align:right}
-.instfoot .fecho .tagl{font-family:var(--ftext);font-weight:700;font-size:18px;line-height:1.22;letter-spacing:-.02em}
+.instfoot .fecho .tagl{font-family:var(--ftext);font-weight:700;font-size:16px;line-height:1.22;letter-spacing:-.02em}
 .instfoot .fecho .tagl em{font-style:normal;color:var(--coral)}
 .instfoot .fecho span{font-family:var(--fmono);font-size:8px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--soft);display:block;margin-top:6px}
@@ -302,29 +316,28 @@
   .note{font-size:9.5px;max-width:none}
   .hd{margin-bottom:16px!important}
 
-  .mapaw,.vsg,.mkt3,.jorline,.canais,.grupos,.canplano,.frzw,.zonas,.caixa,.princ,.contra,
-  .etapas,.ondas,.cens,.passos,.instfoot{grid-template-columns:1fr!important}
+  .mapaw,.vsg,.mkt3,.jorline,.canais,.entgrid,.instfoot{grid-template-columns:1fr!important}
 
-  /* 01 */
+  /* 01 · capa */
   .marca{display:none}
   .marcalogo{position:relative;right:auto;top:auto;transform:none;width:170px;
     margin:0 auto 6px;animation:none}
   .open{gap:20px}
   .open .sub s{display:none}
 
-  /* 02 */
+  /* 02 · mapa */
   .mapabox{height:auto}
   .mapa{height:300px;width:auto}
   .figrow .n{font-size:46px;min-width:108px}
   .figrow{gap:13px}
 
-  /* 03 */
+  /* 03 · leitura */
   .arw{display:none}
   .vsitem{min-height:0}
   .mkt3>div{padding:13px 0!important;border-right:0!important;border-bottom:2px solid var(--line)}
   .mkt3>div:last-child{border-bottom:0}
 
-  /* 04 */
+  /* 04 · shopper e canais */
   .jorline::before{display:none}
   .jst{flex-direction:row;text-align:left;align-items:flex-start;gap:12px;
     border-bottom:1px solid var(--line);padding:11px 0}
@@ -332,36 +345,38 @@
   .jst .sec{font-size:24px;min-width:40px}
   .canal{padding:14px 0;border:0;border-bottom:2px solid var(--line);background:transparent}
 
-  /* 05 */
-  .mv{border-right:0;border-bottom:2px solid var(--line);padding:13px 0}
-  .mv .q{min-height:0}
-  .flowline{display:none}
-  .regra{padding:15px;gap:14px}
+  /* 05 e 06 · entregas */
+  .entd{padding:16px 0;border:0;border-bottom:2px solid var(--line)}
+  .entd::before{display:none}
+  .entd .valor .vl{font-size:31px}
 
-  /* 06 */
-  .camada{gap:11px}
-  .camada .lbl{padding:3px 0 3px 13px}
+  /* 07 · o calendário rola na horizontal dentro da própria caixa */
+  .cal{overflow-x:auto;padding-bottom:6px}
+  .calhead,.calmes,.calrow,.calgrid{grid-template-columns:142px repeat(12,44px)!important;min-width:670px}
+  .calgrid{width:670px}
+  .calrow .lbl{font-size:10px;padding-right:8px}
+  .calrow .lbl i{font-size:7px}
+  .bar span{display:none}
 
-  /* 07 */
-  .fcard .cap{height:148px}
-  .fcard .cap img{max-height:116px}
+  /* 08 · tabela de valores */
+  .tabrow{grid-template-columns:1fr;gap:7px;padding:15px 0;border-bottom:2px solid var(--line)}
+  .tabrow.th{display:none}
+  .tabrow .vl{text-align:left;font-size:30px}
+  .tabrow .vl em{margin-top:1px}
+  .tabrow .fm{font-size:9px}
 
-  /* 08 */
-  .modo{padding:15px 0;border:0;border-bottom:2px solid var(--line)}
-  .pmapa{height:auto;grid-template-columns:1fr;gap:14px;padding:14px 16px;justify-items:center}
-  .mapinha{height:190px}
-  .plegenda{max-width:none}
-  .painel .lin{grid-template-columns:1fr 70px 50px;font-size:10px}
-
-  /* 09 */
-  .etapa{padding:13px 0;border:0;border-bottom:2px solid var(--line)}
-  .onda4{padding:12px 0;border:0;border-bottom:2px solid var(--line)}
-
-  /* 10 */
-  .cen{padding:15px 0;border:0;border-bottom:2px solid var(--line)}
-  .cen .selo{position:static;align-self:flex-start;margin-bottom:4px}
-  .passos>div{padding:12px 0;border:0;border-bottom:2px solid var(--line)}
-  .instfoot{gap:16px;padding-top:15px}
+  /* 09 · cenários */
+  .cenT{overflow-x:auto}
+  .ctrow{grid-template-columns:150px repeat(3,120px)!important;min-width:520px}
+  .ctrow>div{padding:6px 10px}
+  .ctrow .cl{font-size:10.5px}
+  .ctrow .v{font-size:11px}
+  .ctrow.th b{font-size:15px}
+  .ctrow.th span{font-size:7px}
+  .ctrow.tot .v{font-size:15px}
+  .ctrow.tot .cl{font-size:15px}
+  .ctrow.th .rec::after{display:none}
+  .instfoot{gap:16px;padding-top:15px;margin-top:14px}
   .instfoot .fecho{text-align:left}
 
   div:has(> .btn){flex-wrap:wrap!important;gap:8px!important}

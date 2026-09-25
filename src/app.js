@@ -43,17 +43,16 @@ addEventListener("resize",fit);fit();
 
 /* ------------------------------------------------ capitulos */
 var CHAP=[
-  {t:"O desafio",   a:0, b:3},
-  {t:"Como fazemos",a:4, b:4},
-  {t:"As entregas", a:5, b:7},
-  {t:"O caminho",   a:8, b:9}
+  {t:"O desafio",     a:0, b:3},
+  {t:"As entregas",   a:4, b:5},
+  {t:"O caminho",     a:6, b:6},
+  {t:"O investimento",a:7, b:8}
 ];
 var TITLES=[
  "Em 2014 vocês instalaram um canal","6.200 freezers, 2.800 à vista",
  "O problema real por trás do pedido","O shopper decide em segundos",
- "A gente entrega pronto","As seis entregas de trade",
- "Estratégia por Canal","Arquitetura do Freezer",
- "Oito semanas até a rua","Investimento e decisão"
+ "Entregas: pensar e criar","Entregas: levar e rastrear",
+ "Cronograma do ano","Valor por entrega","Cenários de investimento"
 ];
 
 var slides=$$(".slide"),N=slides.length,i=0,busy=false;
