@@ -36,24 +36,26 @@ Para gerar: `python3 build.py`. O `index.html` é o resultado e não deve ser ed
 | 03 | Nossa leitura | O que parece contra o que é, mais três números de categoria |
 | 04 | Shopper e canais | Os seis segundos do freezer e as quatro missões de compra |
 | 05 | Como a 75 LAB trabalha | Quatro princípios e o que a proposta não exige de ninguém |
-| 06 | As soluções | Cinco soluções, cada uma com o que é e o que chega na mão |
-| 07 | Freezer Padrão | O freezer real da marca e as quatro zonas do planograma |
-| 08 | QR de Instalação | Os quatro passos da prova e o painel de cobertura simulado |
+| 06 | As seis entregas | O portfólio de trade em três blocos: pensar, criar e levar |
+| 07 | Estratégia por Canal | O plano quebrado nos quatro canais, com missão, mensagem e peça |
+| 08 | Arquitetura do Freezer | O freezer real, as quatro zonas e o que vai na caixa |
 | 09 | O caminho | Oito semanas até a rua e as quatro ondas do ano |
 | 10 | Investimento e decisão | Cenários P, M e G, próximos passos e o bloco institucional |
 
-## As cinco soluções
+## As seis entregas de trade
 
-| # | Solução | O que chega |
+| Bloco | Entrega | Você recebe |
 | --- | --- | --- |
-| 01 | Freezer Padrão | Cartaz dentro da tampa, adesivos de sabor e régua de preço |
-| 02 | Kit de Canal | Testeira, adesivo de porta e material de balcão, por endereço |
-| 03 | Régua de Sabores | Peça no freezer e a mesma régua no celular, pelo QR |
-| 04 | QR de Instalação | Painel de cobertura por loja e relatório de uma página |
-| 05 | Peça em 3D | Link e QR que abrem a peça em tamanho real no chão da loja |
+| Pensar | **Estratégia por Canal** | Um plano por canal, com o que fazer, o que evitar e qual material resolve |
+| Pensar | **Calendário de Trade** | Calendário de 12 meses com a ocasião, a ação e a peça de cada janela |
+| Criar | **Arquitetura do Freezer** | Planograma por tipo de freezer e o cartaz que ensina a montar |
+| Criar | **Conceito e Enxoval de PDV** | Conceito, layouts, protótipo aprovado e produção embalada por endereço |
+| Levar | **Guia de Execução** | Manual de uma página, vídeo curto e painel de cobertura por loja |
+| Levar | **Catálogo do Distribuidor** | Catálogo homologado, kits por porte de loja e processo de pedido pronto |
 
-Todas executadas pela 75 LAB, sem depender de dado de venda do cliente, sem aplicativo,
-sem sensor e **sem fase de piloto**: a primeira onda já vai para todas as lojas do canal escolhido.
+Pensar e criar a 75 LAB faz com o que já é público e com uma rodada de visitas, sem depender
+de dado de venda liberado. **Sem fase de piloto**: a primeira onda já vai para todas as lojas
+do canal escolhido.
 
 ## Navegação
 
@@ -80,7 +82,7 @@ projetadas em SVG, com os pontos distribuídos conforme a densidade populacional
 ## Pendências
 
 - Razão social, CNPJ e telefone da 75 LAB não constam em fonte pública e estão marcados na tela 10
-- A solução 05 depende de a 75 LAB modelar em 3D cada peça que desenhar, o que faz parte do escopo
-  de produção e não existe ainda para nenhuma peça Los Los
+- A comprovação por QR depende de a 75 LAB publicar a página de cada peça, o que faz parte do escopo
+  de produção e ainda não existe para nenhuma peça Los Los
 - Números e regiões do painel de rastreamento são simulação de tela, não resultado real
 - Os cenários M e G são simulações da 75 LAB, não proposta fechada

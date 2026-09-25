@@ -162,84 +162,66 @@
   stroke-linecap:round;flex-shrink:0}
 .contra b{font-weight:700}
 
-/* 06 · as cinco soluções -------------------------------------------------- */
-.sols{flex:1;min-height:0;display:grid;grid-template-columns:repeat(5,1fr);gap:2px}
-.sol{border:2px solid var(--line);padding:22px 20px;display:flex;flex-direction:column;gap:13px;
+/* 06 · as seis entregas em três blocos ------------------------------------ */
+.grupos{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.grupo{display:flex;flex-direction:column;gap:2px}
+.grupo .gh{display:flex;align-items:baseline;gap:12px;padding-bottom:9px;margin-bottom:8px;
+  border-bottom:4px solid var(--pc)}
+.grupo .gh h3{font-size:30px;line-height:1;color:var(--pc)}
+.grupo .gh span{font-family:var(--fmono);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--soft)}
+.ent{border:2px solid var(--line);padding:15px 18px;display:flex;flex-direction:column;gap:8px;flex:1;
   transition:.3s var(--ease);position:relative;overflow:hidden}
-.sol::before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--pc);
-  transform:scaleY(0);transform-origin:top;transition:.32s var(--ease)}
-.sol:hover{border-color:var(--pc);transform:translateY(-5px)}
-.sol:hover::before{transform:scaleY(1)}
-.sol .ico{color:var(--pc);width:38px;height:38px}
-.sol .num{font-family:var(--fmono);font-size:9px;letter-spacing:.16em;color:var(--pc)}
-.sol h3{font-size:27px;line-height:1.02}
-.sol .o{font-size:14px;line-height:1.44;font-weight:500}
-.sol .chega{margin-top:auto;padding-top:13px;border-top:2px solid var(--line);font-size:12px;line-height:1.46;
-  color:var(--soft)}
-.sol .chega i{font-style:normal;font-family:var(--fmono);font-size:8.5px;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--pc);display:block;margin-bottom:4px}
+.ent::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--pc);
+  transform:scaleY(0);transform-origin:top;transition:.3s var(--ease)}
+.ent:hover{border-color:var(--pc);transform:translateY(-4px)}
+.ent:hover::before{transform:scaleY(1)}
+.ent .top{display:flex;align-items:center;gap:12px}
+.ent .ico{color:var(--pc);width:28px;height:28px;flex-shrink:0}
+.ent h4{font-family:var(--fdisp);font-weight:900;font-size:23px;text-transform:uppercase;
+  letter-spacing:-.015em;line-height:1.02}
+.ent .o{font-size:12.5px;line-height:1.46;color:var(--soft)}
+.ent .chega{margin-top:auto;padding-top:11px;border-top:2px solid var(--line);font-size:11.5px;line-height:1.45}
+.ent .chega i{font-style:normal;font-family:var(--fmono);font-size:8.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--pc);display:block;margin-bottom:3px}
 
-/* 07 · o freezer padrão --------------------------------------------------- */
-.frzw{flex:1;min-height:0;display:grid;grid-template-columns:.88fr 1.12fr;gap:52px;align-items:center}
+/* 07 · a estratégia quebrada por canal ------------------------------------ */
+.canplano{flex:1;min-height:0;display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.cp{border:2px solid var(--line);display:flex;flex-direction:column;transition:.3s var(--ease)}
+.cp:hover{border-color:var(--coral);transform:translateY(-5px)}
+.cp .cph{padding:18px 20px;border-bottom:2px solid var(--line);display:flex;align-items:center;gap:13px;
+  background:var(--fill)}
+.cp .cph .ico{color:var(--coral);width:28px;height:28px;flex-shrink:0}
+.cp .cph h3{font-size:26px;line-height:1}
+.cp .ln{padding:14px 20px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:5px}
+.cp .ln:last-child{border-bottom:0;flex:1}
+.cp .ln b{font-family:var(--fmono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral)}
+.cp .ln span{font-size:12.5px;line-height:1.46}
+.cp .ln.peca span{font-weight:600}
+.cp .ln.peca{background:var(--fill)}
+
+/* 08 · arquitetura do freezer e enxoval ----------------------------------- */
+.frzw{flex:1;min-height:0;display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
 .frzfoto{position:relative;display:grid;place-items:center;height:100%}
 .frzfoto img{max-height:330px;width:auto;filter:drop-shadow(0 26px 44px rgba(0,0,0,.5));position:relative;z-index:2}
 .frzfoto .luzf{position:absolute;width:360px;height:360px;border-radius:50%;
   background:radial-gradient(circle,rgba(236,127,132,.3),transparent 66%);z-index:1}
 .zonas{display:grid;grid-template-columns:1fr 1fr;gap:2px}
-.zona{border:2px solid var(--line);padding:18px 20px;display:flex;flex-direction:column;gap:8px;
+.zona{border:2px solid var(--line);padding:16px 18px;display:flex;flex-direction:column;gap:7px;
   transition:.26s var(--ease)}
 .zona:hover{border-color:var(--zc,var(--coral))}
-.zona .faixa{height:6px;width:52px;background:var(--zc,var(--coral))}
-.zona b{font-family:var(--fdisp);font-weight:900;font-size:26px;text-transform:uppercase;line-height:1}
-.zona p{font-size:13px;line-height:1.46;color:var(--soft)}
+.zona .faixa{height:6px;width:48px;background:var(--zc,var(--coral))}
+.zona b{font-family:var(--fdisp);font-weight:900;font-size:24px;text-transform:uppercase;line-height:1}
+.zona p{font-size:12.5px;line-height:1.46;color:var(--soft)}
 .zona p em{font-style:normal;color:var(--paper);font-weight:600}
 .slide:not(.dark) .zona p em{color:var(--ink)}
 .zq{--zc:#EC7F84}.zm{--zc:#01A290}.zf{--zc:rgba(244,241,234,.3)}
 .slide:not(.dark) .zf{--zc:rgba(18,20,28,.28)}
 .zt{--zc:#C0EE4E}
 .slide:not(.dark) .zt{--zc:#7FA81E}
-
-/* 08 · a prova em duas fotos ---------------------------------------------- */
-.rast{flex:1;min-height:0;display:grid;grid-template-columns:1.06fr .94fr;gap:44px;align-items:center}
-.fluxo{display:flex;flex-direction:column;gap:2px}
-.fx{display:grid;grid-template-columns:54px 1fr;gap:18px;align-items:center;padding:15px 18px;
-  border:2px solid var(--line);transition:.26s var(--ease)}
-.fx:hover{border-color:var(--coral)}
-.fx .ico{color:var(--coral);width:32px;height:32px}
-.fx b{font-size:16px;font-weight:700;line-height:1.2;display:block;margin-bottom:3px}
-.fx span{font-size:12.5px;line-height:1.44;color:var(--soft)}
-.fx .n{font-family:var(--fmono);font-size:9px;letter-spacing:.14em;color:var(--coral)}
-.painel{border:2px solid var(--line);overflow:hidden;background:var(--fill)}
-.painel .ph{display:flex;align-items:center;gap:10px;padding:11px 16px;border-bottom:2px solid var(--line)}
-.painel .ph b{font-family:var(--fmono);font-size:9px;letter-spacing:.14em;text-transform:uppercase}
-.painel .ph i{width:8px;height:8px;border-radius:50%;background:var(--lime);display:block;
-  animation:pls 2s ease-in-out infinite}
-.painel .pmapa{height:196px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;
-  justify-content:center;border-bottom:2px solid var(--line);padding:10px 22px;overflow:hidden}
-.mapinha{height:176px;width:auto;max-width:100%;overflow:visible;display:block}
-.plegenda{display:flex;flex-direction:column;gap:10px;max-width:230px}
-.plegenda span{display:flex;align-items:center;gap:9px;font-family:var(--fmono);font-weight:700;
-  font-size:9px;letter-spacing:.11em;text-transform:uppercase;color:var(--soft)}
-.plegenda i{width:9px;height:9px;border-radius:50%;display:block;flex-shrink:0}
-.plegenda i.ok{background:var(--lime)}
-.plegenda i.al{background:var(--coral)}
-.plegenda p{font-size:10.5px;line-height:1.45;color:var(--soft)}
-.painel .pb{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line)}
-.painel .pb>div{background:var(--ink);padding:14px 16px;display:flex;flex-direction:column;gap:3px}
-.slide:not(.dark) .painel .pb>div{background:var(--paper)}
-.painel .pb b{font-family:var(--fdisp);font-weight:900;font-size:36px;line-height:1;color:var(--lime);
-  font-variant-numeric:tabular-nums}
-.slide:not(.dark) .painel .pb b{color:var(--teal)}
-.painel .pb span{font-family:var(--fmono);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
-.pin{fill:var(--lime);animation:pinin .5s var(--ease) both;animation-delay:calc(var(--k)*110ms + 700ms)}
-.pin .furo{fill:var(--ink)}
-.slide:not(.dark) .pin .furo{fill:var(--paper)}
-.pin .onda{fill:none;stroke:var(--lime);stroke-width:2;opacity:0;transform-box:fill-box;
-  transform-origin:center;animation:pinonda 3.4s ease-out infinite;animation-delay:calc(var(--k)*320ms)}
-.pin.alerta{fill:var(--coral)}
-.pin.alerta .onda{stroke:var(--coral)}
-@keyframes pinin{from{opacity:0}to{opacity:1}}
-@keyframes pinonda{0%{opacity:.75;transform:scale(.3)}72%{opacity:0;transform:scale(1)}100%{opacity:0}}
+.caixa{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:2px}
+.caixa>div{border:2px solid var(--line);padding:13px 16px;display:flex;flex-direction:column;gap:5px}
+.caixa b{font-family:var(--fmono);font-size:8.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--coral)}
+.caixa span{font-size:12px;line-height:1.45;color:var(--soft)}
 
 /* 09 · o caminho --------------------------------------------------------- */
 .caminho{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:22px}
@@ -320,8 +302,8 @@
   .note{font-size:9.5px;max-width:none}
   .hd{margin-bottom:16px!important}
 
-  .mapaw,.vsg,.mkt3,.jorline,.canais,.sols,.rast,.zonas,.princ,.contra,
-  .etapas,.ondas,.cens,.passos,.instfoot,.painel .pb,.fluxo{grid-template-columns:1fr!important}
+  .mapaw,.vsg,.mkt3,.jorline,.canais,.grupos,.canplano,.frzw,.zonas,.caixa,.princ,.contra,
+  .etapas,.ondas,.cens,.passos,.instfoot{grid-template-columns:1fr!important}
 
   /* 01 */
   .marca{display:none}
