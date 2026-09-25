@@ -1,79 +1,58 @@
-<section class="slide dark" data-part="O sistema">
+<section class="slide dark" data-part="As soluções">
   <div class="hd" style="margin-bottom:20px">
-    <span class="eyebrow" data-a><i>(07)</i> Plano de rastreamento 75 LAB</span>
-    <h2 class="sm" data-a style="--d:1">Material de PDV sem rastreamento é despesa.
-      <em>Com rastreamento vira ativo</em> <u>com histórico.</u></h2>
+    <span class="eyebrow" data-a><i>(07)</i> Solução 04 · QR de Instalação</span>
+    <h2 data-a style="--d:1">A prova não é um sistema.<br><em>É o QR que já vem na peça.</em></h2>
   </div>
   <div class="rast">
-    <div class="painel" data-a style="--d:2">
+    <div class="fluxo" data-a style="--d:2">
+      <div class="fx">
+        <svg class="ico" viewBox="0 0 32 32"><path d="M4 9l12-5 12 5-12 5z"/>
+          <path d="M4 9v15l12 5 12-5V9"/><path class="blink" d="M20 20h6v6h-6z"/></svg>
+        <div><span class="n">Passo 01</span><b>A peça chega com o QR impresso</b>
+          <span>Cada material sai da gráfica já com o código da loja de destino.</span></div>
+      </div>
+      <div class="fx">
+        <svg class="ico" viewBox="0 0 32 32"><rect x="9" y="2" width="14" height="28" rx="2"/>
+          <path class="pulse" d="M13 9h6v6h-6z"/><path d="M14 25h4"/></svg>
+        <div><span class="n">Passo 02</span><b>Quem instala aponta o celular</b>
+          <span>Sem baixar nada. Abre no navegador, tira a foto e pronto.</span></div>
+      </div>
+      <div class="fx">
+        <svg class="ico" viewBox="0 0 32 32"><path d="M16 29s10-9.5 10-16A10 10 0 0 0 6 13c0 6.5 10 16 10 16z"/>
+          <circle class="pulse" cx="16" cy="13" r="3.4"/></svg>
+        <div><span class="n">Passo 03</span><b>Foto, loja e data entram sozinhas</b>
+          <span>Ninguém preenche planilha. O registro nasce do próprio ato de instalar.</span></div>
+      </div>
+      <div class="fx">
+        <svg class="ico" viewBox="0 0 32 32"><rect x="3" y="5" width="26" height="22" rx="2"/>
+          <path d="M3 11h26"/><path class="rise" d="M9 22v-5M15 22v-8M21 22v-3"/></svg>
+        <div><span class="n">Passo 04</span><b>Você recebe o painel de cobertura</b>
+          <span>Quantas lojas receberam, quantas instalaram e onde ainda falta.</span></div>
+      </div>
+    </div>
+    <div class="painel" data-a style="--d:3">
       <div class="ph">
-        <i></i><b>Painel de execução · ciclo de verão</b>
+        <i></i><b>Cobertura da onda 1</b>
         <span style="flex:1"></span>
         <em class="src">simulação de tela</em>
       </div>
       <div class="pmapa">
         __MAPINHA__
         <div class="plegenda">
-          <span><i class="ok"></i> No padrão · 403 PDVs</span>
-          <span><i class="al"></i> Desvio aberto · 9 PDVs</span>
-          <p>Cada pino é uma praça com implantação ativa no ciclo. O desvio abre uma tarefa
-            de correção para o distribuidor responsável, com prazo.</p>
+          <span><i class="ok"></i> Instalado</span>
+          <span><i class="al"></i> Peça entregue, sem instalar</span>
+          <p>Cada pino é uma praça da onda. O que não acende vira a lista de cobrança
+            do distribuidor, com endereço.</p>
         </div>
       </div>
       <div class="pb">
-        <div><b class="tnum" data-cu="412">0</b><span>PDVs comprovados</span></div>
-        <div><b class="tnum" data-cu="87">0</b><span>nota média de execução</span></div>
-        <div><b class="tnum" data-cu="9" style="color:var(--coral)">0</b><span>alertas abertos</span></div>
-      </div>
-      <div class="lista">
-        <div class="lin ok"><span>Litoral de São Paulo</span><em>62 PDVs</em><u>94</u></div>
-        <div class="lin ok"><span>Interior paulista</span><em>118 PDVs</em><u>88</u></div>
-        <div class="lin alerta"><span>Nordeste</span><em>74 PDVs</em><u>61</u></div>
-      </div>
-    </div>
-    <div class="modos">
-      <div class="modo" style="--pc:#EC7F84" data-a style="--d:3">
-        <span class="k">Modalidade 01</span>
-        <h3>Leitura<br>única</h3>
-        <p>Leitura pontual no momento da implantação. Responde a pergunta mais básica e mais ignorada
-          do trade: <b>chegou, foi instalado e está no padrão?</b></p>
-        <div class="onda">
-          <svg viewBox="0 0 440 42" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M0 32h160" stroke="rgba(244,241,234,.22)" stroke-width="2" fill="none"/>
-            <path class="draw" style="--d:2" d="M160 32l22-24 22 24" stroke="#EC7F84" stroke-width="3" fill="none"/>
-            <path d="M204 32h236" stroke="rgba(244,241,234,.22)" stroke-width="2" fill="none"/>
-            <circle class="pop" style="--d:6" cx="182" cy="9" r="5.5" fill="#EC7F84"/>
-          </svg>
-        </div>
-        <ul>
-          <li>Foto padronizada e data</li><li>Lista de conferência</li>
-          <li>Localização do PDV</li><li>Relatório do ciclo</li>
-        </ul>
-        <p style="margin-top:6px"><b>Onde entra:</b> em toda campanha do PDV Modular e em cada onda
-          de implantação feita por distribuidor.</p>
-      </div>
-      <div class="modo" style="--pc:#C0EE4E" data-a style="--d:4">
-        <span class="k">Modalidade 02</span>
-        <h3>Leitura<br>contínua</h3>
-        <p>Acompanhamento recorrente enquanto o ativo permanece no ponto. Responde a pergunta que decide
-          investimento: <b>continuou lá, em que estado e por quanto tempo?</b></p>
-        <div class="onda">
-          <svg viewBox="0 0 440 42" preserveAspectRatio="none" aria-hidden="true">
-            <path class="draw" style="--d:2"
-                  d="M0 32h34l14-22 14 22h34l14-22 14 22h34l14-22 14 22h34l14-22 14 22h34l14-22 14 22h34l14-22 14 22h42"
-                  stroke="#C0EE4E" stroke-width="3" fill="none"/>
-          </svg>
-        </div>
-        <ul>
-          <li>Permanência e movimentação</li><li>Disponibilidade de sabor</li>
-          <li>Condição e manutenção</li><li>Alertas de desvio</li>
-        </ul>
-        <p style="margin-top:6px"><b>Onde entra:</b> no parque de freezers e nas estruturas que ficam
-          meses no ponto carregando o valor da marca.</p>
+        <div><b class="tnum" data-cu="412">0</b><span>lojas instaladas</span></div>
+        <div><b class="tnum" data-cu="94" data-cu-suf="%">0</b><span>da onda coberta</span></div>
+        <div><b class="tnum" data-cu="9" style="color:var(--coral)">0</b><span>lojas a cobrar</span></div>
       </div>
     </div>
   </div>
-  <p class="note" data-a style="--d:6">Números e regiões do painel são <b>simulação de tela</b>, não resultado real.
-    A recomendação é começar pela leitura única, que usa só foto e lista de conferência e não exige hardware,
-    e só levar a leitura contínua a sensores depois que a conta do Olho no PDV fechar.</p>
+  <p class="note" data-a style="--d:5">Números do painel são <b>simulação de tela</b>, não resultado real.
+    O mesmo QR abre a peça em 3D para quem vai instalar, então o distribuidor vê como o material fica
+    antes de montar.</p>
 </section>

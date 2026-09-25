@@ -43,17 +43,17 @@ addEventListener("resize",fit);fit();
 
 /* ------------------------------------------------ capitulos */
 var CHAP=[
-  {t:"O desafio", a:0, b:3},
-  {t:"A tese",    a:4, b:4},
-  {t:"O sistema", a:5, b:7},
-  {t:"A decisão", a:8, b:9}
+  {t:"O desafio",   a:0, b:3},
+  {t:"Como fazemos",a:4, b:4},
+  {t:"As soluções", a:5, b:7},
+  {t:"O caminho",   a:8, b:9}
 ];
 var TITLES=[
  "Em 2014 vocês instalaram um canal","6.200 freezers, 2.800 à vista",
  "O problema real por trás do pedido","O shopper decide em segundos",
- "Enxergar, priorizar, ativar, medir, escalar","Dez produtos em três camadas",
- "Os cinco que entram agora","Rastreamento: leitura única e contínua",
- "Noventa dias e doze meses","Investimento e decisão"
+ "A gente entrega pronto","As cinco soluções",
+ "Freezer Padrão","QR de Instalação",
+ "Oito semanas até a rua","Investimento e decisão"
 ];
 
 var slides=$$(".slide"),N=slides.length,i=0,busy=false;
