@@ -349,6 +349,70 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
   transform:translateY(-50%);animation:marcain 1.3s var(--ease) .45s both}
 @keyframes marcain{from{opacity:0;transform:translateY(-50%) scale(.9)}to{opacity:1;transform:translateY(-50%) scale(1)}}
 
+/* 02 · quem é a 75 LAB --------------------------------------------------- */
+.sobre{flex:1;min-height:0;display:grid;grid-template-columns:1.06fr .94fr;gap:52px;align-items:center}
+.balcao{display:flex;flex-direction:column;gap:22px}
+.balcao .frase{font-family:var(--fdisp);font-weight:900;font-size:56px;line-height:1.02;
+  text-transform:uppercase;letter-spacing:-.025em}
+.balcao .frase em{font-style:normal;color:var(--coral)}
+.balcao .lead{max-width:48ch}
+.fund{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.fund>div{border:2px solid var(--line);padding:17px 18px;display:flex;flex-direction:column;gap:7px;
+  transition:.26s var(--ease)}
+.fund>div:hover{border-color:var(--coral)}
+.fund .de{font-family:var(--fmono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral)}
+.fund b{font-size:16px;font-weight:700;line-height:1.2}
+.fund b i{font-style:normal;display:block;font-family:var(--fmono);font-size:9px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--soft);font-weight:400;margin-top:3px}
+.fund p{font-size:11.5px;line-height:1.46;color:var(--soft)}
+.princ4{display:flex;flex-direction:column;gap:2px}
+.princ4>div{display:flex;align-items:flex-start;gap:15px;padding:15px 18px;border:2px solid var(--line);
+  transition:.26s var(--ease)}
+.princ4>div:hover{border-color:var(--coral);transform:translate(-3px,-3px)}
+.princ4 .k{font-family:var(--fdisp);font-weight:900;font-size:30px;line-height:.9;color:var(--coral);
+  min-width:40px}
+.princ4 b{font-size:15.5px;font-weight:700;line-height:1.25;display:block;margin-bottom:3px}
+.princ4 span{font-size:12px;line-height:1.46;color:var(--soft)}
+
+/* 03 · a prova da 75 LAB ------------------------------------------------- */
+.prova{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:24px}
+.provatop{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center}
+.bignum{display:flex;flex-direction:column;gap:4px}
+.bignum b{font-family:var(--fdisp);font-weight:900;font-size:132px;line-height:.82;letter-spacing:-.04em;
+  color:var(--coral);font-variant-numeric:tabular-nums}
+.bignum span{font-family:var(--fmono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
+.marcas75{display:grid;grid-template-columns:repeat(6,1fr);gap:2px}
+.marcas75 div{border:2px solid var(--line);padding:13px 10px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:4px;text-align:center;transition:.26s var(--ease);min-height:62px}
+.marcas75 div:hover{border-color:var(--coral);background:var(--fill)}
+.marcas75 b{font-family:var(--fdisp);font-weight:900;font-size:16px;text-transform:uppercase;
+  letter-spacing:-.01em;line-height:1.02}
+.marcas75 span{font-family:var(--fmono);font-size:7.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.cats{display:grid;grid-template-columns:repeat(6,1fr);gap:2px}
+.cats>div{border-top:4px solid var(--pc,var(--coral));padding:13px 2px 0;display:flex;
+  flex-direction:column;gap:5px}
+.cats b{font-family:var(--fdisp);font-weight:900;font-size:19px;text-transform:uppercase;line-height:1}
+.cats span{font-size:11px;line-height:1.42;color:var(--soft)}
+.citacao{display:flex;align-items:center;gap:20px;border-left:5px solid var(--coral);padding:14px 22px;
+  background:var(--fill)}
+.citacao p{font-family:var(--ftext);font-weight:700;font-size:21px;line-height:1.24;letter-spacing:-.02em}
+.citacao span{font-family:var(--fmono);font-size:9px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--soft);white-space:nowrap}
+
+/* 04 · as dores das reuniões --------------------------------------------- */
+.dores{flex:1;min-height:0;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:1fr 1fr;gap:2px}
+.dor{border:2px solid var(--line);padding:17px 18px;display:flex;flex-direction:column;gap:9px;
+  transition:.28s var(--ease);position:relative;overflow:hidden}
+.dor::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--coral);
+  transform:scaleY(0);transform-origin:top;transition:.3s var(--ease)}
+.dor:hover{border-color:var(--coral);transform:translateY(-4px)}
+.dor:hover::before{transform:scaleY(1)}
+.dor .k{font-family:var(--fmono);font-size:8.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--coral)}
+.dor b{font-size:15px;font-weight:700;line-height:1.28}
+.dor p{font-size:11.5px;line-height:1.46;color:var(--soft);margin-top:auto}
+.dor p i{font-style:normal;font-family:var(--fmono);font-size:8px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--coral);display:block;margin-bottom:3px}
+
 /* 02 · o ponto cego e o mapa --------------------------------------------- */
 .mapaw{flex:1;min-height:0;display:grid;grid-template-columns:.92fr 1.08fr;gap:44px;align-items:center}
 .mapabox{position:relative;height:100%;display:grid;place-items:center}
@@ -556,7 +620,7 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
 /* 09 · cenários somando as entregas -------------------------------------- */
 .cenT{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center}
 .ctrow{display:grid;grid-template-columns:238px repeat(3,1fr);gap:2px;align-items:stretch}
-.ctrow>div{padding:3px 15px;display:flex;flex-direction:column;justify-content:center;
+.ctrow>div{padding:2px 15px;display:flex;flex-direction:column;justify-content:center;
   border-bottom:1px solid var(--line)}
 .ctrow>div:first-child{padding-left:0}
 .ctrow .cl{font-size:11.5px;font-weight:500;line-height:1.28}
@@ -573,7 +637,13 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
   color:var(--soft);display:block;margin-top:3px}
 .ctrow.sub>div{background:var(--fill);border-bottom:2px solid var(--line)}
 .ctrow.sub .v{font-size:15px;color:var(--coral)}
-.ctrow.tot>div{border-bottom:0;padding-top:9px}
+.ctrow.tot>div{border-bottom:2px solid var(--line);padding-top:7px;padding-bottom:7px}
+.ctrow.mensal>div{border-bottom:0;padding-top:7px;background:rgba(1,162,144,.07)}
+.ctrow.mensal>div:first-child{background:transparent}
+.ctrow.mensal .cl{font-family:var(--fdisp);font-weight:900;font-size:17px;text-transform:uppercase;line-height:1.05}
+.ctrow.mensal .cl i{font-family:var(--fmono);font-weight:400;text-transform:uppercase}
+.ctrow.mensal .v{font-family:var(--fdisp);font-weight:900;font-size:20px;letter-spacing:-.02em;
+  color:var(--teal);line-height:1}
 .ctrow.tot .v{font-family:var(--fdisp);font-weight:900;font-size:23px;letter-spacing:-.02em;
   color:var(--coral);line-height:1}
 .ctrow.tot .cl{font-family:var(--fdisp);font-weight:900;font-size:20px;text-transform:uppercase}
@@ -611,7 +681,7 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
 .passos b{font-family:var(--fdisp);font-weight:900;font-size:27px;line-height:.9;color:var(--coral)}
 .passos span{font-size:12px;line-height:1.44}
 .instfoot{display:grid;grid-template-columns:auto 1fr 1fr auto;gap:24px;align-items:center;
-  border-top:2px solid var(--line);padding-top:11px;margin-top:10px}
+  border-top:2px solid var(--line);padding-top:10px;margin-top:9px}
 .instfoot .marcas{display:flex;align-items:center;gap:13px}
 .instfoot .marcas img.ll{height:32px}
 .instfoot .marcas img.l75{height:16px}
@@ -640,7 +710,13 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
   .note{font-size:9.5px;max-width:none}
   .hd{margin-bottom:16px!important}
 
-  .mapaw,.vsg,.mkt3,.jorline,.canais,.entgrid,.instfoot{grid-template-columns:1fr!important}
+  .mapaw,.vsg,.mkt3,.jorline,.canais,.entgrid,.instfoot,.sobre,.fund,.provatop,
+  .dores{grid-template-columns:1fr!important}
+  .marcas75,.cats{grid-template-columns:repeat(2,1fr)!important}
+  .marcas75 div{min-width:0;padding:11px 6px;min-height:54px}
+  .marcas75 b{font-size:13px;word-break:break-word}
+  .cats>div{min-width:0}
+  .dores{grid-template-rows:none!important}
 
   /* 01 · capa */
   .marca{display:none}
@@ -649,7 +725,21 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
   .open{gap:20px}
   .open .sub s{display:none}
 
-  /* 02 · mapa */
+  /* 02 e 03 · a 75 LAB */
+  .balcao .frase{font-size:32px}
+  .bignum b{font-size:84px}
+  .princ4>div{padding:13px 0;border:0;border-bottom:2px solid var(--line)}
+  .princ4>div:hover{transform:none}
+  .fund>div{padding:13px 0;border:0;border-bottom:2px solid var(--line)}
+  .cats>div{padding:11px 0 0}
+  .citacao{padding:12px 16px}
+  .citacao p{font-size:16px}
+
+  /* 04 · dores */
+  .dor{padding:14px 0;border:0;border-bottom:2px solid var(--line)}
+  .dor::before{display:none}
+
+  /* 05 · mapa */
   .mapabox{height:auto}
   .mapa{height:300px;width:auto}
   .figrow .n{font-size:46px;min-width:108px}
@@ -752,9 +842,148 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
   <p class="note" data-a style="--d:9">Fontes: sorvetesloslos.com.br e ABRAMARK.
     Base do diagnóstico: conversa Los Los &times; 75 LAB de 14 de setembro de 2026.</p>
 </section>
+<section class="slide" data-part="A 75 LAB"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
+  <div class="hd" style="margin-bottom:22px">
+    <span class="eyebrow" data-a><i>(01)</i> Quem está do outro lado desta proposta</span>
+    <h2 data-a style="--d:1">A 75 LAB nasceu da soma<br>de <em>dois lados que quase nunca</em>
+      <u>se sentam à mesma mesa</u>.</h2>
+  </div>
+  <div class="sobre">
+    <div class="balcao">
+      <p class="frase" data-a style="--d:2">Os dois lados<br>do <em>balcão</em>.</p>
+      <p class="lead" data-a style="--d:3">Por mais de 15 anos vivemos a distância entre a intenção comercial
+        de uma marca e o que de fato acontece no canal. Por isso não entregamos solução de prateleira:
+        <b>plugamos a solução certa, na língua de quem decide</b>, que é margem, giro e positivação.</p>
+      <div class="fund" data-a style="--d:4">
+        <div>
+          <span class="de">Veio do varejo</span>
+          <b>Caíque Becker<i>Co-fundador · Head de Trade</i></b>
+          <p>Conhece o PDV pelo lado de quem opera a loja: layout, execução no ponto e a régua de aprovação
+            das iniciativas da indústria.</p>
+        </div>
+        <div>
+          <span class="de">Veio da indústria</span>
+          <b>Daniel Coimbra<i>Co-fundador · CEO</i></b>
+          <p>Pensa a marca a partir do P&amp;L: lançamento de produto, gestão de categoria e a estratégia
+            comercial que precisa virar venda na ponta.</p>
+        </div>
+      </div>
+    </div>
+    <div class="princ4">
+      <div data-a style="--d:5"><span class="k">01</span>
+        <div><b>Vivemos o trade, não só aprendemos.</b>
+          <span>Quem desenha a peça já teve de aprovar, instalar e cobrar peça igual.</span></div></div>
+      <div data-a style="--d:6"><span class="k">02</span>
+        <div><b>Solução certa, nunca de prateleira.</b>
+          <span>Cada entrega nasce do desafio do cliente, não de um catálogo pronto.</span></div></div>
+      <div data-a style="--d:7"><span class="k">03</span>
+        <div><b>Para cada desafio, a equipe certa.</b>
+          <span>O cliente não compra uma entrega. Acessa uma rede de especialistas.</span></div></div>
+      <div data-a style="--d:8"><span class="k">04</span>
+        <div><b>Prova acima de promessa.</b>
+          <span>Sem markup oculto e sem relatório bonito: o que conta é o que aconteceu na loja.</span></div></div>
+    </div>
+  </div>
+  <p class="note" data-a style="--d:10">75 LAB · Aceleradora de Trade Marketing, com base em São Paulo.
+    <b>Ideia boa é a que acontece.</b></p>
+</section>
+<section class="slide dark" data-part="A 75 LAB"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
+  <div class="hd" style="margin-bottom:20px">
+    <span class="eyebrow" data-a><i>(02)</i> O que já colocamos na rua</span>
+    <h2 data-a style="--d:1">Mais de 500 projetos.<br><em>A mesma lógica em todos.</em></h2>
+  </div>
+  <div class="prova">
+    <div class="provatop">
+      <div class="bignum" data-a style="--d:2">
+        <b><small style="font-size:52px">+</small><span class="tnum" data-cu="500">0</span></b>
+        <span>projetos executados para marcas líderes</span>
+      </div>
+      <div class="marcas75" data-a style="--d:3">
+        <div><b>LG</b><span>PDV</span></div>
+        <div><b>Whirlpool</b><span>PDV</span></div>
+        <div><b>3 Corações</b><span>Food service</span></div>
+        <div><b>Pague Menos</b><span>PDV</span></div>
+        <div><b>O Boticário</b><span>Ativação</span></div>
+        <div><b>Loungerie</b><span>Ativação</span></div>
+        <div><b>Alltak</b><span>Stand</span></div>
+        <div><b>Ciranda</b><span>Stand e CRM</span></div>
+        <div><b>Kelco</b><span>Evento</span></div>
+        <div><b>Pinc</b><span>Stand</span></div>
+        <div><b>Turbo Filtros</b><span>Stand</span></div>
+        <div><b>e outras</b><span>84 no portfólio</span></div>
+      </div>
+    </div>
+    <div class="cats" data-a style="--d:5">
+      <div style="--pc:#EC7F84"><b>Estratégia</b><span>Plano de trade por canal, ocasião e prioridade.</span></div>
+      <div style="--pc:#EC7F84"><b>PDV</b><span>Do wobbler à ilha, desenhado para o espaço real da loja.</span></div>
+      <div style="--pc:#C0EE4E"><b>Ativação</b><span>Display modular, experiência e ponto extra.</span></div>
+      <div style="--pc:#C0EE4E"><b>Stand</b><span>Feira e convenção, da planta à montagem.</span></div>
+      <div style="--pc:#01A290"><b>Digital</b><span>Página, QR, painel e ferramenta sob medida.</span></div>
+      <div style="--pc:#01A290"><b>Produção</b><span>Cotação, gráfica, logística e entrega por endereço.</span></div>
+    </div>
+    <div class="citacao" data-a style="--d:7">
+      <p>&ldquo;Uma extensão estratégica do nosso time de trade.&rdquo;</p>
+      <span>Depoimento de cliente · 75lab.com.br</span>
+    </div>
+  </div>
+  <p class="note" data-a style="--d:9">Clientes e categorias listados são cases públicos, publicados em 75lab.com.br.
+    <b>Para a Los Los, a mesma estrutura entra aplicada ao freezer</b>, que é o ativo que a marca já tem
+    em 6.200 lojas.</p>
+</section>
+<section class="slide" data-part="A 75 LAB"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
+  <div class="hd" style="margin-bottom:20px">
+    <span class="eyebrow" data-a><i>(03)</i> O que ouvimos nas últimas reuniões</span>
+    <h2 data-a style="--d:1">Oito dores.<br><em>Nenhuma delas é falta de material.</em></h2>
+  </div>
+  <div class="dores">
+    <div class="dor" data-a style="--d:2">
+      <span class="k">Dor 01 · alcance</span>
+      <b>São 6.200 lojas no país e cerca de 2.800 em São Paulo.</b>
+      <p><i>O que trava</i>Visitar o parque inteiro não fecha a conta, e o resto decide sozinho.</p>
+    </div>
+    <div class="dor" data-a style="--d:2">
+      <span class="k">Dor 02 · estrutura</span>
+      <b>O trade interno ainda é enxuto e pouco estruturado.</b>
+      <p><i>O que trava</i>Falta braço para desenhar, produzir e cobrar ao mesmo tempo.</p>
+    </div>
+    <div class="dor" data-a style="--d:3">
+      <span class="k">Dor 03 · execução</span>
+      <b>Freezer limpo e organizado não significa melhor posicionamento.</b>
+      <p><i>O que trava</i>A operação cuida da higiene, mas ninguém define a hierarquia de venda.</p>
+    </div>
+    <div class="dor" data-a style="--d:3">
+      <span class="k">Dor 04 · visibilidade</span>
+      <b>Não existe como enxergar a execução nos outros estados.</b>
+      <p><i>O que trava</i>Sem prova de campo, a decisão de investir vira aposta.</p>
+    </div>
+    <div class="dor" data-a style="--d:4">
+      <span class="k">Dor 05 · canais</span>
+      <b>Queda de giro em lojas de condomínio, padarias e restaurantes.</b>
+      <p><i>O que trava</i>Cada canal caiu por um motivo, e a resposta tem sido a mesma para todos.</p>
+    </div>
+    <div class="dor" data-a style="--d:4">
+      <span class="k">Dor 06 · experimentação</span>
+      <b>Cerca de 95% do faturamento vem de picolé, e degustar o produto inteiro é caro.</b>
+      <p><i>O que trava</i>A barreira de experimentação vira barreira de crescimento.</p>
+    </div>
+    <div class="dor" data-a style="--d:5">
+      <span class="k">Dor 07 · ponta</span>
+      <b>O distribuidor tem de investir localmente, mas sem padrão definido.</b>
+      <p><i>O que trava</i>Cada praça compra o que quer, e a marca chega diferente em cada lugar.</p>
+    </div>
+    <div class="dor" data-a style="--d:5">
+      <span class="k">Dor 08 · orçamento</span>
+      <b>A produção se concentra em poucos períodos do ano.</b>
+      <p><i>O que trava</i>A verba vira urgência de última hora em vez de carteira planejada.</p>
+    </div>
+  </div>
+  <p class="note" data-a style="--d:7">Levantamento a partir da conversa Los Los &times; 75 LAB de 14 de setembro
+    de 2026. Os números citados são os declarados pela Los Los na própria reunião.
+    <b>As oito dores são o critério de corte desta proposta</b>: entrega que não resolve uma delas ficou de fora.</p>
+</section>
 <section class="slide dark" data-part="O desafio"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
   <div class="hd" style="margin-bottom:22px">
-    <span class="eyebrow" data-a><i>(01)</i> O ponto cego</span>
+    <span class="eyebrow" data-a><i>(04)</i> O ponto cego</span>
     <h2 data-a style="--d:1">2.800 freezers cabem numa rota de visita.<br><em>Os outros 3.400 não.</em></h2>
   </div>
   <div class="mapaw">
@@ -933,7 +1162,7 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
 </section>
 <section class="slide" data-part="O desafio"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
   <div class="hd" style="margin-bottom:20px">
-    <span class="eyebrow" data-a><i>(02)</i> Nossa leitura</span>
+    <span class="eyebrow" data-a><i>(05)</i> Nossa leitura</span>
     <h2 data-a style="--d:1">O problema não é <u>fazer mais peças</u>.<br>É <em>fazer a mesma peça em todo lugar</em>.</h2>
   </div>
   <div class="desafio">
@@ -981,7 +1210,7 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
 </section>
 <section class="slide dark" data-part="O desafio"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
   <div class="hd" style="margin-bottom:8px">
-    <span class="eyebrow" data-a><i>(03)</i> Shopper e canais</span>
+    <span class="eyebrow" data-a><i>(06)</i> Shopper e canais</span>
     <h2 data-a style="--d:1">A decisão leva segundos.<br><em>E o freezer é o único vendedor presente.</em></h2>
   </div>
   <div class="shop">
@@ -1063,7 +1292,7 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
 </section>
 <section class="slide" data-part="As entregas"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
   <div class="hd" style="margin-bottom:20px">
-    <span class="eyebrow" data-a><i>(04)</i> As entregas · pensar e criar</span>
+    <span class="eyebrow" data-a><i>(07)</i> As entregas · pensar e criar</span>
     <h2 data-a style="--d:1">A decisão antes da peça,<br><em>e a peça antes da gráfica.</em></h2>
   </div>
   <div class="entgrid">
@@ -1088,10 +1317,6 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
         <div><b>Formato</b><span>Plano por canal, em apresentação e PDF</span></div>
         <div><b>Prazo</b><span>3 semanas por canal</span></div>
       </div>
-      <div class="valor">
-        <span class="vl"><small>R$ </small>16.800</span>
-        <i>por canal · revisão anual inclusa</i>
-      </div>
     </div>
 
     <div class="entd motor" data-a style="--d:3">
@@ -1113,10 +1338,6 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
         <div><b>Formato</b><span>Calendário de 12 meses, em planilha viva</span></div>
         <div><b>Prazo</b><span>2 semanas</span></div>
       </div>
-      <div class="valor">
-        <span class="vl"><small>R$ </small>9.800</span>
-        <i>por ano · com revisão trimestral</i>
-      </div>
     </div>
 
     <div class="entd ativar" data-a style="--d:4">
@@ -1137,10 +1358,6 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
       <div class="meta">
         <div><b>Formato</b><span>Manual ilustrado e artes abertas</span></div>
         <div><b>Prazo</b><span>4 semanas</span></div>
-      </div>
-      <div class="valor">
-        <span class="vl"><small>R$ </small>19.600</span>
-        <i>projeto · vale para todo o parque</i>
       </div>
     </div>
 
@@ -1164,20 +1381,15 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
         <div><b>Formato</b><span>Manual em 3D, artes e produção acompanhada</span></div>
         <div><b>Prazo</b><span>6 semanas por onda</span></div>
       </div>
-      <div class="valor">
-        <span class="vl"><small>R$ </small>32.000</span>
-        <i>por onda · produção física à parte</i>
-      </div>
     </div>
 
   </div>
-  <p class="note" data-a style="--d:7">Valores de criação e estratégia. <b>A produção física é cotada à parte</b>
-    e gerida como carteira anual. Pensar e criar a 75 LAB faz com o portfólio público e com uma rodada
-    de visitas, sem depender de relatório de venda liberado.</p>
+  <p class="note" data-a style="--d:7">Pensar e criar a 75 LAB faz com o portfólio público e com uma rodada de
+    visitas, sem depender de relatório de venda liberado. <b>O investimento de cada entrega está na tela 08.</b></p>
 </section>
 <section class="slide dark" data-part="As entregas"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
   <div class="hd" style="margin-bottom:20px">
-    <span class="eyebrow" data-a><i>(05)</i> As entregas · levar e rastrear</span>
+    <span class="eyebrow" data-a><i>(08)</i> As entregas · levar e rastrear</span>
     <h2 data-a style="--d:1">Chegar na loja é metade.<br><em>A outra metade é provar que chegou.</em></h2>
   </div>
   <div class="entgrid">
@@ -1201,10 +1413,6 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
         <div><b>Formato</b><span>Página no ar, PDF e vídeo</span></div>
         <div><b>Prazo</b><span>2 semanas</span></div>
       </div>
-      <div class="valor">
-        <span class="vl"><small>R$ </small>8.400</span>
-        <i>projeto · serve todas as ondas do ano</i>
-      </div>
     </div>
 
     <div class="entd escalar" data-a style="--d:3">
@@ -1226,10 +1434,6 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
       <div class="meta">
         <div><b>Formato</b><span>Catálogo digital e processo de pedido</span></div>
         <div><b>Prazo</b><span>3 semanas</span></div>
-      </div>
-      <div class="valor">
-        <span class="vl"><small>R$ </small>12.600</span>
-        <i>por ano · atualizado a cada onda</i>
       </div>
     </div>
 
@@ -1253,10 +1457,6 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
         <div><b>Formato</b><span>Por ponto de venda, pagamento único</span></div>
         <div><b>Prazo</b><span>Ativo desde a primeira instalação</span></div>
       </div>
-      <div class="valor">
-        <span class="vl"><small>R$ </small>13,64</span>
-        <i>por PDV · único, ou 12x com total de R$ 17,05</i>
-      </div>
     </div>
 
     <div class="entd ativar" data-a style="--d:5">
@@ -1279,20 +1479,16 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
         <div><b>Formato</b><span>Assinatura de 6 a 12 meses</span></div>
         <div><b>Prazo</b><span>Ativo na entrega da etiqueta</span></div>
       </div>
-      <div class="valor">
-        <span class="vl"><small>R$ </small>27,27</span>
-        <i>por PDV à vista · ou R$ 34,09 por PDV ao mês</i>
-      </div>
     </div>
 
   </div>
-  <p class="note" data-a style="--d:7">O rastreio é cobrado por ponto de venda, então cresce junto com a
-    cobertura e não antes dela. <b>O One Shot responde se chegou e foi instalado. O OnTiming responde
-    se continuou lá, em que estado e por quanto tempo.</b></p>
+  <p class="note" data-a style="--d:7">O rastreio é cobrado por ponto de venda, então cresce junto com a cobertura
+    e não antes dela. O One Shot responde se chegou e foi instalado. O OnTiming responde se continuou lá,
+    em que estado e por quanto tempo. <b>O investimento de cada entrega está na tela 08.</b></p>
 </section>
 <section class="slide" data-part="O caminho"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
   <div class="hd" style="margin-bottom:16px">
-    <span class="eyebrow" data-a><i>(06)</i> Cronograma · outubro de 2026 a setembro de 2027</span>
+    <span class="eyebrow" data-a><i>(09)</i> Cronograma · outubro de 2026 a setembro de 2027</span>
     <h2 data-a style="--d:1">Três ondas no ano.<br><em>A primeira na rua em oito semanas.</em></h2>
   </div>
   <div class="cal">
@@ -1368,7 +1564,7 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
 </section>
 <section class="slide dark" data-part="O investimento"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
   <div class="hd" style="margin-bottom:16px">
-    <span class="eyebrow" data-a><i>(07)</i> Valor por entrega</span>
+    <span class="eyebrow" data-a><i>(10)</i> Valor por entrega</span>
     <h2 data-a style="--d:1">Cada entrega tem preço próprio.<br><em>Você contrata o que precisa.</em></h2>
   </div>
   <div class="tab">
@@ -1396,7 +1592,7 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
       </div>
       <p class="de">As 12 janelas do ano com ocasião, ação e divisão da verba.</p>
       <p class="fm">Planilha viva<br>2 semanas</p>
-      <span class="vl"><small>R$ </small>9.800<em>por ano</em></span>
+      <span class="vl"><small>R$ </small>3.400<em>por ano</em></span>
     </div>
 
     <div class="tabrow ativar" data-a style="--d:5">
@@ -1407,7 +1603,7 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
       </div>
       <p class="de">Planograma, zonas de visibilidade, sinalização e cartaz de montagem.</p>
       <p class="fm">Manual e artes<br>4 semanas</p>
-      <span class="vl"><small>R$ </small>19.600<em>projeto</em></span>
+      <span class="vl"><small>R$ </small>2.300<em>projeto</em></span>
     </div>
 
     <div class="tabrow ativar" data-a style="--d:6">
@@ -1418,7 +1614,7 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
       </div>
       <p class="de">Conceito, manual de merchandising com peças em 3D por canal, layouts e produção.</p>
       <p class="fm">Manual 3D e artes<br>6 semanas por onda</p>
-      <span class="vl"><small>R$ </small>32.000<em>por onda</em></span>
+      <span class="vl"><small>R$ </small>8.900<em>por onda</em></span>
     </div>
 
     <div class="tabrow escalar" data-a style="--d:7">
@@ -1429,7 +1625,7 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
       </div>
       <p class="de">Manual de uma página, vídeo de montagem e treinamento remoto.</p>
       <p class="fm">Página, PDF e vídeo<br>2 semanas</p>
-      <span class="vl"><small>R$ </small>8.400<em>projeto</em></span>
+      <span class="vl"><small>R$ </small>13.400<em>projeto</em></span>
     </div>
 
     <div class="tabrow escalar" data-a style="--d:8">
@@ -1440,7 +1636,7 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
       </div>
       <p class="de">Catálogo homologado com kits, preço de referência e processo de pedido.</p>
       <p class="fm">Catálogo digital<br>3 semanas</p>
-      <span class="vl"><small>R$ </small>12.600<em>por ano</em></span>
+      <span class="vl"><small>R$ </small>5.400<em>por ano</em></span>
     </div>
 
     <div class="tabrow motor" data-a style="--d:9">
@@ -1451,8 +1647,8 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
         <b>One Shot<br>estático</b>
       </div>
       <p class="de">QR na peça com GPS e foto da fachada, mais painel de cobertura.</p>
-      <p class="fm">Por ponto de venda<br>pagamento único</p>
-      <span class="vl"><small>R$ </small>13,64<em>por PDV</em></span>
+      <p class="fm">Por ponto de venda<br>pagamento à vista</p>
+      <span class="vl"><small>R$ </small>13,64<em>por PDV à vista</em></span>
     </div>
 
     <div class="tabrow ativar" data-a style="--d:10">
@@ -1462,22 +1658,22 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
         <b>OnTiming<br>ao vivo</b>
       </div>
       <p class="de">Etiqueta que reporta posição, permanência e movimentação do ativo.</p>
-      <p class="fm">Assinatura<br>6 a 12 meses</p>
-      <span class="vl"><small>R$ </small>27,27<em>por PDV à vista</em></span>
+      <p class="fm">Mensalidade<br>6 a 12 meses</p>
+      <span class="vl"><small>R$ </small>27,27<em>por PDV ao mês</em></span>
     </div>
   </div>
   <p class="note" data-a style="--d:12">Valores de estratégia, criação e rastreio. <b>A produção física é cotada
-    à parte</b>, por peça e por volume, e gerida como carteira anual. O OnTiming também pode ser contratado
-    em mensalidade, a R$ 34,09 por PDV ao mês, com assinatura de 6 a 12 meses.</p>
+    à parte</b>, por peça e por volume, e gerida como carteira anual. O One Shot é pagamento único por ponto
+    de venda. O OnTiming é mensalidade por ponto, com assinatura de 6 a 12 meses.</p>
 </section>
 <section class="slide" data-part="O investimento"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
-  <div class="hd" style="margin-bottom:14px">
-    <span class="eyebrow" data-a><i>(08)</i> Cenários de investimento</span>
-    <h2 class="sm" data-a style="--d:1">Os mesmos preços, <em>somados de três jeitos</em>.</h2>
+  <div class="hd" style="margin-bottom:12px">
+    <span class="eyebrow" data-a><i>(11)</i> Cenários de investimento</span>
+    <h2 class="sm" data-a style="--d:1">Tudo à vista, <em>menos o rastreio ao vivo</em>.</h2>
   </div>
   <div class="cenT">
     <div class="ctrow th" data-a style="--d:2">
-      <div class="cl"><span class="mono" style="font-size:9px;color:var(--soft)">Entrega</span></div>
+      <div class="cl"><span class="mono" style="font-size:9px;color:var(--soft)">Entrega · pagamento à vista</span></div>
       <div class="rec"><b>P · Fundação</b><span>1 canal · 2 ondas · 1.000 lojas</span></div>
       <div><b>M · Aceleração</b><span>2 canais · 3 ondas · 2.500 lojas</span></div>
       <div><b>G · Escala</b><span>4 canais · 4 ondas · 6.200 lojas</span></div>
@@ -1490,68 +1686,68 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
       <div class="v" data-cen="G">67.200<i>4 canais</i></div>
     </div>
     <div class="ctrow" data-a style="--d:3">
-      <div class="cl">Calendário de Trade<i>R$ 9.800 por ano</i></div>
+      <div class="cl">Calendário de Trade<i>R$ 3.400 por ano</i></div>
       <div class="v zero" data-cen="P">○</div>
-      <div class="v" data-cen="M">9.800</div>
-      <div class="v" data-cen="G">9.800</div>
+      <div class="v" data-cen="M">3.400</div>
+      <div class="v" data-cen="G">3.400</div>
     </div>
     <div class="ctrow" data-a style="--d:4">
-      <div class="cl">Arquitetura do Freezer<i>R$ 19.600 projeto</i></div>
-      <div class="v" data-cen="P">19.600</div>
-      <div class="v" data-cen="M">19.600</div>
-      <div class="v" data-cen="G">19.600</div>
+      <div class="cl">Arquitetura do Freezer<i>R$ 2.300 projeto</i></div>
+      <div class="v" data-cen="P">2.300</div>
+      <div class="v" data-cen="M">2.300</div>
+      <div class="v" data-cen="G">2.300</div>
     </div>
     <div class="ctrow" data-a style="--d:4">
-      <div class="cl">Conceito e Enxoval de PDV<i>R$ 32.000 por onda</i></div>
-      <div class="v" data-cen="P">64.000<i>2 ondas</i></div>
-      <div class="v" data-cen="M">96.000<i>3 ondas</i></div>
-      <div class="v" data-cen="G">128.000<i>4 ondas</i></div>
+      <div class="cl">Conceito e Enxoval de PDV<i>R$ 8.900 por onda</i></div>
+      <div class="v" data-cen="P">17.800<i>2 ondas</i></div>
+      <div class="v" data-cen="M">26.700<i>3 ondas</i></div>
+      <div class="v" data-cen="G">35.600<i>4 ondas</i></div>
     </div>
     <div class="ctrow" data-a style="--d:5">
-      <div class="cl">Guia de Execução<i>R$ 8.400 projeto</i></div>
-      <div class="v" data-cen="P">8.400</div>
-      <div class="v" data-cen="M">8.400</div>
-      <div class="v" data-cen="G">8.400</div>
+      <div class="cl">Guia de Execução<i>R$ 13.400 projeto</i></div>
+      <div class="v" data-cen="P">13.400</div>
+      <div class="v" data-cen="M">13.400</div>
+      <div class="v" data-cen="G">13.400</div>
     </div>
     <div class="ctrow" data-a style="--d:5">
-      <div class="cl">Catálogo do Distribuidor<i>R$ 12.600 por ano</i></div>
+      <div class="cl">Catálogo do Distribuidor<i>R$ 5.400 por ano</i></div>
       <div class="v zero" data-cen="P">○</div>
-      <div class="v" data-cen="M">12.600</div>
-      <div class="v" data-cen="G">12.600</div>
+      <div class="v" data-cen="M">5.400</div>
+      <div class="v" data-cen="G">5.400</div>
     </div>
     <div class="ctrow" data-a style="--d:6">
-      <div class="cl">One Shot · rastreio estático<i>R$ 13,64 por PDV</i></div>
+      <div class="cl">One Shot · rastreio estático<i>R$ 13,64 por PDV, à vista</i></div>
       <div class="v" data-cen="P">13.640<i>1.000 lojas</i></div>
       <div class="v" data-cen="M">34.100<i>2.500 lojas</i></div>
       <div class="v" data-cen="G">84.568<i>6.200 lojas</i></div>
     </div>
-    <div class="ctrow" data-a style="--d:6">
-      <div class="cl">OnTiming · rastreio ao vivo<i>R$ 34,09 por PDV ao mês</i></div>
-      <div class="v zero" data-cen="P">○</div>
-      <div class="v zero" data-cen="M">○</div>
-      <div class="v" data-cen="G">81.816<i>200 pontos · 12 meses</i></div>
-    </div>
 
     <div class="ctrow sub" data-a style="--d:7">
-      <div class="cl"><b>Estratégia, criação e rastreio</b></div>
-      <div class="v" data-cen="P">R$ 122.440</div>
-      <div class="v" data-cen="M">R$ 214.100</div>
-      <div class="v" data-cen="G">R$ 411.984</div>
+      <div class="cl"><b>Soma das entregas, à vista</b></div>
+      <div class="v" data-cen="P">R$ 63.940</div>
+      <div class="v" data-cen="M">R$ 118.900</div>
+      <div class="v" data-cen="G">R$ 211.868</div>
     </div>
     <div class="ctrow" data-a style="--d:8">
-      <div class="cl">Produção física estimada<i>cotada à parte, carteira anual</i></div>
+      <div class="cl">Produção física estimada<i>cotada à parte, por onda</i></div>
       <div class="v" data-cen="P">180 a 240 mil</div>
       <div class="v" data-cen="M">300 a 420 mil</div>
       <div class="v" data-cen="G">480 a 720 mil</div>
     </div>
     <div class="ctrow tot" data-a style="--d:9">
-      <div class="cl">Total no ano</div>
-      <div class="v" data-cen="P">R$ 302 a 362 mil</div>
-      <div class="v" data-cen="M">R$ 514 a 634 mil</div>
-      <div class="v" data-cen="G">R$ 892 mil a 1,13 mi</div>
+      <div class="cl">Total à vista no ano</div>
+      <div class="v" data-cen="P">R$ 244 a 304 mil</div>
+      <div class="v" data-cen="M">R$ 419 a 539 mil</div>
+      <div class="v" data-cen="G">R$ 692 a 932 mil</div>
+    </div>
+    <div class="ctrow mensal" data-a style="--d:10">
+      <div class="cl">OnTiming<i>assinatura · R$ 27,27 por PDV ao mês</i></div>
+      <div class="v zero" data-cen="P">não entra</div>
+      <div class="v zero" data-cen="M">não entra</div>
+      <div class="v" data-cen="G">R$ 5.454 / mês<i style="color:var(--soft)">200 pontos prioritários</i></div>
     </div>
   </div>
-  <div class="instfoot" data-a style="--d:11">
+  <div class="instfoot" data-a style="--d:12">
     <div class="marcas">
       <img class="ll" src="assets/logo/loslos-ink.png" alt="Sorvetes Los Los">
       <span class="x">&times;</span>
@@ -1574,9 +1770,10 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
       <span>Prova acima de promessa</span>
     </div>
   </div>
-  <p class="note" data-a style="--d:13">O cenário P cabe na faixa sinalizada em 14/09.
-    <b>O volume de lojas de cada cenário é premissa de cálculo</b> e será substituído pelo cadastro real
-    do canal. Produção não inclui mídia, premiação, promotoria nem frete extraordinário.</p>
+  <p class="note" data-a style="--d:14">Todas as entregas e o One Shot são pagamento à vista.
+    <b>Só o OnTiming é assinatura mensal</b>, com contrato de 6 a 12 meses e cobrança por ponto ativo.
+    O volume de lojas de cada cenário é premissa de cálculo e será substituído pelo cadastro do canal.
+    Produção não inclui mídia, premiação, promotoria nem frete extraordinário.</p>
 </section>
 
 <svg id="grain" aria-hidden="true"><filter id="gf"><feTurbulence type="fractalNoise"
@@ -1661,16 +1858,18 @@ addEventListener("resize",fit);fit();
 
 /* ------------------------------------------------ capitulos */
 var CHAP=[
-  {t:"O desafio",     a:0, b:3},
-  {t:"As entregas",   a:4, b:5},
-  {t:"O caminho",     a:6, b:6},
-  {t:"O investimento",a:7, b:8}
+  {t:"A 75 LAB",      a:0, b:3},
+  {t:"O desafio",     a:4, b:6},
+  {t:"As entregas",   a:7, b:8},
+  {t:"O investimento",a:9, b:11}
 ];
 var TITLES=[
- "Em 2014 vocês instalaram um canal","6.200 freezers, 2.800 à vista",
- "O problema real por trás do pedido","O shopper decide em segundos",
- "Entregas: pensar e criar","Entregas: levar e rastrear",
- "Cronograma do ano","Valor por entrega","Cenários de investimento"
+ "Em 2014 vocês instalaram um canal","Os dois lados do balcão",
+ "Mais de 500 projetos","As oito dores que ouvimos",
+ "6.200 freezers, 2.800 à vista","O problema real por trás do pedido",
+ "O shopper decide em segundos","Entregas: pensar e criar",
+ "Entregas: levar e rastrear","Cronograma do ano",
+ "Valor por entrega","Cenários de investimento"
 ];
 
 var slides=$$(".slide"),N=slides.length,i=0,busy=false;

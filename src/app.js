@@ -43,16 +43,18 @@ addEventListener("resize",fit);fit();
 
 /* ------------------------------------------------ capitulos */
 var CHAP=[
-  {t:"O desafio",     a:0, b:3},
-  {t:"As entregas",   a:4, b:5},
-  {t:"O caminho",     a:6, b:6},
-  {t:"O investimento",a:7, b:8}
+  {t:"A 75 LAB",      a:0, b:3},
+  {t:"O desafio",     a:4, b:6},
+  {t:"As entregas",   a:7, b:8},
+  {t:"O investimento",a:9, b:11}
 ];
 var TITLES=[
- "Em 2014 vocês instalaram um canal","6.200 freezers, 2.800 à vista",
- "O problema real por trás do pedido","O shopper decide em segundos",
- "Entregas: pensar e criar","Entregas: levar e rastrear",
- "Cronograma do ano","Valor por entrega","Cenários de investimento"
+ "Em 2014 vocês instalaram um canal","Os dois lados do balcão",
+ "Mais de 500 projetos","As oito dores que ouvimos",
+ "6.200 freezers, 2.800 à vista","O problema real por trás do pedido",
+ "O shopper decide em segundos","Entregas: pensar e criar",
+ "Entregas: levar e rastrear","Cronograma do ano",
+ "Valor por entrega","Cenários de investimento"
 ];
 
 var slides=$$(".slide"),N=slides.length,i=0,busy=false;

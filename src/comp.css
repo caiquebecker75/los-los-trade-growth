@@ -25,6 +25,70 @@
   transform:translateY(-50%);animation:marcain 1.3s var(--ease) .45s both}
 @keyframes marcain{from{opacity:0;transform:translateY(-50%) scale(.9)}to{opacity:1;transform:translateY(-50%) scale(1)}}
 
+/* 02 · quem é a 75 LAB --------------------------------------------------- */
+.sobre{flex:1;min-height:0;display:grid;grid-template-columns:1.06fr .94fr;gap:52px;align-items:center}
+.balcao{display:flex;flex-direction:column;gap:22px}
+.balcao .frase{font-family:var(--fdisp);font-weight:900;font-size:56px;line-height:1.02;
+  text-transform:uppercase;letter-spacing:-.025em}
+.balcao .frase em{font-style:normal;color:var(--coral)}
+.balcao .lead{max-width:48ch}
+.fund{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.fund>div{border:2px solid var(--line);padding:17px 18px;display:flex;flex-direction:column;gap:7px;
+  transition:.26s var(--ease)}
+.fund>div:hover{border-color:var(--coral)}
+.fund .de{font-family:var(--fmono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral)}
+.fund b{font-size:16px;font-weight:700;line-height:1.2}
+.fund b i{font-style:normal;display:block;font-family:var(--fmono);font-size:9px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--soft);font-weight:400;margin-top:3px}
+.fund p{font-size:11.5px;line-height:1.46;color:var(--soft)}
+.princ4{display:flex;flex-direction:column;gap:2px}
+.princ4>div{display:flex;align-items:flex-start;gap:15px;padding:15px 18px;border:2px solid var(--line);
+  transition:.26s var(--ease)}
+.princ4>div:hover{border-color:var(--coral);transform:translate(-3px,-3px)}
+.princ4 .k{font-family:var(--fdisp);font-weight:900;font-size:30px;line-height:.9;color:var(--coral);
+  min-width:40px}
+.princ4 b{font-size:15.5px;font-weight:700;line-height:1.25;display:block;margin-bottom:3px}
+.princ4 span{font-size:12px;line-height:1.46;color:var(--soft)}
+
+/* 03 · a prova da 75 LAB ------------------------------------------------- */
+.prova{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:24px}
+.provatop{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center}
+.bignum{display:flex;flex-direction:column;gap:4px}
+.bignum b{font-family:var(--fdisp);font-weight:900;font-size:132px;line-height:.82;letter-spacing:-.04em;
+  color:var(--coral);font-variant-numeric:tabular-nums}
+.bignum span{font-family:var(--fmono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
+.marcas75{display:grid;grid-template-columns:repeat(6,1fr);gap:2px}
+.marcas75 div{border:2px solid var(--line);padding:13px 10px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:4px;text-align:center;transition:.26s var(--ease);min-height:62px}
+.marcas75 div:hover{border-color:var(--coral);background:var(--fill)}
+.marcas75 b{font-family:var(--fdisp);font-weight:900;font-size:16px;text-transform:uppercase;
+  letter-spacing:-.01em;line-height:1.02}
+.marcas75 span{font-family:var(--fmono);font-size:7.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.cats{display:grid;grid-template-columns:repeat(6,1fr);gap:2px}
+.cats>div{border-top:4px solid var(--pc,var(--coral));padding:13px 2px 0;display:flex;
+  flex-direction:column;gap:5px}
+.cats b{font-family:var(--fdisp);font-weight:900;font-size:19px;text-transform:uppercase;line-height:1}
+.cats span{font-size:11px;line-height:1.42;color:var(--soft)}
+.citacao{display:flex;align-items:center;gap:20px;border-left:5px solid var(--coral);padding:14px 22px;
+  background:var(--fill)}
+.citacao p{font-family:var(--ftext);font-weight:700;font-size:21px;line-height:1.24;letter-spacing:-.02em}
+.citacao span{font-family:var(--fmono);font-size:9px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--soft);white-space:nowrap}
+
+/* 04 · as dores das reuniões --------------------------------------------- */
+.dores{flex:1;min-height:0;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:1fr 1fr;gap:2px}
+.dor{border:2px solid var(--line);padding:17px 18px;display:flex;flex-direction:column;gap:9px;
+  transition:.28s var(--ease);position:relative;overflow:hidden}
+.dor::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--coral);
+  transform:scaleY(0);transform-origin:top;transition:.3s var(--ease)}
+.dor:hover{border-color:var(--coral);transform:translateY(-4px)}
+.dor:hover::before{transform:scaleY(1)}
+.dor .k{font-family:var(--fmono);font-size:8.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--coral)}
+.dor b{font-size:15px;font-weight:700;line-height:1.28}
+.dor p{font-size:11.5px;line-height:1.46;color:var(--soft);margin-top:auto}
+.dor p i{font-style:normal;font-family:var(--fmono);font-size:8px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--coral);display:block;margin-bottom:3px}
+
 /* 02 · o ponto cego e o mapa --------------------------------------------- */
 .mapaw{flex:1;min-height:0;display:grid;grid-template-columns:.92fr 1.08fr;gap:44px;align-items:center}
 .mapabox{position:relative;height:100%;display:grid;place-items:center}
@@ -232,7 +296,7 @@
 /* 09 · cenários somando as entregas -------------------------------------- */
 .cenT{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center}
 .ctrow{display:grid;grid-template-columns:238px repeat(3,1fr);gap:2px;align-items:stretch}
-.ctrow>div{padding:3px 15px;display:flex;flex-direction:column;justify-content:center;
+.ctrow>div{padding:2px 15px;display:flex;flex-direction:column;justify-content:center;
   border-bottom:1px solid var(--line)}
 .ctrow>div:first-child{padding-left:0}
 .ctrow .cl{font-size:11.5px;font-weight:500;line-height:1.28}
@@ -249,7 +313,13 @@
   color:var(--soft);display:block;margin-top:3px}
 .ctrow.sub>div{background:var(--fill);border-bottom:2px solid var(--line)}
 .ctrow.sub .v{font-size:15px;color:var(--coral)}
-.ctrow.tot>div{border-bottom:0;padding-top:9px}
+.ctrow.tot>div{border-bottom:2px solid var(--line);padding-top:7px;padding-bottom:7px}
+.ctrow.mensal>div{border-bottom:0;padding-top:7px;background:rgba(1,162,144,.07)}
+.ctrow.mensal>div:first-child{background:transparent}
+.ctrow.mensal .cl{font-family:var(--fdisp);font-weight:900;font-size:17px;text-transform:uppercase;line-height:1.05}
+.ctrow.mensal .cl i{font-family:var(--fmono);font-weight:400;text-transform:uppercase}
+.ctrow.mensal .v{font-family:var(--fdisp);font-weight:900;font-size:20px;letter-spacing:-.02em;
+  color:var(--teal);line-height:1}
 .ctrow.tot .v{font-family:var(--fdisp);font-weight:900;font-size:23px;letter-spacing:-.02em;
   color:var(--coral);line-height:1}
 .ctrow.tot .cl{font-family:var(--fdisp);font-weight:900;font-size:20px;text-transform:uppercase}
@@ -287,7 +357,7 @@
 .passos b{font-family:var(--fdisp);font-weight:900;font-size:27px;line-height:.9;color:var(--coral)}
 .passos span{font-size:12px;line-height:1.44}
 .instfoot{display:grid;grid-template-columns:auto 1fr 1fr auto;gap:24px;align-items:center;
-  border-top:2px solid var(--line);padding-top:11px;margin-top:10px}
+  border-top:2px solid var(--line);padding-top:10px;margin-top:9px}
 .instfoot .marcas{display:flex;align-items:center;gap:13px}
 .instfoot .marcas img.ll{height:32px}
 .instfoot .marcas img.l75{height:16px}
@@ -316,7 +386,13 @@
   .note{font-size:9.5px;max-width:none}
   .hd{margin-bottom:16px!important}
 
-  .mapaw,.vsg,.mkt3,.jorline,.canais,.entgrid,.instfoot{grid-template-columns:1fr!important}
+  .mapaw,.vsg,.mkt3,.jorline,.canais,.entgrid,.instfoot,.sobre,.fund,.provatop,
+  .dores{grid-template-columns:1fr!important}
+  .marcas75,.cats{grid-template-columns:repeat(2,1fr)!important}
+  .marcas75 div{min-width:0;padding:11px 6px;min-height:54px}
+  .marcas75 b{font-size:13px;word-break:break-word}
+  .cats>div{min-width:0}
+  .dores{grid-template-rows:none!important}
 
   /* 01 · capa */
   .marca{display:none}
@@ -325,7 +401,21 @@
   .open{gap:20px}
   .open .sub s{display:none}
 
-  /* 02 · mapa */
+  /* 02 e 03 · a 75 LAB */
+  .balcao .frase{font-size:32px}
+  .bignum b{font-size:84px}
+  .princ4>div{padding:13px 0;border:0;border-bottom:2px solid var(--line)}
+  .princ4>div:hover{transform:none}
+  .fund>div{padding:13px 0;border:0;border-bottom:2px solid var(--line)}
+  .cats>div{padding:11px 0 0}
+  .citacao{padding:12px 16px}
+  .citacao p{font-size:16px}
+
+  /* 04 · dores */
+  .dor{padding:14px 0;border:0;border-bottom:2px solid var(--line)}
+  .dor::before{display:none}
+
+  /* 05 · mapa */
   .mapabox{height:auto}
   .mapa{height:300px;width:auto}
   .figrow .n{font-size:46px;min-width:108px}
