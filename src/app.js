@@ -146,12 +146,12 @@ document.addEventListener("click",function(e){
 var lb=$("#lb"),lbimg=$("#lbimg"),lbcap=$("#lbcap"),gal=[],gi=0;
 function openLb(src,cap,list,idx){
   gal=list||[src];gi=idx||0;
-  lbimg.src=src;lbcap.textContent=cap||"";
+  lbimg.removeAttribute("hidden");lbimg.src=src;lbcap.textContent=cap||"";
   lb.classList.add("on");
   $("#lbp").style.display=$("#lbn").style.display=gal.length>1?"grid":"none";
   lbimg.focus&&lbimg.focus();
 }
-function closeLb(){lb.classList.remove("on");lbimg.src=""}
+function closeLb(){lb.classList.remove("on");lbimg.removeAttribute("src");lbimg.setAttribute("hidden","")}
 function lbGo(d){
   if(gal.length<2)return;
   gi=(gi+d+gal.length)%gal.length;

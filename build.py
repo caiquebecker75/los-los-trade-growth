@@ -59,7 +59,7 @@ AFTER = '''
 </div>
 <div id="lb" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
   <button class="lbnav" id="lbp" aria-label="Imagem anterior"><svg><use href="#lt"/></svg></button>
-  <img id="lbimg" alt="">
+  <img id="lbimg" alt="" hidden>
   <button class="lbnav" id="lbn" aria-label="Próxima imagem"><svg><use href="#gt"/></svg></button>
   <button id="lbx" aria-label="Fechar (ESC)"><svg><use href="#cl"/></svg></button>
   <p id="lbcap"></p>

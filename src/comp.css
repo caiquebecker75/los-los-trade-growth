@@ -141,7 +141,7 @@
 .ocore{width:186px;height:186px;border-radius:50%;background:var(--coral);display:grid;place-items:center;
   text-align:center;padding:22px;z-index:3;position:relative}
 .ocore span{font-family:var(--fdisp);font-weight:900;font-size:26px;line-height:1;text-transform:uppercase;color:var(--ink)}
-.on6{position:absolute;width:224px;transform:translate(-50%,-50%);display:flex;gap:12px;align-items:flex-start;
+.on6{position:absolute;width:206px;transform:translate(-50%,-50%);display:flex;gap:11px;align-items:flex-start;
   animation:pp .7s var(--ease) both;animation-delay:calc(var(--d)*90ms + 360ms)}
 .on6 .ico{flex-shrink:0;color:var(--coral);width:26px;height:26px}
 .on6 b{display:block;font-size:14px;font-weight:700;line-height:1.2;margin-bottom:4px}
