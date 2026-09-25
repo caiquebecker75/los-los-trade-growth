@@ -1,69 +1,81 @@
 # Los Los Trade Growth System · 75 LAB
 
-Apresentação HTML de 31 telas do plano estratégico de trade, execução, escala e crescimento
-proposto pela **75 LAB** para a **Sorvetes Los Los**. Horizonte: outubro de 2026 a setembro de 2027.
+Apresentação HTML de 10 telas do plano de trade, execução, escala e crescimento proposto pela
+**75 LAB** para a **Sorvetes Los Los**. Horizonte: outubro de 2026 a setembro de 2027.
 
 **No ar:** https://projetos.75lab.com.br/los-los-trade-growth/
 
 ## Como é feita
 
 Palco fixo de 1600 × 900 escalado para qualquer tela, sem dependências além das fontes do Google.
-Nada de framework: HTML, CSS e um motor próprio de ~300 linhas de JavaScript.
+Nada de framework: HTML, CSS e um motor próprio de cerca de 300 linhas de JavaScript.
 
 ```
 src/
-  head.html      meta, fontes e o sistema de design (tokens, chrome, cursor, lightbox, fundo)
-  comp.css       componentes por tela + o bloco mobile que reorganiza cada composição
-  app.js         motor: navegação, cursor, count-up, abas, lightbox, índice, modo mobile
-  slides/01..31  uma tela por arquivo
+  head.html        meta, fontes e sistema de design (tokens, chrome, cursor, lightbox, fundo)
+  comp.css         componentes por tela + bloco mobile que reorganiza cada composição
+  app.js           motor: navegação, cursor, contadores, lightbox, índice, modo mobile
+  partials/        mapa.html e mapinha.html, gerados a partir de coordenadas reais
+  slides/01..10    uma tela por arquivo
 assets/
-  logo/          logotipos Los Los (ink e branco) e 75 LAB (preto e paper)
-  img/           packshots oficiais dos picolés
-build.py         monta index.html a partir de src/ (e falha se achar travessão)
-sync.sh          build + cópia para o scratchpad do preview local
+  logo/            logotipos Los Los (ink e branco) e 75 LAB (preto e paper)
+  img/             freezer, carrinho e packshots oficiais da marca
+  varejo/          logotipos das redes onde a marca está presente
+build.py           monta index.html a partir de src/ e falha se achar travessão
+sync.sh            build + cópia para o scratchpad do preview local
 ```
 
-Para gerar: `python3 build.py`. O arquivo `index.html` é o resultado e não deve ser editado à mão.
+Para gerar: `python3 build.py`. O `index.html` é o resultado e não deve ser editado à mão.
+
+## As dez telas
+
+| # | Tela | O que entrega |
+| --- | --- | --- |
+| 01 | Abertura | O freezer real da marca e a tese: em 2014 a Los Los instalou um canal |
+| 02 | O ponto cego | Mapa do Brasil com 6.200 PDVs, 2.800 no raio de visita e 3.400 fora |
+| 03 | A leitura do briefing | Problema aparente contra problema real, mais o contexto de categoria |
+| 04 | Shopper e canais | Os seis segundos do freezer e as quatro missões de compra |
+| 05 | A tese | Os cinco movimentos e a regra de ouro, que abre clicando nas perguntas |
+| 06 | O sistema | Dez produtos em três camadas, cada um com ícone, cor e nome próprios |
+| 07 | Fase 1 | Os cinco produtos dos primeiros 90 dias, com as fotos reais dos ativos |
+| 08 | Rastreamento | Painel simulado com mapa de execução, leitura única e leitura contínua |
+| 09 | O caminho | Treze semanas com condições de passagem e doze meses sobre a curva sazonal |
+| 10 | Investimento e decisão | Cenários P, M e G, próximos passos e o bloco institucional |
+
+## Os dez produtos
+
+| Camada | Produtos |
+| --- | --- |
+| Motor · recorrente | Raio-X do Giro · Calendário de Estação · Laboratório de Teste |
+| Ativar · sob demanda | Freezer que Vende · Retomada por Canal · PDV Modular · Prova de Sabor |
+| Escalar · por aprovação | Rede Los Los · Olho no PDV · Liga da Execução |
 
 ## Navegação
 
-Setas, espaço, Page Up e Page Down, scroll, clique, toque e a tecla **M** para o índice por capítulos.
-Cada imagem amplia em lightbox (ESC ou clique fora fecha, setas navegam a galeria).
+Setas, espaço, Page Up e Page Down, rolagem, clique, toque e a tecla **M** para o índice por capítulos.
+As fotos de produto ampliam em lightbox (ESC ou clique fora fecha, setas navegam a galeria).
 O botão de impressão gera um PDF de uma tela por página.
 
-## Estrutura narrativa
+## Identidade
 
-| Capítulo | Telas | O que acontece |
-| --- | --- | --- |
-| I · O ponto cego | 01 a 05 | Abertura, o parque de 6.200 freezers, agenda, decupagem do briefing e os oito sinais da conversa |
-| II · O contexto | 06 a 10 | Categoria, territórios competitivos, shopper, canais e tendências com endereço no plano |
-| III · A tese | 11 a 13 | Os cinco movimentos, a regra de ouro e o reveal do sistema |
-| IV · O sistema | 14 a 21 | Três camadas e os produtos: X-Ray, Freezer Performance, Restart, Flex PDV, Discovery, Scale, League |
-| V · A prova | 22 a 26 | One Shot e On Timing, Los Los Eye, Pilot Lab, cronograma de 90 dias e roadmap de 12 meses |
-| VI · A decisão | 27 a 31 | Cenários P, M e G, gates de tecnologia, governança, riscos, encerramento e institucional |
+Coral `#EC7F84`, ink `#12141C` e Poppins vêm do site da Los Los. Big Shoulders Display, Space Mono,
+cantos retos e grão vêm do sistema da 75 LAB. Cada camada de produto tem a sua cor: coral no Motor,
+lima no Ativar e verde-azulado no Escalar.
 
-## Interações por tela
-
-- **02** matriz de 620 pontos, cada um valendo 10 PDVs
-- **05** os oito sinais da conversa, clicáveis, com a implicação de desenho
-- **09** quatro canais com a missão de compra de cada um
-- **12** portão de produção: as quatro perguntas abrem a liberação
-- **15** simulador do Opportunity Score com os sete critérios ponderados
-- **16** comparador do freezer, como está hoje e com o sistema
-- **17** playbook do Restart por canal
-- **19** packshots oficiais navegáveis, com lightbox
-- **27** seletor dos cenários de investimento
+Os mapas não são imagem de banco: são desenhados a partir de coordenadas reais de latitude e longitude,
+projetadas em SVG, com os pontos distribuídos conforme a densidade populacional do país.
 
 ## Fontes
 
-- Marca e números de parque: sorvetesloslos.com.br e ABRAMARK
-- Categoria: ABIS, Abrasorvete via Estadão Conteúdo
+- Marca e parque instalado: sorvetesloslos.com.br e ABRAMARK
+- Categoria: ABIS e Abrasorvete, via Estadão Conteúdo
 - Shopper e canal: Kantar Brasil (2024) e Nielsen
-- Base primária do diagnóstico: transcrição da reunião Los Los × 75 LAB de 14 de setembro de 2026
+- Base primária do diagnóstico: reunião Los Los × 75 LAB de 14 de setembro de 2026
 
 ## Pendências
 
-- Razão social, CNPJ e telefone da 75 LAB não constam em fonte pública e estão marcados na tela 31
-- Não há modelo 3D de freezer ou de peça Los Los, então nenhuma experiência 3D ou de realidade aumentada
-  foi simulada. A tela 18 explica como isso entra quando o primeiro material for aprovado
+- Razão social, CNPJ e telefone da 75 LAB não constam em fonte pública e estão marcados na tela 10
+- Não há modelo 3D de freezer ou de peça Los Los, então nenhuma experiência de realidade aumentada
+  foi simulada
+- Números e regiões do painel de rastreamento são simulação de tela, não resultado real
 - Os cenários M e G são simulações da 75 LAB, não proposta fechada

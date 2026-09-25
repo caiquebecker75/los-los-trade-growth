@@ -43,26 +43,17 @@ addEventListener("resize",fit);fit();
 
 /* ------------------------------------------------ capitulos */
 var CHAP=[
-  {t:"O ponto cego",       a:0,  b:4},
-  {t:"O contexto",         a:5,  b:9},
-  {t:"A tese",             a:10, b:12},
-  {t:"O sistema",          a:13, b:20},
-  {t:"A prova",            a:21, b:25},
-  {t:"A decisão",          a:26, b:30}
+  {t:"O desafio", a:0, b:3},
+  {t:"A tese",    a:4, b:4},
+  {t:"O sistema", a:5, b:7},
+  {t:"A decisão", a:8, b:9}
 ];
 var TITLES=[
- "Em 2014 vocês instalaram um canal","6.200 freezers, 2.800 à vista","O que vamos percorrer",
- "O problema aparente e o real","Oito sinais da conversa",
- "A categoria cresce e fica mais disputada","Onde cada marca escolheu jogar","Os seis segundos do freezer",
- "Quatro canais, quatro missões","Tendências que cabem neste plano",
- "Enxergar, priorizar, ativar, medir, escalar","A regra de ouro antes de produzir","Los Los Trade Growth System",
- "Três camadas, três lógicas de investimento","Trade X-Ray e Opportunity Score","Freezer Performance System",
- "Los Los Restart por canal","Flex PDV: hardware que sobrevive à campanha","Picolé Discovery",
- "Los Los Scale: distribuidor como operação","Execution League",
- "Rastreamento: One Shot e On Timing","Los Los Eye: do freezer à decisão","Pilot Lab: o que conta como prova",
- "Os primeiros 90 dias","Doze meses: out/26 a set/27",
- "Cenários de investimento","Tecnologia por gates","Governança e riscos","O ativo já está instalado",
- "75 LAB · Los Los"
+ "Em 2014 vocês instalaram um canal","6.200 freezers, 2.800 à vista",
+ "O problema real por trás do pedido","O shopper decide em segundos",
+ "Enxergar, priorizar, ativar, medir, escalar","Dez produtos em três camadas",
+ "Os cinco que entram agora","Rastreamento: leitura única e contínua",
+ "Noventa dias e doze meses","Investimento e decisão"
 ];
 
 var slides=$$(".slide"),N=slides.length,i=0,busy=false;
@@ -77,7 +68,7 @@ function chrome(){
   $("#prog").style.width=((i+1)/N*100)+"%";
   $("#count").innerHTML="<b>"+String(i+1).padStart(2,"0")+"</b> / "+N;
   var c=chapOf(i);
-  $("#partlbl").innerHTML="<i>"+["I","II","III","IV","V","VI"][c]+"</i> · "+CHAP[c].t;
+  $("#partlbl").innerHTML="<i>"+["I","II","III","IV"][c]+"</i> · "+CHAP[c].t;
   $$("#mgrid button").forEach(function(b,k){b.classList.toggle("cur",k===i)});
   var h=$("#hint");if(h)h.style.opacity=i===0?1:0;
   var mc=$("#mobCount");if(mc)mc.textContent=String(i+1).padStart(2,"0")+" / "+N;
@@ -182,7 +173,7 @@ function closeMenu(){$("#menu").classList.remove("on")}
 (function buildMenu(){
   var h="";
   CHAP.forEach(function(c,ci){
-    h+='<section><h4>'+["I","II","III","IV","V","VI"][ci]+' · '+c.t+'</h4>';
+    h+='<section><h4>'+["I","II","III","IV"][ci]+' · '+c.t+'</h4>';
     for(var k=c.a;k<=c.b;k++)
       h+='<button data-go="'+k+'"><b>'+String(k+1).padStart(2,"0")+'</b><span>'+TITLES[k]+'</span></button>';
     h+='</section>';
@@ -249,20 +240,13 @@ function mobSetup(){
 }
 
 
-/* ------------------------------------------------ tela 12 · portao de producao */
+/* ------------------------------------------------ tela 05 · portao de producao */
 (function(){
-  var qbs=$$("[data-q]");if(!qbs.length)return;
-  var T=["Sem nenhuma resposta, o pedido é só uma vontade. Não recebe estimativa de produção.",
-         "Uma ideia com intenção, mas sem critério de decisão. Vira custo antes de virar aprendizado.",
-         "Já dá para desenhar a solução. Ainda não dá para saber se ela funcionou.",
-         "Falta o combinado mais importante de todos: como vamos ler o resultado.",
-         "Comportamento, canal, métrica e leitura definidos. Agora vale produzir."];
+  var qbs=$$("[data-q]"),st=$("#gst");if(!qbs.length||!st)return;
   function upd(){
     var n=0;qbs.forEach(function(b){if(b.classList.contains("on"))n++});
-    $("#gnum").textContent=n+"/4";
-    $("#gtxt").textContent=T[n];
-    $("#gbox").classList.toggle("open",n===4);
-    $("#gst").textContent=n===4?"Liberado para produção":"Produção bloqueada";
+    st.textContent=n+" de 4 respondidas · "+(n===4?"produção liberada":"produção bloqueada");
+    st.classList.toggle("ok",n===4);
   }
   qbs.forEach(function(b){b.addEventListener("click",function(){b.classList.toggle("on");upd()})});
   upd();

@@ -40,7 +40,7 @@ CHROME_BOT = '''
   <button class="nb" id="next" aria-label="Próxima tela"><svg><use href="#gt"/></svg></button>
   <button class="nb" id="bPrint" aria-label="Imprimir ou salvar em PDF"><svg><use href="#pr"/></svg></button>
 </footer>
-<span class="hint" id="hint">setas · scroll · espaço · M para o índice</span>'''
+<span class="hint" id="hint">setas · rolagem · espaço · M para o índice</span>'''
 
 AFTER = '''
 <nav id="mob" aria-label="Navegação">
@@ -91,6 +91,12 @@ def main():
     comp = (S / "comp.css").read_text(encoding="utf-8")
     app = (S / "app.js").read_text(encoding="utf-8")
 
+    partials = {}
+    pdir = S / "partials"
+    if pdir.exists():
+        for f in pdir.glob("*.html"):
+            partials["__" + f.stem.upper() + "__"] = f.read_text(encoding="utf-8").strip()
+
     files = sorted((S / "slides").glob("*.html"))
     if not files:
         sys.exit("nenhum slide em src/slides/")
@@ -98,6 +104,8 @@ def main():
     for f in files:
         html = f.read_text(encoding="utf-8").strip()
         # injeta o fundo vivo logo apos a tag de abertura da <section>
+        for tok, frag in partials.items():
+            html = html.replace(tok, frag)
         html = re.sub(r'(<section\b[^>]*>)', r'\1' + BGW, html, count=1)
         parts.append(html)
     slides = "\n".join(parts)
