@@ -599,19 +599,19 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
 /* 08 · tabela de valores ------------------------------------------------- */
 .tab{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center}
 .tabrow{display:grid;grid-template-columns:214px 1fr 156px 168px;gap:20px;align-items:center;
-  padding:7px 14px;border-bottom:1px solid var(--line);transition:.2s}
+  padding:2.5px 14px;border-bottom:1px solid var(--line);transition:.2s}
 .tabrow:hover{background:var(--fill)}
-.tabrow.th{border-bottom:2px solid var(--line);padding-bottom:10px}
+.tabrow.th{border-bottom:2px solid var(--line);padding-bottom:8px}
 .tabrow.th span{font-family:var(--fmono);font-size:8.5px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--soft)}
 .tabrow .nm{display:flex;align-items:center;gap:12px}
 .tabrow .nm .ico{width:22px;height:22px;color:var(--pc);flex-shrink:0}
-.tabrow .nm b{font-family:var(--fdisp);font-weight:900;font-size:17px;text-transform:uppercase;
+.tabrow .nm b{font-family:var(--fdisp);font-weight:900;font-size:16px;text-transform:uppercase;
   letter-spacing:-.01em;line-height:1.05}
-.tabrow .de{font-size:11.5px;line-height:1.4;color:var(--soft)}
+.tabrow .de{font-size:11px;line-height:1.38;color:var(--soft)}
 .tabrow .fm{font-family:var(--fmono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;
   color:var(--soft);line-height:1.5}
-.tabrow .vl{font-family:var(--fdisp);font-weight:900;font-size:25px;line-height:1;letter-spacing:-.02em;
+.tabrow .vl{font-family:var(--fdisp);font-weight:900;font-size:23px;line-height:1;letter-spacing:-.02em;
   text-align:right;color:var(--pc);font-variant-numeric:tabular-nums}
 .tabrow .vl small{font-size:12px;letter-spacing:0}
 .tabrow .vl em{display:block;font-style:normal;font-family:var(--fmono);font-size:8px;
@@ -681,9 +681,9 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
 .passos b{font-family:var(--fdisp);font-weight:900;font-size:27px;line-height:.9;color:var(--coral)}
 .passos span{font-size:12px;line-height:1.44}
 .instfoot{display:grid;grid-template-columns:auto 1fr 1fr auto;gap:24px;align-items:center;
-  border-top:2px solid var(--line);padding-top:10px;margin-top:9px}
+  border-top:2px solid var(--line);padding-top:9px;margin-top:7px}
 .instfoot .marcas{display:flex;align-items:center;gap:13px}
-.instfoot .marcas img.ll{height:32px}
+.instfoot .marcas img.ll{height:29px}
 .instfoot .marcas img.l75{height:16px}
 .instfoot .col h4{font-family:var(--fmono);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;
   color:var(--coral);margin-bottom:6px}
@@ -732,8 +732,9 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
   .princ4>div:hover{transform:none}
   .fund>div{padding:13px 0;border:0;border-bottom:2px solid var(--line)}
   .cats>div{padding:11px 0 0}
-  .citacao{padding:12px 16px}
+  .citacao{padding:12px 16px;flex-direction:column;align-items:flex-start;gap:8px}
   .citacao p{font-size:16px}
+  .citacao span{white-space:normal}
 
   /* 04 · dores */
   .dor{padding:14px 0;border:0;border-bottom:2px solid var(--line)}
@@ -982,235 +983,8 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
     <b>As oito dores são o critério de corte desta proposta</b>: entrega que não resolve uma delas ficou de fora.</p>
 </section>
 <section class="slide dark" data-part="O desafio"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
-  <div class="hd" style="margin-bottom:22px">
-    <span class="eyebrow" data-a><i>(04)</i> O ponto cego</span>
-    <h2 data-a style="--d:1">2.800 freezers cabem numa rota de visita.<br><em>Os outros 3.400 não.</em></h2>
-  </div>
-  <div class="mapaw">
-    <div class="mapabox" data-a style="--d:2">
-      <svg class="mapa" viewBox="0 0 520 560" aria-label="Mapa do Brasil com a distribuição dos pontos de venda">
-  <path class="brcontorno draw" d="M183.9 11.1 L185.2 20.7 L228.3 55.3 L252.4 51.2 L290.4 26.3 L299.3 70.5 L329.8 102.3 L383.0 117.5 L414.7 123.1 L456.6 134.1 L498.4 163.2 L503.5 181.1 L502.2 195.0 L492.1 217.1 L474.3 235.1 L456.6 262.7 L450.2 330.5 L433.8 363.7 L397.0 399.6 L357.7 413.4 L329.8 435.6 L328.5 464.6 L310.7 484.0 L295.5 511.6 L281.6 528.2 L267.6 548.9 L241.0 510.2 L214.3 500.5 L234.6 463.2 L252.4 436.9 L256.2 414.8 L214.3 388.5 L206.7 356.7 L183.9 308.3 L148.4 262.7 L116.7 218.5 L57.1 207.4 L20.3 212.9 L12.7 183.9 L49.5 141.0 L64.7 103.7 L59.6 74.7 L83.7 66.4 L95.1 44.2 L133.2 26.3 L171.2 20.7 Z"/>
-  <circle class="raio" cx="353.9" cy="405.1" r="64"/>
-  <g class="mfora">
-    <circle class="md" cx="401.4" cy="392.8" r="3.4" style="--k:0"/>
-    <circle class="md" cx="394.3" cy="347.1" r="3.4" style="--k:1"/>
-    <circle class="md" cx="322.9" cy="454.9" r="3.4" style="--k:2"/>
-    <circle class="md" cx="420.5" cy="154.4" r="3.4" style="--k:3"/>
-    <circle class="md" cx="325.6" cy="428.2" r="3.4" style="--k:4"/>
-    <circle class="md" cx="377.4" cy="295.0" r="3.4" style="--k:5"/>
-    <circle class="md" cx="352.0" cy="408.4" r="3.4" style="--k:6"/>
-    <circle class="md" cx="470.7" cy="234.5" r="3.4" style="--k:7"/>
-    <circle class="md" cx="459.3" cy="149.9" r="3.4" style="--k:8"/>
-    <circle class="md" cx="412.6" cy="184.6" r="3.4" style="--k:9"/>
-    <circle class="md" cx="186.8" cy="104.4" r="3.4" style="--k:10"/>
-    <circle class="md" cx="294.1" cy="470.2" r="3.4" style="--k:11"/>
-    <circle class="md" cx="257.6" cy="391.4" r="3.4" style="--k:12"/>
-    <circle class="md" cx="292.8" cy="462.5" r="3.4" style="--k:13"/>
-    <circle class="md" cx="321.2" cy="422.4" r="3.4" style="--k:14"/>
-    <circle class="md" cx="294.4" cy="461.3" r="3.4" style="--k:15"/>
-    <circle class="md" cx="450.6" cy="231.7" r="3.4" style="--k:16"/>
-    <circle class="md" cx="341.8" cy="300.5" r="3.4" style="--k:17"/>
-    <circle class="md" cx="140.0" cy="234.0" r="3.4" style="--k:18"/>
-    <circle class="md" cx="424.1" cy="236.0" r="3.4" style="--k:19"/>
-    <circle class="md" cx="188.0" cy="117.6" r="3.4" style="--k:20"/>
-    <circle class="md" cx="362.1" cy="319.8" r="3.4" style="--k:21"/>
-    <circle class="md" cx="358.7" cy="346.1" r="3.4" style="--k:22"/>
-    <circle class="md" cx="374.6" cy="339.8" r="3.4" style="--k:23"/>
-    <circle class="md" cx="381.0" cy="297.2" r="3.4" style="--k:24"/>
-    <circle class="md" cx="349.0" cy="365.1" r="3.4" style="--k:25"/>
-    <circle class="md" cx="319.5" cy="419.2" r="3.4" style="--k:26"/>
-    <circle class="md" cx="284.6" cy="505.0" r="3.4" style="--k:27"/>
-    <circle class="md" cx="307.4" cy="455.6" r="3.4" style="--k:28"/>
-    <circle class="md" cx="102.1" cy="185.4" r="3.4" style="--k:29"/>
-    <circle class="md" cx="482.6" cy="199.3" r="3.4" style="--k:30"/>
-    <circle class="md" cx="387.2" cy="395.4" r="3.4" style="--k:31"/>
-    <circle class="md" cx="307.6" cy="464.5" r="3.4" style="--k:32"/>
-    <circle class="md" cx="337.5" cy="299.6" r="3.4" style="--k:33"/>
-    <circle class="md" cx="290.7" cy="467.3" r="3.4" style="--k:34"/>
-    <circle class="md" cx="430.8" cy="145.6" r="3.4" style="--k:35"/>
-    <circle class="md" cx="113.2" cy="196.0" r="3.4" style="--k:36"/>
-    <circle class="md" cx="431.3" cy="136.2" r="3.4" style="--k:37"/>
-    <circle class="md" cx="483.9" cy="199.2" r="3.4" style="--k:38"/>
-    <circle class="md" cx="283.7" cy="440.0" r="3.4" style="--k:39"/>
-    <circle class="md" cx="293.0" cy="382.2" r="3.4" style="--k:40"/>
-    <circle class="md" cx="299.0" cy="413.4" r="3.4" style="--k:41"/>
-    <circle class="md" cx="331.4" cy="299.0" r="3.4" style="--k:42"/>
-    <circle class="md" cx="328.5" cy="320.2" r="3.4" style="--k:43"/>
-    <circle class="md" cx="324.9" cy="110.8" r="3.4" style="--k:44"/>
-    <circle class="md" cx="278.9" cy="392.7" r="3.4" style="--k:45"/>
-    <circle class="md" cx="282.6" cy="466.9" r="3.4" style="--k:46"/>
-    <circle class="md" cx="441.7" cy="262.9" r="3.4" style="--k:47"/>
-    <circle class="md" cx="308.6" cy="408.0" r="3.4" style="--k:48"/>
-    <circle class="md" cx="385.7" cy="377.7" r="3.4" style="--k:49"/>
-    <circle class="md" cx="328.5" cy="315.4" r="3.4" style="--k:50"/>
-    <circle class="md" cx="307.4" cy="484.1" r="3.4" style="--k:51"/>
-    <circle class="md" cx="139.8" cy="217.3" r="3.4" style="--k:52"/>
-    <circle class="md" cx="356.1" cy="312.8" r="3.4" style="--k:53"/>
-    <circle class="md" cx="324.1" cy="99.2" r="3.4" style="--k:54"/>
-    <circle class="md" cx="274.6" cy="429.3" r="3.4" style="--k:55"/>
-    <circle class="md" cx="419.4" cy="359.0" r="3.4" style="--k:56"/>
-    <circle class="md" cx="325.4" cy="303.7" r="3.4" style="--k:57"/>
-    <circle class="md" cx="399.8" cy="394.7" r="3.4" style="--k:58"/>
-    <circle class="md" cx="314.3" cy="420.0" r="3.4" style="--k:59"/>
-    <circle class="md" cx="247.6" cy="344.5" r="3.4" style="--k:60"/>
-    <circle class="md" cx="317.8" cy="431.4" r="3.4" style="--k:61"/>
-    <circle class="md" cx="318.2" cy="384.6" r="3.4" style="--k:62"/>
-    <circle class="md" cx="425.3" cy="260.3" r="3.4" style="--k:63"/>
-    <circle class="md" cx="431.5" cy="262.5" r="3.4" style="--k:64"/>
-    <circle class="md" cx="260.6" cy="429.3" r="3.4" style="--k:65"/>
-    <circle class="md" cx="318.7" cy="116.1" r="3.4" style="--k:66"/>
-    <circle class="md" cx="364.6" cy="284.0" r="3.4" style="--k:67"/>
-    <circle class="md" cx="290.6" cy="478.6" r="3.4" style="--k:68"/>
-    <circle class="md" cx="325.2" cy="296.7" r="3.4" style="--k:69"/>
-    <circle class="md" cx="314.7" cy="409.0" r="3.4" style="--k:70"/>
-    <circle class="md" cx="491.2" cy="195.2" r="3.4" style="--k:71"/>
-    <circle class="md" cx="393.1" cy="396.5" r="3.4" style="--k:72"/>
-    <circle class="md" cx="393.0" cy="387.3" r="3.4" style="--k:73"/>
-    <circle class="md" cx="471.4" cy="168.6" r="3.4" style="--k:74"/>
-    <circle class="md" cx="379.6" cy="394.2" r="3.4" style="--k:75"/>
-    <circle class="md" cx="434.6" cy="215.2" r="3.4" style="--k:76"/>
-    <circle class="md" cx="333.5" cy="326.9" r="3.4" style="--k:77"/>
-    <circle class="md" cx="383.8" cy="390.8" r="3.4" style="--k:78"/>
-    <circle class="md" cx="318.0" cy="304.6" r="3.4" style="--k:79"/>
-    <circle class="md" cx="332.4" cy="294.9" r="3.4" style="--k:80"/>
-    <circle class="md" cx="452.7" cy="244.1" r="3.4" style="--k:81"/>
-    <circle class="md" cx="378.8" cy="377.0" r="3.4" style="--k:82"/>
-    <circle class="md" cx="478.6" cy="200.7" r="3.4" style="--k:83"/>
-  </g>
-  <g class="msp">
-    <circle class="md lit" cx="348.2" cy="393.5" r="3.8" style="--k:10"/>
-    <circle class="md lit" cx="348.7" cy="407.8" r="3.8" style="--k:11"/>
-    <circle class="md lit" cx="336.7" cy="406.1" r="3.8" style="--k:12"/>
-    <circle class="md lit" cx="371.6" cy="395.0" r="3.8" style="--k:13"/>
-    <circle class="md lit" cx="370.3" cy="398.1" r="3.8" style="--k:14"/>
-    <circle class="md lit" cx="359.3" cy="399.2" r="3.8" style="--k:15"/>
-    <circle class="md lit" cx="324.1" cy="387.6" r="3.8" style="--k:16"/>
-    <circle class="md lit" cx="361.3" cy="393.7" r="3.8" style="--k:17"/>
-    <circle class="md lit" cx="323.6" cy="432.5" r="3.8" style="--k:18"/>
-    <circle class="md lit" cx="337.4" cy="410.5" r="3.8" style="--k:19"/>
-    <circle class="md lit" cx="357.8" cy="403.2" r="3.8" style="--k:20"/>
-    <circle class="md lit" cx="357.9" cy="395.6" r="3.8" style="--k:21"/>
-    <circle class="md lit" cx="341.3" cy="372.7" r="3.8" style="--k:22"/>
-    <circle class="md lit" cx="362.1" cy="381.7" r="3.8" style="--k:23"/>
-    <circle class="md lit" cx="342.0" cy="415.2" r="3.8" style="--k:24"/>
-    <circle class="md lit" cx="346.7" cy="404.2" r="3.8" style="--k:25"/>
-    <circle class="md lit" cx="363.4" cy="398.1" r="3.8" style="--k:26"/>
-    <circle class="md lit" cx="344.9" cy="418.9" r="3.8" style="--k:27"/>
-    <circle class="md lit" cx="343.7" cy="381.3" r="3.8" style="--k:28"/>
-    <circle class="md lit" cx="338.8" cy="398.1" r="3.8" style="--k:29"/>
-    <circle class="md lit" cx="353.4" cy="379.8" r="3.8" style="--k:30"/>
-    <circle class="md lit" cx="318.1" cy="407.9" r="3.8" style="--k:31"/>
-    <circle class="md lit" cx="350.8" cy="416.5" r="3.8" style="--k:32"/>
-    <circle class="md lit" cx="361.1" cy="403.4" r="3.8" style="--k:33"/>
-    <circle class="md lit" cx="327.5" cy="388.1" r="3.8" style="--k:34"/>
-    <circle class="md lit" cx="364.0" cy="386.0" r="3.8" style="--k:35"/>
-    <circle class="md lit" cx="377.3" cy="396.1" r="3.8" style="--k:36"/>
-    <circle class="md lit" cx="336.0" cy="411.6" r="3.8" style="--k:37"/>
-    <circle class="md lit" cx="327.6" cy="398.2" r="3.8" style="--k:38"/>
-    <circle class="md lit" cx="377.3" cy="392.4" r="3.8" style="--k:39"/>
-    <circle class="md lit" cx="320.1" cy="445.9" r="3.8" style="--k:40"/>
-    <circle class="md lit" cx="333.4" cy="385.5" r="3.8" style="--k:41"/>
-    <circle class="md lit" cx="371.5" cy="399.7" r="3.8" style="--k:42"/>
-    <circle class="md lit" cx="356.8" cy="394.9" r="3.8" style="--k:43"/>
-    <circle class="md lit" cx="379.9" cy="391.7" r="3.8" style="--k:44"/>
-    <circle class="md lit" cx="361.5" cy="392.9" r="3.8" style="--k:45"/>
-    <circle class="md lit" cx="325.7" cy="380.2" r="3.8" style="--k:46"/>
-    <circle class="md lit" cx="368.9" cy="393.2" r="3.8" style="--k:47"/>
-    <circle class="md lit" cx="318.8" cy="413.3" r="3.8" style="--k:48"/>
-    <circle class="md lit" cx="349.4" cy="384.7" r="3.8" style="--k:49"/>
-    <circle class="md lit" cx="330.1" cy="374.5" r="3.8" style="--k:50"/>
-    <circle class="md lit" cx="362.0" cy="405.0" r="3.8" style="--k:51"/>
-    <circle class="md lit" cx="358.1" cy="391.1" r="3.8" style="--k:52"/>
-    <circle class="md lit" cx="354.6" cy="382.6" r="3.8" style="--k:53"/>
-    <circle class="md lit" cx="341.3" cy="409.5" r="3.8" style="--k:54"/>
-    <circle class="md lit" cx="370.4" cy="401.9" r="3.8" style="--k:55"/>
-    <circle class="md lit" cx="337.5" cy="386.0" r="3.8" style="--k:56"/>
-    <circle class="md lit" cx="329.0" cy="404.7" r="3.8" style="--k:57"/>
-    <circle class="md lit" cx="350.0" cy="407.5" r="3.8" style="--k:58"/>
-    <circle class="md lit" cx="339.1" cy="391.5" r="3.8" style="--k:59"/>
-    <circle class="md lit" cx="371.9" cy="387.5" r="3.8" style="--k:60"/>
-    <circle class="md lit" cx="358.5" cy="399.9" r="3.8" style="--k:61"/>
-    <circle class="md lit" cx="355.2" cy="392.4" r="3.8" style="--k:62"/>
-    <circle class="md lit" cx="349.6" cy="397.6" r="3.8" style="--k:63"/>
-  </g>
-  <circle class="raioanel" cx="353.9" cy="405.1" r="64"/>
-</svg>
-      <span class="mapalab" style="left:56%;top:64%">raio de São Paulo</span>
-    </div>
-    <div class="figs">
-      <div class="figrow a" data-a style="--d:3">
-        <span class="n tnum" data-cu="6200">0</span>
-        <p><b>pontos de venda no Brasil</b>Cada freezer é o único vendedor presente na hora da decisão.</p>
-      </div>
-      <div class="figrow a" data-a style="--d:4">
-        <span class="n tnum" data-cu="2800">0</span>
-        <p><b>dentro do raio de São Paulo</b>Onde a operação consegue visitar e corrigir.</p>
-      </div>
-      <div class="figrow b" data-a style="--d:5">
-        <span class="n tnum" data-cu="3400">0</span>
-        <p><b>fora de qualquer leitura</b>55% do parque decide sozinho o que o shopper vê.</p>
-      </div>
-      <div class="legenda" data-a style="--d:6">
-        <span><i style="background:var(--coral)"></i> Acompanhado de perto</span>
-        <span><i style="background:rgba(244,241,234,.26)"></i> Sem leitura recorrente</span>
-      </div>
-    </div>
-  </div>
-  <p class="note" data-a style="--d:8">Visitar 6.200 lojas não fecha a conta.
-    <b>A saída é mandar o padrão pronto e deixar a peça trazer a prova de volta.</b>
-    Posição dos pontos ilustrativa, com base na distribuição populacional do país.</p>
-</section>
-<section class="slide" data-part="O desafio"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
-  <div class="hd" style="margin-bottom:20px">
-    <span class="eyebrow" data-a><i>(05)</i> Nossa leitura</span>
-    <h2 data-a style="--d:1">O problema não é <u>fazer mais peças</u>.<br>É <em>fazer a mesma peça em todo lugar</em>.</h2>
-  </div>
-  <div class="desafio">
-    <div class="vsg">
-      <div class="vshead" data-a style="--d:2"><span class="mono">O que parece</span></div>
-      <div></div>
-      <div class="vshead" data-a style="--d:2"><span class="mono" style="color:var(--coral2)">O que é</span></div>
-
-      <div class="vsitem ap" data-a style="--d:3"><b>01</b><span>Falta material de PDV.</span></div>
-      <div class="arw" data-a style="--d:3"><svg viewBox="0 0 42 16"><path class="draw" d="M2 8h34M30 3l6 5-6 5"/></svg></div>
-      <div class="vsitem re" data-a style="--d:3"><b>01</b><span>Falta <b>padrão</b>. Peça sem padrão vira decoração.</span></div>
-
-      <div class="vsitem ap" data-a style="--d:4"><b>02</b><span>O freezer precisa estar limpo.</span></div>
-      <div class="arw" data-a style="--d:4"><svg viewBox="0 0 42 16"><path class="draw" d="M2 8h34M30 3l6 5-6 5"/></svg></div>
-      <div class="vsitem re" data-a style="--d:4"><b>02</b><span>Limpo é higiene. O que vende é <b>hierarquia</b>.</span></div>
-
-      <div class="vsitem ap" data-a style="--d:5"><b>03</b><span>Precisamos de uma campanha nacional.</span></div>
-      <div class="arw" data-a style="--d:5"><svg viewBox="0 0 42 16"><path class="draw" d="M2 8h34M30 3l6 5-6 5"/></svg></div>
-      <div class="vsitem re" data-a style="--d:5"><b>03</b><span>Cada canal pede <b>uma caixa diferente</b>.</span></div>
-
-      <div class="vsitem ap" data-a style="--d:6"><b>04</b><span>Precisamos de um sistema para enxergar.</span></div>
-      <div class="arw" data-a style="--d:6"><svg viewBox="0 0 42 16"><path class="draw" d="M2 8h34M30 3l6 5-6 5"/></svg></div>
-      <div class="vsitem re" data-a style="--d:6"><b>04</b><span>A própria peça pode <b>trazer a prova junto</b>.</span></div>
-    </div>
-    <div class="mkt3" data-a style="--d:8">
-      <div>
-        <span class="n"><small>R$ </small><span class="tnum" data-cu="13">0</span><small> bi</small></span>
-        <p>o setor de sorvetes no Brasil.</p>
-        <span class="src">Fonte · ABIS</span>
-      </div>
-      <div>
-        <span class="n"><span class="tnum" data-cu="16.3" data-cu-dec="1">0</span><small>%</small></span>
-        <p>de crescimento projetado em 2026.</p>
-        <span class="src">Fonte · Abrasorvete</span>
-      </div>
-      <div>
-        <span class="n"><span class="tnum" data-cu="70" data-cu-suf="%">0</span></span>
-        <p>das decisões acontecem na frente da gôndola.</p>
-        <span class="src">Fonte · Nielsen</span>
-      </div>
-    </div>
-  </div>
-  <p class="note" data-a style="--d:10">A categoria cresce, mas o crescimento chega para quem está
-    <b>visível na hora da decisão</b>.</p>
-</section>
-<section class="slide dark" data-part="O desafio"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
   <div class="hd" style="margin-bottom:8px">
-    <span class="eyebrow" data-a><i>(06)</i> Shopper e canais</span>
+    <span class="eyebrow" data-a><i>(04)</i> Shopper e canais</span>
     <h2 data-a style="--d:1">A decisão leva segundos.<br><em>E o freezer é o único vendedor presente.</em></h2>
   </div>
   <div class="shop">
@@ -1292,7 +1066,7 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
 </section>
 <section class="slide" data-part="As entregas"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
   <div class="hd" style="margin-bottom:20px">
-    <span class="eyebrow" data-a><i>(07)</i> As entregas · pensar e criar</span>
+    <span class="eyebrow" data-a><i>(05)</i> As entregas · pensar e criar</span>
     <h2 data-a style="--d:1">A decisão antes da peça,<br><em>e a peça antes da gráfica.</em></h2>
   </div>
   <div class="entgrid">
@@ -1385,11 +1159,11 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
 
   </div>
   <p class="note" data-a style="--d:7">Pensar e criar a 75 LAB faz com o portfólio público e com uma rodada de
-    visitas, sem depender de relatório de venda liberado. <b>O investimento de cada entrega está na tela 08.</b></p>
+    visitas, sem depender de relatório de venda liberado. <b>O investimento de cada entrega está na tela 09.</b></p>
 </section>
 <section class="slide dark" data-part="As entregas"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
   <div class="hd" style="margin-bottom:20px">
-    <span class="eyebrow" data-a><i>(08)</i> As entregas · levar e rastrear</span>
+    <span class="eyebrow" data-a><i>(06)</i> As entregas · levar e rastrear</span>
     <h2 data-a style="--d:1">Chegar na loja é metade.<br><em>A outra metade é provar que chegou.</em></h2>
   </div>
   <div class="entgrid">
@@ -1484,11 +1258,11 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
   </div>
   <p class="note" data-a style="--d:7">O rastreio é cobrado por ponto de venda, então cresce junto com a cobertura
     e não antes dela. O One Shot responde se chegou e foi instalado. O OnTiming responde se continuou lá,
-    em que estado e por quanto tempo. <b>O investimento de cada entrega está na tela 08.</b></p>
+    em que estado e por quanto tempo. <b>O investimento de cada entrega está na tela 09.</b></p>
 </section>
 <section class="slide" data-part="O caminho"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
   <div class="hd" style="margin-bottom:16px">
-    <span class="eyebrow" data-a><i>(09)</i> Cronograma · outubro de 2026 a setembro de 2027</span>
+    <span class="eyebrow" data-a><i>(07)</i> Cronograma · outubro de 2026 a setembro de 2027</span>
     <h2 data-a style="--d:1">Três ondas no ano.<br><em>A primeira na rua em oito semanas.</em></h2>
   </div>
   <div class="cal">
@@ -1564,7 +1338,7 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
 </section>
 <section class="slide dark" data-part="O investimento"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
   <div class="hd" style="margin-bottom:16px">
-    <span class="eyebrow" data-a><i>(10)</i> Valor por entrega</span>
+    <span class="eyebrow" data-a><i>(08)</i> Valor por entrega</span>
     <h2 data-a style="--d:1">Cada entrega tem preço próprio.<br><em>Você contrata o que precisa.</em></h2>
   </div>
   <div class="tab">
@@ -1662,96 +1436,11 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
       <span class="vl"><small>R$ </small>27,27<em>por PDV ao mês</em></span>
     </div>
   </div>
-  <p class="note" data-a style="--d:12">Valores de estratégia, criação e rastreio. <b>A produção física é cotada
-    à parte</b>, por peça e por volume, e gerida como carteira anual. O One Shot é pagamento único por ponto
-    de venda. O OnTiming é mensalidade por ponto, com assinatura de 6 a 12 meses.</p>
-</section>
-<section class="slide" data-part="O investimento"><div class="bgw" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div><div class="dotsw" aria-hidden="true"></div><div class="glw" aria-hidden="true"></div>
-  <div class="hd" style="margin-bottom:12px">
-    <span class="eyebrow" data-a><i>(11)</i> Cenários de investimento</span>
-    <h2 class="sm" data-a style="--d:1">Tudo à vista, <em>menos o rastreio ao vivo</em>.</h2>
-  </div>
-  <div class="cenT">
-    <div class="ctrow th" data-a style="--d:2">
-      <div class="cl"><span class="mono" style="font-size:9px;color:var(--soft)">Entrega · pagamento à vista</span></div>
-      <div class="rec"><b>P · Fundação</b><span>1 canal · 2 ondas · 1.000 lojas</span></div>
-      <div><b>M · Aceleração</b><span>2 canais · 3 ondas · 2.500 lojas</span></div>
-      <div><b>G · Escala</b><span>4 canais · 4 ondas · 6.200 lojas</span></div>
-    </div>
-
-    <div class="ctrow" data-a style="--d:3">
-      <div class="cl">Estratégia por Canal<i>R$ 16.800 por canal</i></div>
-      <div class="v" data-cen="P">16.800<i>1 canal</i></div>
-      <div class="v" data-cen="M">33.600<i>2 canais</i></div>
-      <div class="v" data-cen="G">67.200<i>4 canais</i></div>
-    </div>
-    <div class="ctrow" data-a style="--d:3">
-      <div class="cl">Calendário de Trade<i>R$ 3.400 por ano</i></div>
-      <div class="v zero" data-cen="P">○</div>
-      <div class="v" data-cen="M">3.400</div>
-      <div class="v" data-cen="G">3.400</div>
-    </div>
-    <div class="ctrow" data-a style="--d:4">
-      <div class="cl">Arquitetura do Freezer<i>R$ 2.300 projeto</i></div>
-      <div class="v" data-cen="P">2.300</div>
-      <div class="v" data-cen="M">2.300</div>
-      <div class="v" data-cen="G">2.300</div>
-    </div>
-    <div class="ctrow" data-a style="--d:4">
-      <div class="cl">Conceito e Enxoval de PDV<i>R$ 8.900 por onda</i></div>
-      <div class="v" data-cen="P">17.800<i>2 ondas</i></div>
-      <div class="v" data-cen="M">26.700<i>3 ondas</i></div>
-      <div class="v" data-cen="G">35.600<i>4 ondas</i></div>
-    </div>
-    <div class="ctrow" data-a style="--d:5">
-      <div class="cl">Guia de Execução<i>R$ 13.400 projeto</i></div>
-      <div class="v" data-cen="P">13.400</div>
-      <div class="v" data-cen="M">13.400</div>
-      <div class="v" data-cen="G">13.400</div>
-    </div>
-    <div class="ctrow" data-a style="--d:5">
-      <div class="cl">Catálogo do Distribuidor<i>R$ 5.400 por ano</i></div>
-      <div class="v zero" data-cen="P">○</div>
-      <div class="v" data-cen="M">5.400</div>
-      <div class="v" data-cen="G">5.400</div>
-    </div>
-    <div class="ctrow" data-a style="--d:6">
-      <div class="cl">One Shot · rastreio estático<i>R$ 13,64 por PDV, à vista</i></div>
-      <div class="v" data-cen="P">13.640<i>1.000 lojas</i></div>
-      <div class="v" data-cen="M">34.100<i>2.500 lojas</i></div>
-      <div class="v" data-cen="G">84.568<i>6.200 lojas</i></div>
-    </div>
-
-    <div class="ctrow sub" data-a style="--d:7">
-      <div class="cl"><b>Soma das entregas, à vista</b></div>
-      <div class="v" data-cen="P">R$ 63.940</div>
-      <div class="v" data-cen="M">R$ 118.900</div>
-      <div class="v" data-cen="G">R$ 211.868</div>
-    </div>
-    <div class="ctrow" data-a style="--d:8">
-      <div class="cl">Produção física estimada<i>cotada à parte, por onda</i></div>
-      <div class="v" data-cen="P">180 a 240 mil</div>
-      <div class="v" data-cen="M">300 a 420 mil</div>
-      <div class="v" data-cen="G">480 a 720 mil</div>
-    </div>
-    <div class="ctrow tot" data-a style="--d:9">
-      <div class="cl">Total à vista no ano</div>
-      <div class="v" data-cen="P">R$ 244 a 304 mil</div>
-      <div class="v" data-cen="M">R$ 419 a 539 mil</div>
-      <div class="v" data-cen="G">R$ 692 a 932 mil</div>
-    </div>
-    <div class="ctrow mensal" data-a style="--d:10">
-      <div class="cl">OnTiming<i>assinatura · R$ 27,27 por PDV ao mês</i></div>
-      <div class="v zero" data-cen="P">não entra</div>
-      <div class="v zero" data-cen="M">não entra</div>
-      <div class="v" data-cen="G">R$ 5.454 / mês<i style="color:var(--soft)">200 pontos prioritários</i></div>
-    </div>
-  </div>
   <div class="instfoot" data-a style="--d:12">
     <div class="marcas">
-      <img class="ll" src="assets/logo/loslos-ink.png" alt="Sorvetes Los Los">
+      <img class="ll" src="assets/logo/loslos-white.png" alt="Sorvetes Los Los">
       <span class="x">&times;</span>
-      <img class="l75" src="assets/logo/75lab-black.png" alt="75 LAB">
+      <img class="l75" src="assets/logo/75lab-paper.png" alt="75 LAB">
     </div>
     <div class="col">
       <h4>75 LAB</h4>
@@ -1770,10 +1459,9 @@ h1 u,h2 u,h3 u{text-decoration:none;color:rgba(18,20,28,.3)}
       <span>Prova acima de promessa</span>
     </div>
   </div>
-  <p class="note" data-a style="--d:14">Todas as entregas e o One Shot são pagamento à vista.
-    <b>Só o OnTiming é assinatura mensal</b>, com contrato de 6 a 12 meses e cobrança por ponto ativo.
-    O volume de lojas de cada cenário é premissa de cálculo e será substituído pelo cadastro do canal.
-    Produção não inclui mídia, premiação, promotoria nem frete extraordinário.</p>
+  <p class="note" data-a style="--d:14">Valores de estratégia, criação e rastreio. <b>A produção física é cotada
+    à parte</b>, por peça e por volume, e gerida como carteira anual. O One Shot é pagamento único por ponto
+    de venda. O OnTiming é mensalidade por ponto, com assinatura de 6 a 12 meses.</p>
 </section>
 
 <svg id="grain" aria-hidden="true"><filter id="gf"><feTurbulence type="fractalNoise"
@@ -1859,17 +1547,16 @@ addEventListener("resize",fit);fit();
 /* ------------------------------------------------ capitulos */
 var CHAP=[
   {t:"A 75 LAB",      a:0, b:3},
-  {t:"O desafio",     a:4, b:6},
-  {t:"As entregas",   a:7, b:8},
-  {t:"O investimento",a:9, b:11}
+  {t:"O desafio",     a:4, b:4},
+  {t:"As entregas",   a:5, b:7},
+  {t:"O investimento",a:8, b:8}
 ];
 var TITLES=[
  "Em 2014 vocês instalaram um canal","Os dois lados do balcão",
  "Mais de 500 projetos","As oito dores que ouvimos",
- "6.200 freezers, 2.800 à vista","O problema real por trás do pedido",
  "O shopper decide em segundos","Entregas: pensar e criar",
  "Entregas: levar e rastrear","Cronograma do ano",
- "Valor por entrega","Cenários de investimento"
+ "Valor por entrega"
 ];
 
 var slides=$$(".slide"),N=slides.length,i=0,busy=false;

@@ -27,7 +27,7 @@ sync.sh            build + cópia para o scratchpad do preview local
 
 Para gerar: `python3 build.py`. O `index.html` é o resultado e não deve ser editado à mão.
 
-## As doze telas
+## As nove telas
 
 | # | Tela | O que entrega |
 | --- | --- | --- |
@@ -35,14 +35,11 @@ Para gerar: `python3 build.py`. O `index.html` é o resultado e não deve ser ed
 | 02 | A 75 LAB | Os dois lados do balcão, os fundadores e os quatro princípios |
 | 03 | A prova da 75 LAB | Mais de 500 projetos, cases públicos e as seis frentes de entrega |
 | 04 | As dores | As oito dores levantadas nas reuniões, com o que cada uma trava |
-| 05 | O ponto cego | Mapa do Brasil com 6.200 lojas, 2.800 no raio de visita e 3.400 fora |
-| 06 | Nossa leitura | O que parece contra o que é, mais três números de categoria |
-| 07 | Shopper e canais | Os seis segundos do freezer e as quatro missões de compra |
-| 08 | Entregas · pensar e criar | Quatro entregas em detalhe, com escopo, formato e prazo |
-| 09 | Entregas · levar e rastrear | Guia, catálogo, One Shot e OnTiming, com escopo, formato e prazo |
-| 10 | Cronograma | Calendário de 12 meses em barras, por trimestre e por entrega |
-| 11 | Valor por entrega | Tabela com as oito entregas, formato, prazo e investimento |
-| 12 | Cenários de investimento | As entregas somadas em P, M e G, com o bloco institucional |
+| 05 | Shopper e canais | Os seis segundos do freezer e as quatro missões de compra |
+| 06 | Entregas · pensar e criar | Quatro entregas em detalhe, com escopo, formato e prazo |
+| 07 | Entregas · levar e rastrear | Guia, catálogo, One Shot e OnTiming, com escopo, formato e prazo |
+| 08 | Cronograma | Calendário de 12 meses em barras, por trimestre e por entrega |
+| 09 | Valor por entrega | Tabela das oito entregas, com o bloco institucional no rodapé |
 
 ## As oito entregas e os valores
 
@@ -59,18 +56,6 @@ Para gerar: `python3 build.py`. O `index.html` é o resultado e não deve ser ed
 
 Os preços aparecem só na tela 11. As telas 08 e 09 mostram escopo, formato e prazo.
 O Conceito e Enxoval inclui o **manual de merchandising com as peças em 3D**, uma versão por canal.
-
-## Cenários
-
-Tudo é pagamento à vista, menos o OnTiming, que é assinatura mensal.
-
-| | P · Fundação | M · Aceleração | G · Escala |
-| --- | --- | --- | --- |
-| Premissa | 1 canal, 2 ondas, 1.000 lojas | 2 canais, 3 ondas, 2.500 lojas | 4 canais, 4 ondas, 6.200 lojas |
-| Soma das entregas, à vista | R$ 63.940 | R$ 118.900 | R$ 211.868 |
-| Produção física estimada | R$ 180 a 240 mil | R$ 300 a 420 mil | R$ 480 a 720 mil |
-| **Total à vista no ano** | **R$ 244 a 304 mil** | **R$ 419 a 539 mil** | **R$ 692 a 932 mil** |
-| OnTiming, assinatura | não entra | não entra | R$ 5.454 por mês, 200 pontos |
 
 ## Navegação
 
